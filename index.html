@@ -11,75 +11,92 @@
 		</script>
 		<title>Mohammad Amin Shabani's homepage</title>
 		<meta charset="utf-8" />
+		<meta name="description" content="This is Mohammad Amin Shabani's personal homepage. Here you can find his latest projects, blog posts, and contact information.">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="theme-color" content="#7952b3">
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		
 		<link href="assets/css/dashboard.css" rel="stylesheet">
 		<link href="assets/css/main.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 	</head>
 	<body>
 		<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-			<a class="navbar-brand col-3 col-lg-2 px-3 fs-6 bg-transparent" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="#sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="inline-icon material-symbols-outlined">menu</span>Menu</a>
-			<div class="navbar-nav col-sm-2 col-7">
+			<a class="navbar-brand col-3 col-lg-2 px-3 fs-6 bg-transparent" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="#sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="inline-icon material-symbols-outlined">menu</span>Menu
+			</a>
+			<nav class="navbar-nav col-sm-2 col-7" role="navigation">
 				<ul class="list-group list-group-horizontal justify-content-end">
-					<li class="bg-dark list-group-item"><a href="https://twitter.com/amin_shabani" class="link-light"><i class="bi bi-twitter"></i></a></li>
-					<li class="bg-dark list-group-item"><a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105/" class="link-light"><i class="bi bi-linkedin"></i></a></li>
-					<li class="bg-dark list-group-item"><a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" class="link-light"><i class="ai ai-google-scholar-square ai-1x"></i></a></li>
-					<li class="bg-dark list-group-item"><a href="https://github.com/aminshabani" class="link-light"><i class="link-light bi bi-github"></i></a></li>
+					<li class="list-group-item list-group-item-header">
+						<a href="https://twitter.com/amin_shabani" class="social-link" rel="noopener noreferrer" aria-label="Twitter">
+							<i class="bi bi-twitter"></i>
+						</a>
+					</li>
+					<li class="list-group-item list-group-item-header">
+						<a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105/" class="social-link" rel="noopener noreferrer" aria-label="LinkedIn">
+							<i class="bi bi-linkedin"></i>
+						</a>
+					</li>
+					<li class="list-group-item list-group-item-header">
+						<a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" class="social-link" rel="noopener noreferrer" aria-label="Google Scholar">
+							<i class="ai ai-google-scholar-square ai-1x"></i>
+						</a>
+					</li>
+					<li class="list-group-item list-group-item-header">
+						<a href="https://github.com/aminshabani" class="social-link" rel="noopener noreferrer" aria-label="GitHub">
+							<i class="bi bi-github"></i>
+						</a>
+					</li>
 				</ul>
-			</div>
+			</nav>
 		</header>
 		<div class="container-fluid">
-			  <nav id="sidebarMenu" class="col-12 col-sm-3 col-lg-2 d-sm-block bg-light sidebar collapse">
+			<aside id="sidebarMenu" class="col-12 col-sm-3 col-lg-2 bg-light sidebar collapse d-sm-block">
 				<div class="position-sticky pt-2 sidebar-sticky">
-				  <ul class="nav flex-column mb-auto">
-					<li class="nav-item">
-						<img style='height: 90%; width: 90%;' src="images/DALL-E_teaser.png" alt="publications-Created by OpenAI's ChatGPT with DALL·E capabilities"/>
-						<br>
+					<ul class="nav flex-column mb-auto">
+						<li class="nav-item">
+							<img class='sidebar-image' src="images/DALL-E_teaser.png" alt="Image created by OpenAI's ChatGPT with DALL·E capabilities"/>
+							<hr>
+							<a href="#" class="nav-link" aria-current="page">
+								<span class="inline-icon material-symbols-outlined">person</span>
+								About
+							</a>
+						</li>
 						<hr>
-						<a href="#" class="nav-link" aria-current="page">
-						  <span class="inline-icon material-symbols-outlined">person</span>
-						  About
-						</a>
-					  </li>
-					  <hr>
-					  <li>
-						<a href="#publications" class="nav-link">
-						  <span class="inline-icon material-symbols-outlined">content_copy</span>
-						  Publications
-						</a>
-					  </li>
-					  <hr>
-					  <li>
-						<a href="CV-AminShabani.pdf" class="nav-link">
-						  <span class="inline-icon material-symbols-outlined">clinical_notes</span>
-						  CV
-						</a>
-					  </li>
-					  <hr>
-					  <!-- <a class="twitter-timeline" href="https://twitter.com/amin_shabani?ref_src=twsrc%5Etfw">Tweets by amin_shabani</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-					  <!-- <li>
-						<a href="#education" class="nav-link">
-							<span class="inline-icon material-symbols-outlined">school</span>
-						  Education
-						</a>
-					  </li>
-					  <hr>
-					  <li>
-						<a href="#" class="nav-link">
-							<span class="inline-icon material-symbols-outlined">badge</span>
-						  Experience
-						</a>
-					  </li> -->
-				  </ul>
+						<li>
+							<a href="#news" class="nav-link">
+								<span class="inline-icon material-symbols-outlined">newspaper</span>
+								News
+							</a>
+						</li>
+						<hr>
+						<li>
+							<a href="#photos" class="nav-link">
+								<span class="inline-icon material-symbols-outlined">photo_camera</span>
+								Photos
+							</a>
+						</li>
+						<hr>
+						<li>
+							<a href="#publications" class="nav-link">
+								<span class="inline-icon material-symbols-outlined">content_copy</span>
+								Publications
+							</a>
+						</li>
+						<hr>
+						<li>
+							<a href="CV-AminShabani.pdf" class="nav-link">
+								<span class="inline-icon material-symbols-outlined">clinical_notes</span>
+								CV (PDF)
+							</a>
+						</li>
+						<hr>
+					</ul>
 				</div>
-			  </nav>
+			</aside>
 		  
 			  <main class="col-sm-9 ms-sm-auto col-lg-10 px-sm-4 my-4">
 				<section>
@@ -99,24 +116,57 @@
 						</div>
 					</div>
 				</section>
-				<!-- <hr> -->
-				<header class="" id="publications">
-					<h2>News</h2>
-				</header>
-				<hr>
-				<div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">One paper got accepted at CVPR 2024. The work was done during my internship at Adobe. <span class="badge bg-dark rounded-pill">New</span></li>
-						<li class="list-group-item">Talk at Samsung AI Center, Toronto, January 2024 <span class="badge bg-dark rounded-pill">New</span></li>
-						<li class="list-group-item">One paper got accepted at NeurIPS 2023 (Spotlight)</li>
-						<!-- <li class="list-group-item">Joined Adobe as a Research Intern, June 2023</li> -->
-						<li class="list-group-item">One paper got accepted at CVPR 2023</li>
-						<li class="list-group-item">One paper got accepted to ICLR 2023. The work was done mostly during my internship at BorealisAI.</li>
-<!-- 						<li class="list-group-item">Received Helmut & Hugo Eppich Family Graduate Scholarship, January 2023</li>
-						<li class="list-group-item">One paper got accepted at ACCV 2022</li>
-						<li class="list-group-item">Joined BorealisAI for an internship, January 2022</li>
-						<li class="list-group-item">One paper got accepted at ICCV 2021</li> -->
-					</ul>
+				<div class="row">
+					<div class="col-md-6">
+						<header class="" id="news">
+							<h2>News</h2>
+						</header>
+						<hr>
+						<!-- Existing content -->
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">One paper got accepted at CVPR 2024. The work was done during my internship at Adobe. <span class="badge bg-dark rounded-pill">New</span></li>
+							<li class="list-group-item">Talk at Samsung AI Center, Toronto, January 2024 <span class="badge bg-dark rounded-pill">New</span></li>
+							<li class="list-group-item">One paper got accepted at NeurIPS 2023 (Spotlight)</li>
+							<!-- <li class="list-group-item">Joined Adobe as a Research Intern, June 2023</li> -->
+							<li class="list-group-item">One paper got accepted at CVPR 2023</li>
+							<li class="list-group-item">One paper got accepted to ICLR 2023. The work was done mostly during my internship at BorealisAI.</li>
+							<!-- <li class="list-group-item">Received Helmut & Hugo Eppich Family Graduate Scholarship, January 2023</li> -->
+							<!-- <li class="list-group-item">One paper got accepted at ACCV 2022</li> -->
+							<!-- <li class="list-group-item">Joined BorealisAI for an internship, January 2022</li> -->
+							<!-- <li class="list-group-item">One paper got accepted at ICCV 2021</li> -->
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<!-- Photo album -->
+						<header class="" id="photos">
+							<h2>Photos</h2>
+						</header>
+						<hr>
+						<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<figure class="image-caption">
+										<img src="assets/photos/group-2023-cvpr.jpg" class="d-block mx-auto image-size" alt="CVPR 2023, Vancouver">
+										<figcaption>CVPR 2023, Vancouver</figcaption>
+									</figure>
+								</div>
+								<div class="carousel-item">
+									<figure class="image-caption">
+										<img src="assets/photos/group-2022-sfu.jpg" class="d-block mx-auto image-size" alt="SFU 2022, Vancouver">
+										<figcaption>SFU 2022, Vancouver</figcaption>
+									</figure>
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
 				</div>
 				<br>
 				<!-- <hr> -->
@@ -289,10 +339,6 @@
 
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	</body>
 </html>
