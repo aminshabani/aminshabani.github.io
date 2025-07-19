@@ -1,346 +1,994 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-98RNZEQP3C"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-98RNZEQP3C');
-		</script>
-		<title>Mohammad Amin Shabani's homepage</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="This is Mohammad Amin Shabani's personal homepage. Here you can find his latest projects, blog posts, and contact information.">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="theme-color" content="#7952b3">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Amin Shabani - Personal Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font to the body */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            border-radius: 3px;
+        }
+        .publication-item {
+            transition: all 0.3s ease;
+        }
+        .publication-item:hover {
+            transform: translateX(5px);
+        }
+        .nav-link {
+            position: relative;
+            color: #d1d5db; /* Light gray for nav links in dark mode */
+        }
+        .nav-link:hover {
+            color: #ffffff; /* White on hover in dark mode */
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        /* Active nav link style for JavaScript */
+        .nav-link.active-section {
+            color: #3b82f6; /* Blue-600 */
+        }
+        .nav-link.active-section:after {
+            width: 100%;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #3b82f6;
+            z-index: 1; /* Ensure dot is above the line */
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #4b5563; /* Darker grey for timeline line in dark mode */
+        }
+        /* Back to top button */
+        #back-to-top {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place at the bottom */
+            right: 20px; /* Place at the right */
+            z-index: 99; /* Ensure it's above other content */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #3b82f6; /* Blue background */
+            color: white; /* White text */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        }
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-		
-		<link href="assets/css/dashboard.css" rel="stylesheet">
-		<link href="assets/css/main.css" rel="stylesheet">
-	</head>
-	<body>
-		<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-			<a class="navbar-brand col-3 col-lg-2 px-3 fs-6 bg-transparent" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="#sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="inline-icon material-symbols-outlined">menu</span>Menu
-			</a>
-			<nav class="navbar-nav col-sm-2 col-7" role="navigation">
-				<ul class="list-group list-group-horizontal justify-content-end">
-					<li class="list-group-item list-group-item-header">
-						<a href="https://twitter.com/amin_shabani" class="social-link" rel="noopener noreferrer" aria-label="Twitter">
-							<i class="bi bi-twitter"></i>
-						</a>
-					</li>
-					<li class="list-group-item list-group-item-header">
-						<a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105/" class="social-link" rel="noopener noreferrer" aria-label="LinkedIn">
-							<i class="bi bi-linkedin"></i>
-						</a>
-					</li>
-					<li class="list-group-item list-group-item-header">
-						<a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" class="social-link" rel="noopener noreferrer" aria-label="Google Scholar">
-							<i class="ai ai-google-scholar-square ai-1x"></i>
-						</a>
-					</li>
-					<li class="list-group-item list-group-item-header">
-						<a href="https://github.com/aminshabani" class="social-link" rel="noopener noreferrer" aria-label="GitHub">
-							<i class="bi bi-github"></i>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<div class="container-fluid">
-			<aside id="sidebarMenu" class="col-12 col-sm-3 col-lg-2 bg-light sidebar collapse d-sm-block">
-				<div class="position-sticky pt-2 sidebar-sticky">
-					<ul class="nav flex-column mb-auto">
-						<li class="nav-item">
-							<img class='sidebar-image' src="images/DALL-E_teaser.png" alt="Image created by OpenAI's ChatGPT with DALL·E capabilities"/>
-							<hr>
-							<a href="#" class="nav-link" aria-current="page">
-								<span class="inline-icon material-symbols-outlined">person</span>
-								About
-							</a>
-						</li>
-						<hr>
-						<li>
-							<a href="#news" class="nav-link">
-								<span class="inline-icon material-symbols-outlined">newspaper</span>
-								News
-							</a>
-						</li>
-						<hr>
-						<li>
-							<a href="#photos" class="nav-link">
-								<span class="inline-icon material-symbols-outlined">photo_camera</span>
-								Photos
-							</a>
-						</li>
-						<hr>
-						<li>
-							<a href="#publications" class="nav-link">
-								<span class="inline-icon material-symbols-outlined">content_copy</span>
-								Publications
-							</a>
-						</li>
-						<hr>
-						<li>
-							<a href="CV-AminShabani.pdf" class="nav-link">
-								<span class="inline-icon material-symbols-outlined">clinical_notes</span>
-								CV (PDF)
-							</a>
-						</li>
-						<hr>
-					</ul>
-				</div>
-			</aside>
-		  
-			  <main class="col-sm-9 ms-sm-auto col-lg-10 px-sm-4 my-4">
-				<section>
-					<div class="row justify-content-center">
-						<div class="col-12 col-sm-8 my-5">
-						<header>
-							<h2>Hi, I’m Mohammad Amin Shabani</h2>
-							<p style="text-transform: uppercase;color: #7f888f;">PhD student - Simon Fraser University</p>
-						</header>
-						I am a PhD student in Computer Science at Simon Fraser University, advised by <a class="text-decoration-none" href="https://www.cs.sfu.ca/~furukawa/">Prof. Yasutaka Furukawa</a>. I earned my MS in Electrical and Computer Engineering from Seoul National University, where I was supervised by <a class="text-decoration-none" href="https://cv.snu.ac.kr/index.php/~kmlee/">Prof. Kyoung Mu Lee</a>, and my BS in Computer Science from Sharif University of Technology. 
-						<br> My research focuses on Computer Vision, Deep Learning, and Graph Theory.
-						<div></div>
-						</p>
-						</div>
-						<div class="col-5 col-sm-3">
-						<img src="images/profpic.jpeg" class="rounded mx-auto" style="width:100%;height:auto;" alt="amin shabani"/>
-						</div>
-					</div>
-				</section>
-				<div class="row">
-					<div class="col-md-6">
-						<header class="" id="news">
-							<h2>News</h2>
-						</header>
-						<hr>
-						<!-- Existing content -->
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">One paper got accepted at CVPR 2024. The work was done during my internship at Adobe. <span class="badge bg-dark rounded-pill">New</span></li>
-							<li class="list-group-item">Talk at Samsung AI Center, Toronto, January 2024 <span class="badge bg-dark rounded-pill">New</span></li>
-							<li class="list-group-item">One paper got accepted at NeurIPS 2023 (Spotlight)</li>
-							<!-- <li class="list-group-item">Joined Adobe as a Research Intern, June 2023</li> -->
-							<li class="list-group-item">One paper got accepted at CVPR 2023</li>
-							<li class="list-group-item">One paper got accepted to ICLR 2023. The work was done mostly during my internship at BorealisAI.</li>
-							<!-- <li class="list-group-item">Received Helmut & Hugo Eppich Family Graduate Scholarship, January 2023</li> -->
-							<!-- <li class="list-group-item">One paper got accepted at ACCV 2022</li> -->
-							<!-- <li class="list-group-item">Joined BorealisAI for an internship, January 2022</li> -->
-							<!-- <li class="list-group-item">One paper got accepted at ICCV 2021</li> -->
-						</ul>
-					</div>
-					<div class="col-md-6">
-						<!-- Photo album -->
-						<header class="" id="photos">
-							<h2>Photos</h2>
-						</header>
-						<hr>
-						<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<figure class="image-caption">
-										<img src="assets/photos/group-2023-cvpr.jpg" class="d-block mx-auto image-size" alt="CVPR 2023, Vancouver">
-										<figcaption>CVPR 2023, Vancouver</figcaption>
-									</figure>
-								</div>
-								<div class="carousel-item">
-									<figure class="image-caption">
-										<img src="assets/photos/group-2022-sfu.jpg" class="d-block mx-auto image-size" alt="SFU 2022, Vancouver">
-										<figcaption>SFU 2022, Vancouver</figcaption>
-									</figure>
-								</div>
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Next</span>
-							</button>
-						</div>
-					</div>
-				</div>
-				<br>
-				<!-- <hr> -->
-				<header class="" id="publications">
-					<h2>Publications</h2>
-				</header>
-				<hr>
-				<div>
-					<article class="row">
-						<h6><i>Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>This paper proposes an image-vector dual diffusion model for generative layout design. Distinct from prior efforts that mostly ignores visual information of elements and the whole canvas, our approach integrates the power of a pre-trained large image diffusion model to guide layout composition in a vector diffusion model by providing enhanced salient region understanding and high-level interelement relationship reasoning.</p>
-						<p><b> Mohammad Amin Shabani </b>, Zhaowen Wang, Difan Liu, Nanxuan Zhao, Jimei Yang, Yasutaka Furukawa<br> CVPR 2024</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="visual_layout_composer/pdfs/visual_layout_composer.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-							<!-- <li class="list-group-item d-flex justify-content-between align-items-center"><a href="" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">play_circle</span>Video</a></li> -->
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="visual_layout_composer/index.html" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">web</span>Project Website</a></li>
-						</ul>
-						</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/vlc.jpg" alt="Visual Layout Composer"/></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>This paper presents an end-to-end neural architecture based on Diffusion Models for spatial puzzle solving, particularly jigsaw puzzle and room arrangement tasks.</p>
-						<p>Sepidehsadat Hosseini, <b> Mohammad Amin Shabani </b>, Saghar Irandoust, and Yasutaka Furukawa<br> NeurIPS 2023 (Spotlight)</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://arxiv.org/pdf/2211.13785" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://youtu.be/wANagTkvyIY" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">play_circle</span>Video</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://github.com/sepidsh/PuzzleFussion" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">code</span>Code</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://sepidsh.github.io/puzzlefusion/" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">web</span>Project Website</a></li>
-						</ul>
-						</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/jigsawplan.png" alt="JigsawPlan"/></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>The paper presents a new method for generating vector floorplans using a diffusion model that improves upon existing methods. The approach uses a graph-conditioned floorplan generation approach with a Transformer architecture and outperforms state-of-the-art methods on the RPLAN dataset.</p>
-						<p><b>Mohammad Amin Shabani</b>, Sepidehsadat Hosseini, and Yasutaka Furukawa<br> CVPR 2023</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://arxiv.org/pdf/2211.13287.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://youtu.be/BfGX4-Am9v8" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">play_circle</span>Video</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://github.com/aminshabani/house_diffusion" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">code</span>Code</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="housediffusion/index.html" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">web</span>Project Website</a></li>
-						</ul>
-						</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/housediffusion.jpg" alt="HouseDiffusion"/></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>ScaleFormer: Iterative Multi-Scale Refining Transformers for Time Series Forecasting</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>In this paper, we propose a general multi-scale framework that can be applied to the state-of-the-art transformer-based time series forecasting models (FEDformer, Autoformer, etc.).</p>
-						<p><b>Mohammad Amin Shabani</b>, Amir Abdi, Lili Meng, and Tristan Sylvain <br> ICLR 2023</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://arxiv.org/pdf/2206.04038v3.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://www.linkedin.com/events/7025842225947308032" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">play_circle</span>Video</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://github.com/BorealisAI/scaleformer" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">code</span>Code</a></li>
-						</ul>
-						</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/scaleformer.png" alt="Scaleformer"/></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>Vectorizing Building Blueprints</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>This paper proposes a novel vectorization algorithm for highdefinition floorplans with construction-level intricate architectural details, namely a blueprint.</p>
-							<p>Weilian Song, Mahsa Maleki Abyaneh, <b>Mohammad Amin Shabani</b>, and Yasutaka Furukawa <br> ACCV 2022</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://github.com/weiliansong/blueprint-vectorizer" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">code</span>Code</a></li>
-						</ul>
-						</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/vectorizing_building.png" alt="Vectorizing Building Blueprints" /></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps</i></h6>
-							<div class="col-12 col-sm-8">
-								<p>This paper proposes an extreme Structure from Motion (SfM) algorithm for residential indoor panoramas that have little to no visual overlaps. Only a single panorama is present in a room for many cases, making the task infeasible for existing SfM algorithms. </p>
-								<p><b>Mohammad Amin Shabani</b>, Weilian Song, Makoto Odamaki, Hirochika Fujiki, and Yasutaka Furukawa <br> ICCV 2021</p>
-								<ul class="list-group list-group-horizontal-sm mb-2">
-									<li class="list-group-item d-flex justify-content-between align-items-center"><a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-									<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://www.youtube.com/watch?v=_sikNaOL_B4" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">play_circle</span>Video</a></li>
-									<li class="list-group-item d-flex justify-content-between align-items-center"><a href="publications/extreme_sfm/index.html" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">web</span>Project Website</a></li>
-								</ul>
-							</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/extreme_sfm.jpg" alt="extreme_sfm" /></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>Local Visual Microphones: Improved Sound Extraction from Silent Video</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>In this paper we study local vibration patterns at different image locations. We show that different locations in the image vibrate differently. We carefully aggregate local vibrations and produce a sound quality that improves state-of-the-art. </p>
-						<p><b>MA Shabani</b>, L Samadfam, MA Sadeghi <br> BMVC 2017</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://arxiv.org/pdf/1801.09436.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://www.youtube.com/watch?v=ZX0NSlHDWV4" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">play_circle</span>Video</a></li>
-						</ul>
-					</div>
-					<div class="col-12 col-sm-4">
-						<a href="#" class="image"><img src="images/lvm.jpg" alt="Local Visual Microphones" /></a>
-					</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>Layer-wise Progressive Knowledge Distillation</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>We proposed a new method to create soft targets in different levels of complexity by obtaining the probabilities from the intermediate layers of the teacher network. Our method is specially designed for the cases that there is a large gap between the teacher and the student which makes it harder for the student to mimic the teacher.</p>
-						<p><b>MA Shabani</b> <br> 2019</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="http://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-						</ul>
-						</div>
-						<div class="col-12 col-sm-4">
-							<a href="#" class="image"><img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation" /></a>
-						</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>On decomposing complete tripartite graphs into 5-cycles</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>The problem of finding necessary and sufficient conditions to decompose a complete tripartite graph into 5-cycles was first considered by ES Mahmoodian and Maryam Mirzakhani (1995). They stated some necessary conditions and conjectured that those conditions are also sufficient. We show the conjecture is true under some conditions.</p>
-						<p>M Abdolmaleki, SG Ilchi, ES Mahmoodian, <b>MA Shabani</b> <br>arXiv preprint </p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://arxiv.org/pdf/1907.06187.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-						</ul>
-					</div>
-					<div class="col-12 col-sm-4">
-						<a href="#" class="image"><img src="images/5cycle.png" alt="decomposing complete tripartite graphs into 5-cycles" /></a>
-					</div>
-					</article>
-					<hr>
-					<article class="row">
-						<h6><i>On Uniquely k-List Colorable Planar Graphs, Graphs on Surfaces, and Regular Graphs</i></h6>
-						<div class="col-12 col-sm-8">
-						<p>A graph G is said to have property M(k) if it is not uniquely k-list colorable. We found bounds on M(k) for graphs embedded on surfaces, and obtain new results on planar graphs. We begin a general study of bounds on M(k) for regular graphs, as well as for graphs with varying list sizes.</p>
-						<p>M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N Matsumoto, <b>M. A. Shabani</b> <br>Graphs and Combinatorics, 2018</p>
-						<ul class="list-group list-group-horizontal-sm mb-2">
-							<li class="list-group-item d-flex justify-content-between align-items-center"><a href="https://arxiv.org/pdf/1705.07434.pdf" class="button text-decoration-none"><span class="inline-icon material-symbols-outlined">picture_as_pdf</span>PDF</a></li>
-						</ul>
-					</div>
-					<div class="col-12 col-sm-4">
-						<a href="#" class="image"><img src="images/uklc.png" alt="UkLC" /></a>
-					</div>
-					</article>
-					
-				</div>
-				<!-- <header class="" id="education">
-					<h2>Education</h2>
-				</header>
-				<hr>
-				<div>
-				</div> -->
-			  </main>
-		  </div>
+        #back-to-top:hover {
+            background-color: #1e3a8a; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Photo carousel specific styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+            aspect-ratio: 16 / 9; /* Maintain aspect ratio for photos */
+            height: 300px; /* Fixed height for carousel */
+        }
+        .carousel-image {
+            width: 100%;
+            height: 100%; /* Fill the container height */
+            object-fit: cover; /* Cover the area without distortion */
+            display: block;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 0.375rem; /* rounded-md */
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: white;
+        }
+        .photo-title {
+            position: absolute;
+            bottom: 20px; /* Above the dots */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        .carousel-container:hover .photo-title {
+            opacity: 1;
+        }
+
+        /* News section fixed height and scrollable */
+        .news-scroll-container {
+            height: 300px; /* Match carousel height */
+            overflow-y: auto;
+            padding-right: 10px; /* Space for scrollbar */
+        }
+        /* Hide scrollbar for aesthetic, but keep functionality */
+        .news-scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .news-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #4b5563; /* gray-600 */
+            border-radius: 4px;
+        }
+        .news-scroll-container::-webkit-scrollbar-track {
+            background-color: #1f2937; /* gray-800 */
+        }
+        .news-item-line {
+            display: block; /* Ensure it takes full width */
+        }
+
+        /* Publications scrollable container */
+        .publications-scroll-container {
+            max-height: 600px; /* Example height, adjust as needed */
+            overflow-y: auto;
+            padding-right: 10px; /* Space for scrollbar */
+        }
+        .publications-scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .publications-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #4b5563; /* gray-600 */
+            border-radius: 4px;
+        }
+        .publications-scroll-container::-webkit-scrollbar-track {
+            background-color: #1f2937; /* gray-800 */
+        }
+
+        /* Light Mode Styles - Applied when html has class="light-mode" */
+        html.light-mode body {
+            background-color: #f9fafb; /* gray-50 */
+            color: #1f2937; /* gray-800 */
+        }
+        html.light-mode header {
+            background-color: #ffffff; /* white */
+        }
+        html.light-mode .nav-link {
+            color: #4b5563; /* gray-600 */
+        }
+        html.light-mode .nav-link:hover {
+            color: #3b82f6; /* blue-600 */
+        }
+        html.light-mode #mobile-menu {
+            background-color: #ffffff; /* white */
+        }
+        html.light-mode #mobile-menu a {
+            color: #1f2937; /* gray-800 */
+            border-color: #e5e7eb; /* gray-200 */
+        }
+        html.light-mode #mobile-menu-button {
+            color: #4b5563; /* gray-600 */
+        }
+        html.light-mode #about {
+            background: linear-gradient(to right, #e0f2fe, #eef2ff); /* blue-50 to indigo-50 */
+        }
+        html.light-mode #about h1, html.light-mode #about h2, html.light-mode #about p {
+            color: #1f2937; /* gray-800 */
+        }
+        html.light-mode #about h1 .gradient-text {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        html.light-mode #about .section-title:after {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        }
+        html.light-mode #about .bg-gray-800 { /* Research interest cards */
+            background-color: #eff6ff; /* blue-50 */
+            border-color: #3b82f6; /* blue-500 */
+        }
+        html.light-mode #about .bg-gray-800 h4 {
+            color: #1f2937; /* gray-800 */
+        }
+        html.light-mode #about .bg-gray-800 p {
+            color: #4b5563; /* gray-600 */
+        }
+
+        html.light-mode #news-photos {
+            background-color: #ffffff; /* white */
+        }
+        html.light-mode #news-photos .bg-gray-800 { /* News items */
+            background-color: #f9fafb; /* gray-50 */
+        }
+        html.light-mode #news-photos .news-item-line {
+            color: #4b5563; /* gray-600 */
+        }
+        html.light-mode #news-photos .news-item-line .text-blue-400 {
+            color: #3b82f6; /* blue-600 */
+        }
+        html.light-mode .news-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #9ca3af; /* gray-400 */
+        }
+        html.light-mode .news-scroll-container::-webkit-scrollbar-track {
+            background-color: #e5e7eb; /* gray-200 */
+        }
+
+        html.light-mode #experience {
+            background-color: #f9fafb; /* gray-50 */
+        }
+        html.light-mode #experience .timeline:before {
+            background-color: #e5e7eb; /* gray-200 */
+        }
+        html.light-mode #experience .bg-gray-700 { /* Experience items */
+            background-color: #ffffff; /* white */
+        }
+        html.light-mode #experience .bg-gray-700 h3 {
+            color: #1f2937; /* gray-800 */
+        }
+        html.light-mode #experience .bg-gray-700 span,
+        html.light-mode #experience .bg-gray-700 a,
+        html.light-mode #experience .bg-gray-700 p {
+            color: #4b5563; /* gray-600 */
+        }
+        html.light-mode #experience .bg-gray-700 a:hover {
+            color: #3b82f6; /* blue-600 */
+        }
+        html.light-mode #experience .bg-gray-700 .text-blue-400 {
+            color: #3b82f6; /* blue-600 */
+        }
+
+        html.light-mode #publications {
+            background-color: #ffffff; /* white */
+        }
+        html.light-mode #publications .bg-gray-800 { /* Publication items */
+            background-color: #f9fafb; /* gray-50 */
+        }
+        html.light-mode #publications .bg-gray-800 h3 {
+            color: #1f2937; /* gray-800 */
+        }
+        html.light-mode #publications .bg-gray-800 span,
+        html.light-mode #publications .bg-gray-800 p,
+        html.light-mode #publications .bg-gray-800 a {
+            color: #4b5563; /* gray-600 */
+        }
+        html.light-mode #publications .bg-gray-800 a:hover {
+            color: #3b82f6; /* blue-600 */
+        }
+        html.light-mode #publications .bg-gray-800 .text-blue-400 {
+            color: #3b82f6; /* blue-600 */
+        }
+        html.light-mode .publications-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #9ca3af; /* gray-400 */
+        }
+        html.light-mode .publications-scroll-container::-webkit-scrollbar-track {
+            background-color: #e5e7eb; /* gray-200 */
+        }
+
+        html.light-mode #contact {
+            background-color: #1f2937; /* gray-800 - keep dark for contrast */
+            color: #d1d5db; /* gray-300 */
+        }
+        html.light-mode #contact h2, html.light-mode #contact h3 {
+            color: #ffffff; /* white */
+        }
+        html.light-mode #contact .text-blue-400 {
+            color: #60a5fa; /* blue-400 */
+        }
+        html.light-mode #contact a {
+            color: #93c5fd; /* blue-300 */
+        }
+        html.light-mode #contact a:hover {
+            color: #bfdbfe; /* blue-200 */
+        }
+        html.light-mode #contact .bg-gray-800 {
+            background-color: #374151; /* gray-700 */
+        }
+        html.light-mode #contact .bg-gray-800:hover {
+            background-color: #4b5563; /* gray-600 */
+        }
 
 
-		<!-- Scripts -->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	</body>
+        html.light-mode footer {
+            background-color: #374151; /* gray-700 */
+            color: #d1d5db; /* gray-300 */
+        }
+        html.light-mode footer .border-gray-700 {
+            border-color: #4b5563; /* gray-600 */
+        }
+        html.light-mode footer h3 {
+            color: #ffffff; /* white */
+        }
+        html.light-mode footer .bg-zinc-800 {
+            background-color: #4b5563; /* gray-600 */
+        }
+        html.light-mode footer .bg-zinc-800 p {
+            color: #e5e7eb; /* gray-200 */
+        }
+        html.light-mode footer .bg-zinc-800 .text-blue-300 {
+            color: #93c5fd; /* blue-300 */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-800 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">Amin Shabani</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#news-photos" class="nav-link">News & Photos</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle-button" class="text-gray-400 hover:text-white focus:outline-none transition-colors">
+                    <i class="fas fa-sun text-xl" id="theme-icon"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-400 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-2 px-4 shadow-md">
+            <a href="#about" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">About</a>
+            <a href="#experience" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Experience</a>
+            <a href="#publications" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Publications</a>
+            <a href="#news-photos" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">News & Photos</a>
+            <a href="#contact" class="block py-2 rounded-md px-2 hover:bg-gray-700 text-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section & Research Interests (Combined) -->
+    <section id="about" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-indigo-950">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Mohammad Amin <span class="gradient-text">Shabani</span></h1>
+                <!-- Updated title for graduated status -->
+                <h2 class="text-xl md:text-2xl text-gray-300 mb-6">ML Researcher at RBC Borealis</h2>
+                <p class="text-lg text-gray-300 mb-6">Machine Learning Researcher with expertise in Generative Models, Time Series Forecasting, and Large Language Models.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="mailto:aminshabaany@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                        <i class="fas fa-envelope mr-2"></i> Contact Me
+                    </a>
+                    <a href="#publications" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                        <i class="fas fa-scroll mr-2"></i> Publications
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <!-- Placeholder for profile image -->
+                    <img src="images/profpic.jpeg" class="rounded mx-auto" style="width:100%;height:auto;" alt="amin shabani"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Interests (Moved inside About section) -->
+        <div class="container mx-auto px-4 mt-16">
+            <h3 class="text-2xl font-bold mb-8 text-gray-100">Research Interests</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
+                    <div class="text-blue-600 mb-3">
+                        <i class="fas fa-magic text-3xl"></i> <!-- Icon for Generative Models -->
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Generative Models</h4>
+                    <p class="text-gray-300">Exploring advanced generative models, including diffusion models, for diverse data synthesis and content creation.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-indigo-500 hover:shadow-lg transition-shadow">
+                    <div class="text-indigo-600 mb-3">
+                        <i class="fas fa-chart-line text-3xl"></i> <!-- Icon for Time Series Forecasting -->
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Time Series Forecasting</h4>
+                    <p class="text-gray-300">Developing robust and accurate models for predicting future data points in various time-dependent sequences.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-purple-500 hover:shadow-lg transition-shadow">
+                    <div class="text-purple-600 mb-3">
+                        <i class="fas fa-comments text-3xl"></i> <!-- Icon for Large Language Models -->
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Large Language Models</h4>
+                    <p class="text-gray-300">Researching the capabilities and applications of large language models for natural language understanding and generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Photos Section (Combined and moved up) -->
+    <section id="news-photos" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- News Section -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8 section-title text-white">News</h2>
+                <div class="news-scroll-container space-y-4 pr-4"> <!-- Added pr-4 for scrollbar space -->
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">Apr 2024</span>
+                            Joined RBC Borealis as a Machine Learning Researcher. <span class="text-red-400 font-bold">(new)</span>
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">March 2024</span>
+                            Paper "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation" accepted at CVPR 2024. <span class="text-red-400 font-bold">(new)</span>
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">January 2024</span>
+                            Gave a talk about my research on diffusion models for layout generation at Samsung AI Center in Toronto.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">September 2023</span>
+                            Paper "PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving" accepted as Spotlight at NeurIPS 2023.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">March 2023</span>
+                            Paper "HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising" accepted at CVPR 2023.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">January 2023</span>
+                            Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting" accepted at ICLR 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photos Section (Carousel) -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8 section-title text-white">Photos</h2>
+                <div class="carousel-container">
+                    <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo">
+                    <div id="photo-title" class="photo-title"></div> <!-- Added div for photo title -->
+                    <button id="prev-button" class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-button" class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                    <div id="carousel-dots" class="carousel-dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title text-white">Work Experience</h2>
+            <div class="relative pl-8 timeline">
+                <!-- RBC Borealis (Current Role) -->
+                <div class="mb-10 relative timeline-item">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold text-white">Machine Learning Researcher</h3>
+                            <span class="text-blue-400 font-medium">Apr 2024 - Present</span>
+                        </div>
+                        <div class="flex items-center text-gray-300 mb-3">
+                            <i class="fas fa-building mr-2"></i>
+                            <a href="https://rbcborealis.com/" target="_blank" class="hover:text-blue-400 transition-colors">RBC Borealis</a>
+                        </div>
+                        <p class="text-gray-300">Contributing to research and development of machine learning models for real-world applications in finance.</p>
+                    </div>
+                </div>
+                
+                <!-- Adobe -->
+                <div class="mb-10 relative timeline-item">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold text-white">Research Scientist/Engineer Intern</h3>
+                            <span class="text-blue-400 font-medium">Jun 2023 - Nov 2023</span>
+                        </div>
+                        <div class="flex items-center text-gray-300 mb-3">
+                            <i class="fas fa-building mr-2"></i>
+                            <a href="https://www.adobe.com/ca/" target="_blank" class="hover:text-blue-400 transition-colors">Adobe</a>
+                        </div>
+                        <p class="text-gray-300">Worked on a new method for automatically generating layout designs. Published at CVPR 2024.</p>
+                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html" target="_blank" class="inline-block mt-3 text-blue-400 hover:underline transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Borealis AI -->
+                <div class="mb-10 relative timeline-item">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold text-white">Machine Learning Research Intern</h3>
+                            <span class="text-blue-400 font-medium">Jan 2022 - May 2022</span>
+                        </div>
+                        <div class="flex items-center text-gray-300 mb-3">
+                            <i class="fas fa-building mr-2"></i>
+                            <a href="https://www.borealisai.com/en/" target="_blank" class="hover:text-blue-400 transition-colors">Borealis AI (RBC Borealis)</a>
+                        </div>
+                        <p class="text-gray-300">Worked on Iterative Multi-scale Refining Transformers for Time Series Forecasting. Published at ICLR 2023.</p>
+                        <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank" class="inline-block mt-3 text-blue-400 hover:underline transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Faraadid -->
+                <div class="relative timeline-item">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-semibold text-white">Research and Development Engineer</h3>
+                            <span class="text-blue-400 font-medium">Feb 2017 - Aug 2017</span>
+                        </div>
+                        <div class="flex items-center text-gray-300 mb-3">
+                            <i class="fas fa-building mr-2"></i>
+                            <a href="http://faraadid.com/VisitorPages/default.aspx?itemid=3" target="_blank" class="hover:text-blue-400 transition-colors">Faraadid Company</a>
+                        </div>
+                        <p class="text-gray-300">Worked on finding online methods for object detection, considering the trade-off between speed and accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title text-white">Publications</h2>
+            <div class="publications-scroll-container space-y-6">
+                <!-- CVPR 2024 -->
+                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex items-center space-x-4">
+                    <img src="images/vlc.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <div>
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-white">Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation</h3>
+                            <span class="text-blue-400 font-medium md:ml-4">CVPR 2024</span>
+                        </div>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan Zhao, Jimei Yang, Yasutaka Furukawa</p>
+                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- NeurIPS 2023 -->
+                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex items-center space-x-4">
+                    <img src="images/jigsawplan.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <div>
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-white">PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving</h3>
+                            <span class="text-blue-400 font-medium md:ml-4">NeurIPS 2023 (Spotlight)</span>
+                        </div>
+                        <p class="text-gray-300 mb-3">Sepidehsadat Hosseini, <strong>Amin Shabani</strong>, Yasutaka Furukawa</p>
+                        <a href="https://arxiv.org/abs/2211.13785" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- CVPR 2023 -->
+                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex items-center space-x-4">
+                    <img src="images/housediffusion.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <div>
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-white">HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising</h3>
+                            <span class="text-blue-400 font-medium md:ml-4">CVPR 2023</span>
+                        </div>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Sepidehsadat Hosseini, Yasutaka Furukawa</p>
+                        <a href="https://aminshabani.github.io/housediffusion" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ICLR 2023 -->
+                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex items-center space-x-4">
+                    <img src="images/scaleformer.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <div>
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-white">Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting</h3>
+                            <span class="text-blue-400 font-medium md:ml-4">ICLR 2023</span>
+                        </div>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan Sylvain</p>
+                        <a href="https://arxiv.org/abs/2206.04038" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- More publications button -->
+            <div class="text-center mt-8">
+                <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors shadow-md">
+                    View All Publications <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-900 text-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title text-white">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-4 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:aminshabaany@gmail.com" class="text-blue-300 hover:text-blue-200 transition-colors">aminshabaany@gmail.com</a>
+                            </div>
+                        </div>
+                        <!-- <div class="flex items-start">
+                            <i class="fas fa-globe mt-1 mr-4 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Website</p>
+                                <a href="https://aminshabani.github.io" target="_blank" class="text-blue-300 hover:text-blue-200 transition-colors">aminshabani.github.io</a>
+                            </div>
+                        </div> -->
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Location</p>
+                                <p>Vancouver, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Connect With Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-linkedin-in text-xl text-blue-400"></i>
+                        </a>
+                        <a href="https://github.com/aminshabani" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-github text-xl text-blue-400"></i>
+                        </a>
+                        <a href="https://twitter.com/amin_shabani" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-twitter text-xl text-blue-400"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                            <i class="fas fa-graduation-cap text-xl text-blue-400" title="Google Scholar"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>
+                &copy; 2024 Mohammad Amin Shabani. Created with <span class="text-blue-400 font-semibold">Deepsite</span> &amp; <span class="text-blue-400 font-semibold">Gemini</span>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Image Pop-up Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
+        <div class="relative bg-gray-800 p-4 rounded-lg shadow-xl max-w-3xl max-h-[90vh] overflow-hidden">
+            <button id="close-image-modal" class="absolute top-2 right-2 text-white text-3xl font-bold leading-none hover:text-gray-300 transition-colors">&times;</button>
+            <img id="modal-image" src="" alt="Enlarged Publication Image" class="max-w-full max-h-full object-contain rounded-md">
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle logic
+        const themeToggleButton = document.getElementById('theme-toggle-button');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement; // This refers to the <html> tag
+
+        // Function to set the theme
+        function setTheme(theme) {
+            if (theme === 'light') {
+                htmlElement.classList.add('light-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                htmlElement.classList.remove('light-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else {
+                // Check system preference
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    setTheme('light');
+                } else {
+                    setTheme('dark'); // Default to dark if no preference or system is dark
+                }
+            }
+        });
+
+        // Toggle theme on button click
+        themeToggleButton.addEventListener('click', () => {
+            const currentTheme = htmlElement.classList.contains('light-mode') ? 'light' : 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Highlight active section in navigation and show/hide back-to-top button
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                // Adjust offset to trigger active state a bit before the section fully enters view
+                if (pageYOffset >= sectionTop - 300) { 
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-section'); // Remove custom class
+                link.classList.remove('text-blue-600'); // Remove Tailwind class
+                // Ensure active state for nav links considers the light/dark theme color
+                if (htmlElement.classList.contains('light-mode')) {
+                     link.style.color = ''; // Reset inline style
+                } else {
+                     link.style.color = ''; // Reset inline style
+                }
+
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active-section'); // Add custom class
+                    link.classList.add('text-blue-600'); // Add Tailwind class
+                }
+            });
+
+            // Show/hide back to top button
+            if (window.pageYOffset > 300) { // Show button after scrolling 300px
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+
+        // Scroll to top when back-to-top button is clicked
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Photo Carousel Logic
+        const images = [
+            { src: "assets/photos/group-2023-cvpr.jpg", title: "CVPR 2023 Group Photo" },
+            { src: "assets/photos/group-2022-sfu.jpg", title: "SFU Lab Group Photo 2022" },
+        ];
+        let currentImageIndex = 0;
+        const carouselImage = document.getElementById('carousel-image');
+        const photoTitleElement = document.getElementById('photo-title'); // Get the new title element
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const carouselDotsContainer = document.getElementById('carousel-dots');
+        let autoSlideInterval;
+
+        function showImage(index) {
+            // Ensure index wraps around
+            currentImageIndex = (index + images.length) % images.length;
+            carouselImage.src = images[currentImageIndex].src;
+            photoTitleElement.textContent = images[currentImageIndex].title; // Set the title text
+            updateDots();
+        }
+
+        function nextImage() {
+            showImage(currentImageIndex + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImageIndex - 1);
+        }
+
+        function createDots() {
+            carouselDotsContainer.innerHTML = ''; // Clear existing dots
+            images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => {
+                    showImage(index);
+                    resetAutoSlide();
+                });
+                carouselDotsContainer.appendChild(dot);
+            });
+            updateDots();
+        }
+
+        function updateDots() {
+            const dots = carouselDotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === currentImageIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextImage, 5000); // Change image every 5 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Event listeners for navigation buttons
+        prevButton.addEventListener('click', () => {
+            prevImage();
+            resetAutoSlide();
+        });
+        nextButton.addEventListener('click', () => {
+            nextImage();
+            resetAutoSlide();
+        });
+
+        // Initialize carousel on page load
+        window.addEventListener('load', () => {
+            if (images.length > 0) {
+                showImage(currentImageIndex);
+                createDots();
+                startAutoSlide();
+            }
+        });
+
+        // Image Pop-up Modal Logic
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeImageModalButton = document.getElementById('close-image-modal');
+        // Select all images within publication-item divs
+        const publicationImages = document.querySelectorAll('#publications .publication-item img');
+
+        // Function to open the modal
+        function openImageModal(src) {
+            modalImage.src = src;
+            imageModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Function to close the modal
+        function closeImageModal() {
+            imageModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore background scrolling
+        }
+
+        // Event listener for closing the modal via the close button
+        closeImageModalButton.addEventListener('click', closeImageModal);
+
+        // Event listener for closing the modal by clicking on the overlay (outside the image)
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) { // Check if the click was directly on the modal background
+                closeImageModal();
+            }
+        });
+
+        // Add click listeners to publication images to open the modal
+        publicationImages.forEach(img => {
+            img.addEventListener('click', () => {
+                openImageModal(img.src);
+            });
+        });
+    </script>
+</body>
 </html>
