@@ -293,6 +293,26 @@
             color: #4b5563; /* gray-600 */
         }
 
+        /* Add this inside the existing light mode styles section */
+        html.light-mode #education {
+            background-color: #f9fafb; /* gray-50 */
+        }
+        html.light-mode #education h2.section-title {
+            color: #1f2937; /* Dark text for headers */
+        }
+        html.light-mode #education .section-title:after {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        }
+        html.light-mode #education .bg-gray-700 {
+            background-color: #ffffff; /* white */
+        }
+        html.light-mode #education .bg-gray-700 h3 {
+            color: #1f2937; /* gray-800 */
+        }
+        html.light-mode #education .bg-gray-700 p {
+            color: #4b5563; /* gray-600 */
+        }
+
         html.light-mode #news-photos {
             background-color: #ffffff; /* white */
         }
@@ -443,6 +463,7 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#news-photos" class="nav-link">News & Photos</a>
+                <a href="#education" class="nav-link">Education</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#publications" class="nav-link">Publications</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -459,9 +480,10 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-2 px-4 shadow-md">
             <a href="#about" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">About</a>
+            <a href="#news-photos" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">News & Photos</a>
+            <a href="#education" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Education</a>
             <a href="#experience" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Experience</a>
             <a href="#publications" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Publications</a>
-            <a href="#news-photos" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">News & Photos</a>
             <a href="#contact" class="block py-2 rounded-md px-2 hover:bg-gray-700 text-gray-200">Contact</a>
         </div>
     </header>
@@ -575,6 +597,44 @@
                     <button id="prev-button" class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                     <button id="next-button" class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
                     <div id="carousel-dots" class="carousel-dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-16 bg-gray-800">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title text-white">Education</h2>
+            <div class="space-y-6">
+                <!-- SFU -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-white">Simon Fraser University</h3>
+                        <span class="text-blue-400 font-medium">2019 - 2025</span>
+                    </div>
+                    <p class="text-gray-300 font-medium">Ph.D. (Doctor of Philosophy)</p>
+                    <p class="text-gray-400">Computer Science</p>
+                </div>
+
+                <!-- Seoul National University -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-white">Seoul National University</h3>
+                        <span class="text-blue-400 font-medium">2017 - 2019</span>
+                    </div>
+                    <p class="text-gray-300 font-medium">M.Sc. (Master of Science)</p>
+                    <p class="text-gray-400">Computer Engineering</p>
+                </div>
+
+                <!-- Sharif University -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-white">Sharif University of Technology</h3>
+                        <span class="text-blue-400 font-medium">2012 - 2017</span>
+                    </div>
+                    <p class="text-gray-300 font-medium">B.Sc. (Bachelor of Science)</p>
+                    <p class="text-gray-400">Computer Science</p>
                 </div>
             </div>
         </div>
