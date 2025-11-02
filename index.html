@@ -281,6 +281,31 @@
         html.light-mode #about .section-title:after {
             background: linear-gradient(90deg, #1e3a8a, #3b82f6);
         }
+        /* CSS update for Download CV button light mode */
+        html.light-mode #about .btn-outline {
+            color: #2563eb; /* blue-600 text */
+            border-color: #2563eb; /* blue-600 border */
+        }
+        html.light-mode #about .btn-outline:hover {
+            background-color: #eff6ff; /* blue-50 bg */
+        }
+        /* CSS update for Contact Me button light mode */
+        html.light-mode #about .btn-primary {
+            background-color: #2563eb; /* blue-600 */
+            color: #ffffff; /* white */
+        }
+        html.light-mode #about .btn-primary:hover {
+            background-color: #1d4ed8; /* blue-700 */
+        }
+        /* Ensure the other pub button maintains its style */
+        html.light-mode #about a[href="#publications"] {
+            color: #2563eb; /* blue-600 text */
+            border-color: #2563eb; /* blue-600 border */
+        }
+        html.light-mode #about a[href="#publications"]:hover {
+            background-color: #eff6ff; /* blue-50 bg */
+        }
+        
         html.light-mode #about .bg-gray-800 { /* Research interest cards */
             background-color: #eff6ff; /* blue-50 */
             border-color: #3b82f6; /* blue-500 */
@@ -332,6 +357,18 @@
         html.light-mode #news-photos .news-item-line .text-blue-400 {
             color: #3b82f6; /* blue-600 */
         }
+        html.light-mode #news-photos .news-item-line .text-red-400 {
+            color: #ef4444; /* red-500 */
+        }
+        /* Specific light mode for links inside news items */
+        html.light-mode #news-photos .news-item-line a {
+            color: #3b82f6; /* blue-600 */
+        }
+        html.light-mode #news-photos .news-item-line a:hover {
+            color: #1d4ed8; /* blue-700 */
+            text-decoration: underline;
+        }
+
         html.light-mode .news-scroll-container::-webkit-scrollbar-thumb {
             background-color: #9ca3af; /* gray-400 */
         }
@@ -495,22 +532,23 @@
                 <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white"> Amin <span class="gradient-text">Shabani</span></h1>
                 <h2 class="text-xl md:text-2xl text-gray-300 mb-6">ML Researcher at RBC Borealis</h2>
                 <p class="text-lg text-gray-300 mb-6">
-                <p class="text-lg text-gray-300 mb-6">
                     I received my Ph.D. in Computer Science from Simon Fraser University (SFU) under the supervision of <a href="https://yasu-furukawa.github.io/" target="_blank" class="text-blue-400 hover:underline">Prof. Yasutaka Furukawa</a>, and my M.Sc. from Seoul National University (SNU) under <a href="https://cv.snu.ac.kr/" target="_blank" class="text-blue-400 hover:underline">Prof. Kyoung Mu Lee</a>. 
                 </p>
+                <!-- Updated Button Group -->
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="mailto:aminshabaany@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                    <a href="mailto:aminshabaany@gmail.com" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
                         <i class="fas fa-envelope mr-2"></i> Contact Me
                     </a>
-                    <a href="#publications" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
-                        <i class="fas fa-scroll mr-2"></i> Publications
+                    <!-- Added Download CV Button -->
+                    <a href="CV-AminShabani.pdf" download="CV-AminShabani.pdf" class="btn-outline border border-blue-600 text-blue-400 hover:bg-gray-700 px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                        <i class="fas fa-download mr-2"></i> Download CV
                     </a>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
                     <!-- Placeholder for profile image -->
-                    <img src="images/profpic.jpeg" class="rounded mx-auto" style="width:100%;height:auto;" alt="amin shabani"/>
+                    <img src="images/profpic.jpeg" class="rounded mx-auto" style="width:100%;height:auto;" alt="amin shabani" onerror="this.onerror=null; this.src='https://placehold.co/320x320/374151/E5E7EB?text=Amin+Shabani';">
                 </div>
             </div>
         </div>
@@ -542,16 +580,39 @@
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title text-white">News</h2>
                 <div class="news-scroll-container space-y-4 pr-4"> <!-- Added pr-4 for scrollbar space -->
+                    <!-- NEW ITEM 1 -->
                     <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
-                            <span class="text-blue-400 font-medium mr-2">Apr 2024</span>
-                            Joined RBC Borealis as a Machine Learning Researcher. <span class="text-red-400 font-bold">(new)</span>
+                            <span class="text-blue-400 font-medium mr-2">October 2025</span>
+                            <b>1st Place Winner</b>, Financial Agentic Retrieval Grand Challenge (<a href="https://ai4f.org/2025-challenge" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">FinAgentBench</a>), AI for Finance Symposium ’25. <span class="text-red-400 font-bold">(new)</span>
+                        </p>
+                    </div>
+                    <!-- NEW ITEM 2 -->
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">September 2025</span>
+                            New arXiv preprint: "<a href="https://arxiv.org/pdf/2510.13329" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Embedding-based Context-aware Reranker</a>". <span class="text-red-400 font-bold">(new)</span>
+                        </p>
+                    </div>
+                    <!-- NEW ITEM 3 -->
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">September 2025</span>
+                            Paper "<a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">FACTS: Table Summarization via Offline Template Generation wtih Agentic Workflows</a>" accepted at NeurIPS 2025 Workshop on Generative AI in Finance. <span class="text-red-400 font-bold">(new)</span>
+                        </p>
+                    </div>
+
+                    <!-- Existing Items -->
+                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">April 2024</span>
+                            Joined RBC Borealis as a Machine Learning Researcher.
                         </p>
                     </div>
                     <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">March 2024</span>
-                            Paper "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation" accepted at CVPR 2024. <span class="text-red-400 font-bold">(new)</span>
+                            Paper "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation" accepted at CVPR 2024.
                         </p>
                     </div>
                     <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
@@ -585,7 +646,7 @@
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title text-white">Photos</h2>
                 <div class="carousel-container">
-                    <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo">
+                    <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo" onerror="this.onerror=null; this.src='https://placehold.co/600x400/374151/E5E7EB?text=Photo+Not+Available';">
                     <div id="photo-title" class="photo-title"></div> <!-- Added div for photo title -->
                     <button id="prev-button" class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                     <button id="next-button" class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
@@ -712,9 +773,42 @@
         <div class="container mx-auto max-w-5xl px-4">
             <h2 class="text-3xl font-bold mb-8 section-title text-white">Publications</h2>
             <div class="publications-scroll-container space-y-6">
+                <!-- ArXiv Preprint: Reranker -->
+                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/ebcar.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-white">Embedding-based Context-aware Reranker</h3>
+                            <span class="text-blue-400 font-medium md:ml-4">ArXiv Preprint, 2025</span>
+                        </div>
+                        <p class="text-gray-300 mb-3">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://arxiv.org/pdf/2510.13329" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                                <i class="fas fa-file-pdf mr-1"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- NeurIPS Workshop: FACTS -->
+                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/facts.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-white">FACTS: Table Summarization via Offline Template Generation wtih Agentic Workflows</h3>
+                            <span class="text-blue-400 font-medium md:ml-4">NeurIPS Workshop, 2025</span>
+                        </div>
+                        <p class="text-gray-300 mb-3">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                                <i class="fas fa-file-pdf mr-1"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- CVPR 2024 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/vlc.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/vlc.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation</h3>
@@ -734,7 +828,7 @@
                 
                 <!-- NeurIPS 2023 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/jigsawplan.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/jigsawplan.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Puzzle';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving</h3>
@@ -760,7 +854,7 @@
                 
                 <!-- CVPR 2023 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/housediffusion.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/housediffusion.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=House';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising</h3>
@@ -786,7 +880,7 @@
                 
                 <!-- ICLR 2023 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/scaleformer.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/scaleformer.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Scale';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting</h3>
@@ -809,7 +903,7 @@
 
                 <!-- ACCV 2022 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/vectorizing_building.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/vectorizing_building.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Vector';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Vectorizing Building Blueprints</h3>
@@ -832,7 +926,7 @@
 
                 <!-- ICCV 2021 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/extreme_sfm.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/extreme_sfm.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=SfM';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps</h3>
@@ -855,7 +949,7 @@
 
                 <!-- BMVC 2017 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/lvm.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/lvm.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=LVM';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Local Visual Microphones: Improved Sound Extraction from Silent Video</h3>
@@ -875,7 +969,7 @@
 
                 <!-- 2019 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/lpkd.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/lpkd.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=LPKD';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Layer-wise Progressive Knowledge Distillation</h3>
@@ -892,7 +986,7 @@
 
                 <!-- arXiv preprint -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/5cycle.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/5cycle.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=5-cycle';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">On decomposing complete tripartite graphs into 5-cycles</h3>
@@ -909,7 +1003,7 @@
 
                 <!-- Graphs and Combinatorics, 2018 -->
                 <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/uklc.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105">
+                    <img src="images/uklc.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=UKLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">On Uniquely k-List Colorable Planar Graphs, Graphs on Surfaces, and Regular Graphs</h3>
@@ -1123,7 +1217,7 @@
         // Photo Carousel Logic
         const images = [
             { src: "assets/photos/group-2023-cvpr.jpg", title: "CVPR 2023 Group Photo" },
-            { src: "assets/photos/group-2022-sfu.jpg", title: "SFU Lab Group Photo 2022" },
+            { src: "assets.photos/group-2022-sfu.jpg", title: "SFU Lab Group Photo 2022" },
         ];
         let currentImageIndex = 0;
         const carouselImage = document.getElementById('carousel-image');
@@ -1241,3 +1335,4 @@
     </script>
 </body>
 </html>
+
