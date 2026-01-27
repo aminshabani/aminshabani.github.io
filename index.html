@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,488 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Apply Inter font to the body */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            border-radius: 3px;
-        }
-        .publication-item {
-            transition: all 0.3s ease;
-        }
-        .publication-item:hover {
-            transform: translateX(5px);
-        }
-        .nav-link {
-            position: relative;
-            color: #d1d5db; /* Light gray for nav links in dark mode */
-        }
-        .nav-link:hover {
-            color: #ffffff; /* White on hover in dark mode */
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        /* Active nav link style for JavaScript */
-        .nav-link.active-section {
-            color: #3b82f6; /* Blue-600 */
-        }
-        .nav-link.active-section:after {
-            width: 100%;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: #3b82f6;
-            z-index: 1; /* Ensure dot is above the line */
-        }
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: -23px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: #4b5563; /* Darker grey for timeline line in dark mode */
-        }
-        /* Back to top button */
-        #back-to-top {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed position */
-            bottom: 20px; /* Place at the bottom */
-            right: 20px; /* Place at the right */
-            z-index: 99; /* Ensure it's above other content */
-            border: none; /* Remove borders */
-            outline: none; /* Remove outline */
-            background-color: #3b82f6; /* Blue background */
-            color: white; /* White text */
-            cursor: pointer; /* Add a mouse pointer on hover */
-            padding: 15px; /* Some padding */
-            border-radius: 50%; /* Rounded corners */
-            font-size: 18px; /* Increase font size */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-        }
 
-        #back-to-top:hover {
-            background-color: #1e3a8a; /* Darker blue on hover */
-            transform: translateY(-2px); /* Slight lift on hover */
-        }
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Personal website of Amin Shabani, Machine Learning Researcher at RBC Borealis specializing in Generative Models, Time Series Forecasting, and Computer Vision.">
+    <meta name="keywords"
+        content="Amin Shabani, Machine Learning, Research, Computer Vision, Generative Models, Diffusion Models, Time Series Forecasting, RPC Borealis, SFU, Seoul National University, Sharif University">
+    <meta name="author" content="Amin Shabani">
+    <link rel="canonical" href="https://aminshabani.github.io/">
 
-        /* Photo carousel specific styles */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
-            aspect-ratio: 16 / 9; /* Maintain aspect ratio for photos */
-            height: 300px; /* Fixed height for carousel */
-        }
-        .carousel-image {
-            width: 100%;
-            height: 100%; /* Fill the container height */
-            object-fit: cover; /* Cover the area without distortion */
-            display: block;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            border-radius: 0.375rem; /* rounded-md */
-            transition: background-color 0.3s ease;
-        }
-        .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .carousel-button.prev {
-            left: 10px;
-        }
-        .carousel-button.next {
-            right: 10px;
-        }
-        .carousel-dots {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-        }
-        .dot {
-            width: 10px;
-            height: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dot.active {
-            background-color: white;
-        }
-        .photo-title {
-            position: absolute;
-            bottom: 20px; /* Above the dots */
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 8px 15px;
-            text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
-        }
-        .carousel-container:hover .photo-title {
-            opacity: 1;
-        }
+    <!-- Open Graph (OG) Meta Tags -->
+    <meta property="og:title" content="Amin Shabani - Machine Learning Researcher">
+    <meta property="og:description"
+        content="Personal website of Amin Shabani, Machine Learning Researcher at RBC Borealis.">
+    <meta property="og:image" content="https://aminshabani.github.io/images/profpic.jpeg">
+    <meta property="og:url" content="https://aminshabani.github.io/">
+    <meta property="og:type" content="website">
 
-        /* News section fixed height and scrollable */
-        .news-scroll-container {
-            height: 300px; /* Match carousel height */
-            overflow-y: auto;
-            padding-right: 10px; /* Space for scrollbar */
-        }
-        /* Hide scrollbar for aesthetic, but keep functionality */
-        .news-scroll-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        .news-scroll-container::-webkit-scrollbar-thumb {
-            background-color: #4b5563; /* gray-600 */
-            border-radius: 4px;
-        }
-        .news-scroll-container::-webkit-scrollbar-track {
-            background-color: #1f2937; /* gray-800 */
-        }
-        .news-item-line {
-            display: block; /* Ensure it takes full width */
-        }
-
-        /* Publications scrollable container */
-        .publications-scroll-container {
-            max-height: 600px; /* Example height, adjust as needed */
-            overflow-y: auto;
-            padding-right: 10px; /* Space for scrollbar */
-        }
-        .publications-scroll-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        .publications-scroll-container::-webkit-scrollbar-thumb {
-            background-color: #4b5563; /* gray-600 */
-            border-radius: 4px;
-        }
-        .publications-scroll-container::-webkit-scrollbar-track {
-            background-color: #1f2937; /* gray-800 */
-        }
-
-        /* Light Mode Styles - Applied when html has class="light-mode" */
-        html.light-mode body {
-            background-color: #f9fafb; /* gray-50 */
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode header {
-            background-color: #ffffff; /* white */
-        }
-        html.light-mode header .gradient-text { /* Fix header logo color in light mode */
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        html.light-mode .nav-link {
-            color: #4b5563; /* gray-600 */
-        }
-        html.light-mode .nav-link:hover {
-            color: #3b82f6; /* blue-600 */
-        }
-        html.light-mode #mobile-menu {
-            background-color: #ffffff; /* white */
-        }
-        html.light-mode #mobile-menu a {
-            color: #1f2937; /* gray-800 */
-            border-color: #e5e7eb; /* gray-200 */
-        }
-        html.light-mode #mobile-menu-button {
-            color: #4b5563; /* gray-600 */
-        }
-        html.light-mode #theme-toggle-button { /* Change sun/moon icon color in light mode */
-            color: #4b5563; /* gray-600 */
-        }
-        html.light-mode #theme-toggle-button:hover {
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode #about {
-            background: linear-gradient(to right, #e0f2fe, #eef2ff); /* blue-50 to indigo-50 */
-        }
-        /* Updated: Ensure h1, h2, h3, and p tags within #about have dark text in light mode */
-        html.light-mode #about h1,
-        html.light-mode #about h2,
-        html.light-mode #about h3, /* Added h3 here */
-        html.light-mode #about p {
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode #about h1 .gradient-text {
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        html.light-mode #about .section-title:after {
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-        }
-        /* CSS update for Download CV button light mode */
-        html.light-mode #about .btn-outline {
-            color: #2563eb; /* blue-600 text */
-            border-color: #2563eb; /* blue-600 border */
-        }
-        html.light-mode #about .btn-outline:hover {
-            background-color: #eff6ff; /* blue-50 bg */
-        }
-        /* CSS update for Contact Me button light mode */
-        html.light-mode #about .btn-primary {
-            background-color: #2563eb; /* blue-600 */
-            color: #ffffff; /* white */
-        }
-        html.light-mode #about .btn-primary:hover {
-            background-color: #1d4ed8; /* blue-700 */
-        }
-        /* Ensure the other pub button maintains its style */
-        html.light-mode #about a[href="#publications"] {
-            color: #2563eb; /* blue-600 text */
-            border-color: #2563eb; /* blue-600 border */
-        }
-        html.light-mode #about a[href="#publications"]:hover {
-            background-color: #eff6ff; /* blue-50 bg */
-        }
-        
-        html.light-mode #about .bg-gray-800 { /* Research interest cards */
-            background-color: #eff6ff; /* blue-50 */
-            border-color: #3b82f6; /* blue-500 */
-        }
-        /* Updated: Ensure h4 tags within research interest cards have dark text in light mode */
-        html.light-mode #about .bg-gray-800 h4 {
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode #about .bg-gray-800 p {
-            color: #4b5563; /* gray-600 */
-        }
-
-        /* Add this inside the existing light mode styles section */
-        html.light-mode #education {
-            background-color: #f9fafb; /* gray-50 */
-        }
-        html.light-mode #education h2.section-title {
-            color: #1f2937; /* Dark text for headers */
-        }
-        html.light-mode #education .section-title:after {
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-        }
-        html.light-mode #education .bg-gray-700 {
-            background-color: #ffffff; /* white */
-        }
-        html.light-mode #education .bg-gray-700 h3 {
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode #education .bg-gray-700 p {
-            color: #4b5563; /* gray-600 */
-        }
-
-        html.light-mode #news-photos {
-            background-color: #ffffff; /* white */
-        }
-        /* Fix for headers in News and Photos sections */
-        html.light-mode #news-photos h2.section-title {
-            color: #1f2937; /* Dark text for headers */
-        }
-        html.light-mode #news-photos .section-title:after { /* Ensure underline also updates */
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-        }
-        html.light-mode #news-photos .bg-gray-800 { /* News items */
-            background-color: #f9fafb; /* gray-50 */
-        }
-        html.light-mode #news-photos .news-item-line {
-            color: #4b5563; /* gray-600 */
-        }
-        html.light-mode #news-photos .news-item-line .text-blue-400 {
-            color: #3b82f6; /* blue-600 */
-        }
-        html.light-mode #news-photos .news-item-line .text-red-400 {
-            color: #ef4444; /* red-500 */
-        }
-        /* Specific light mode for links inside news items */
-        html.light-mode #news-photos .news-item-line a {
-            color: #3b82f6; /* blue-600 */
-        }
-        html.light-mode #news-photos .news-item-line a:hover {
-            color: #1d4ed8; /* blue-700 */
-            text-decoration: underline;
-        }
-
-        html.light-mode .news-scroll-container::-webkit-scrollbar-thumb {
-            background-color: #9ca3af; /* gray-400 */
-        }
-        html.light-mode .news-scroll-container::-webkit-scrollbar-track {
-            background-color: #e5e7eb; /* gray-200 */
-        }
-
-        html.light-mode #experience {
-            background-color: #f9fafb; /* gray-50 */
-        }
-        /* Fix for headers in Experience section */
-        html.light-mode #experience h2.section-title {
-            color: #1f2937; /* Dark text for headers */
-        }
-        html.light-mode #experience .section-title:after { /* Ensure underline also updates */
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-        }
-        html.light-mode #experience .timeline:before {
-            background-color: #e5e7eb; /* gray-200 */
-        }
-        html.light-mode #experience .bg-gray-700 { /* Experience items */
-            background-color: #ffffff; /* white */
-        }
-        /* Updated: Ensure h3 tags within experience items have dark text in light mode */
-        html.light-mode #experience .bg-gray-700 h3 {
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode #experience .bg-gray-700 span,
-        html.light-mode #experience .bg-gray-700 a,
-        html.light-mode #experience .bg-gray-700 p {
-            color: #4b5563; /* gray-600 */
-        }
-        html.light-mode #experience .bg-gray-700 a:hover {
-            color: #3b82f6; /* blue-600 */
-        }
-        html.light-mode #experience .bg-gray-700 .text-blue-400 {
-            color: #3b82f6; /* blue-600 */
-        }
-
-        html.light-mode #publications {
-            background-color: #ffffff; /* white */
-        }
-        /* Fix for headers in Publications section */
-        html.light-mode #publications h2.section-title {
-            color: #1f2937; /* Dark text for headers */
-        }
-        html.light-mode #publications .section-title:after { /* Ensure underline also updates */
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-        }
-        html.light-mode #publications .bg-gray-800 { /* Publication items */
-            background-color: #f9fafb; /* gray-50 */
-        }
-        /* Updated: Ensure h3 tags within publication items have dark text in light mode */
-        html.light-mode #publications .bg-gray-800 h3 {
-            color: #1f2937; /* gray-800 */
-        }
-        html.light-mode #publications .bg-gray-800 span,
-        html.light-mode #publications .bg-gray-800 p,
-        html.light-mode #publications .bg-gray-800 a {
-            color: #4b5563; /* gray-600 */
-        }
-        html.light-mode #publications .bg-gray-800 a:hover {
-            color: #3b82f6; /* blue-600 */
-        }
-        html.light-mode #publications .bg-gray-800 .text-blue-400 {
-            color: #3b82f6; /* blue-600 */
-        }
-        html.light-mode .publications-scroll-container::-webkit-scrollbar-thumb {
-            background-color: #9ca3af; /* gray-400 */
-        }
-        html.light-mode .publications-scroll-container::-webkit-scrollbar-track {
-            background-color: #e5e7eb; /* gray-200 */
-        }
-
-        html.light-mode #contact {
-            background-color: #1f2937; /* gray-800 - keep dark for contrast */
-            color: #d1d5db; /* gray-300 */
-        }
-        /* Updated: Ensure h2 and h3 tags within contact section have dark text in light mode */
-        html.light-mode #contact h2,
-        html.light-mode #contact h3 {
-            color: #ffffff; /* white */
-        }
-        html.light-mode #contact .text-blue-400 {
-            color: #60a5fa; /* blue-400 */
-        }
-        html.light-mode #contact a {
-            color: #93c5fd; /* blue-300 */
-        }
-        html.light-mode #contact a:hover {
-            color: #bfdbfe; /* blue-200 */
-        }
-        html.light-mode #contact .bg-gray-800 {
-            background-color: #374151; /* gray-700 */
-        }
-        html.light-mode #contact .bg-gray-800:hover {
-            background-color: #4b5563; /* gray-600 */
-        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 
 
-        html.light-mode footer {
-            background-color: #374151; /* gray-700 */
-            color: #d1d5db; /* gray-300 */
-        }
-        html.light-mode footer .border-gray-700 {
-            border-color: #4b5563; /* gray-600 */
-        }
-        /* Updated: Ensure h3 tags within footer have dark text in light mode */
-        html.light-mode footer h3 {
-            color: #ffffff; /* white */
-        }
-        html.light-mode footer .bg-zinc-800 {
-            background-color: #4b5563; /* gray-600 */
-        }
-        html.light-mode footer .bg-zinc-800 p {
-            color: #e5e7eb; /* gray-200 */
-        }
-        html.light-mode footer .bg-zinc-800 .text-blue-300 {
-            color: #93c5fd; /* blue-300 */
-        }
-
-    </style>
+    <!-- Styles moved to css/styles.css -->
 </head>
+
 <body class="bg-gray-900 text-gray-200 font-sans">
     <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 bg-gray-800 shadow-sm">
@@ -506,7 +49,8 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <button id="theme-toggle-button" class="text-gray-400 hover:text-white focus:outline-none transition-colors">
+                <button id="theme-toggle-button"
+                    class="text-gray-400 hover:text-white focus:outline-none transition-colors">
                     <i class="fas fa-sun text-xl" id="theme-icon"></i>
                 </button>
                 <button id="mobile-menu-button" class="md:hidden text-gray-400 focus:outline-none">
@@ -516,11 +60,17 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-2 px-4 shadow-md">
-            <a href="#about" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">About</a>
-            <a href="#news-photos" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">News & Photos</a>
-            <a href="#experience" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Experience</a>
-            <a href="#education" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Education</a>
-            <a href="#publications" class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Publications</a>
+            <a href="#about"
+                class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">About</a>
+            <a href="#news-photos"
+                class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">News &
+                Photos</a>
+            <a href="#experience"
+                class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Experience</a>
+            <a href="#education"
+                class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Education</a>
+            <a href="#publications"
+                class="block py-2 border-b border-gray-700 rounded-md px-2 hover:bg-gray-700 text-gray-200">Publications</a>
             <a href="#contact" class="block py-2 rounded-md px-2 hover:bg-gray-700 text-gray-200">Contact</a>
         </div>
     </header>
@@ -529,26 +79,36 @@
     <section id="about" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-indigo-950">
         <div class="container mx-auto max-w-5xl px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white"> Amin <span class="gradient-text">Shabani</span></h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white"> Amin <span
+                        class="gradient-text">Shabani</span></h1>
                 <h2 class="text-xl md:text-2xl text-gray-300 mb-6">ML Researcher at RBC Borealis</h2>
                 <p class="text-lg text-gray-300 mb-6">
-                    I received my Ph.D. in Computer Science from Simon Fraser University (SFU) under the supervision of <a href="https://yasu-furukawa.github.io/" target="_blank" class="text-blue-400 hover:underline">Prof. Yasutaka Furukawa</a>, and my M.Sc. from Seoul National University (SNU) under <a href="https://cv.snu.ac.kr/" target="_blank" class="text-blue-400 hover:underline">Prof. Kyoung Mu Lee</a>. 
+                    I received my Ph.D. in Computer Science from Simon Fraser University (SFU) under the supervision of
+                    <a href="https://yasu-furukawa.github.io/" target="_blank"
+                        class="text-blue-400 hover:underline">Prof. Yasutaka Furukawa</a>, and my M.Sc. from Seoul
+                    National University (SNU) under <a href="https://cv.snu.ac.kr/" target="_blank"
+                        class="text-blue-400 hover:underline">Prof. Kyoung Mu Lee</a>.
                 </p>
                 <!-- Updated Button Group -->
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="mailto:aminshabaany@gmail.com" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                    <a href="mailto:aminshabaany@gmail.com"
+                        class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
                         <i class="fas fa-envelope mr-2"></i> Contact Me
                     </a>
                     <!-- Added Download CV Button -->
-                    <a href="CV-AminShabani.pdf" download="CV-AminShabani.pdf" class="btn-outline border border-blue-600 text-blue-400 hover:bg-gray-700 px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                    <a href="CV-AminShabani.pdf" download="CV-AminShabani.pdf"
+                        class="btn-outline border border-blue-600 text-blue-400 hover:bg-gray-700 px-6 py-3 rounded-lg flex items-center justify-center transition-colors shadow-md">
                         <i class="fas fa-download mr-2"></i> Download CV
                     </a>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <div
+                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
                     <!-- Placeholder for profile image -->
-                    <img src="images/profpic.jpeg" class="rounded mx-auto" style="width:100%;height:auto;" alt="amin shabani" onerror="this.onerror=null; this.src='https://placehold.co/320x320/374151/E5E7EB?text=Amin+Shabani';">
+                    <img src="images/profpic.jpeg" class="rounded mx-auto" width="320" height="320"
+                        style="width:100%;height:auto;" alt="Amin Shabani Profile Picture"
+                        onerror="this.onerror=null; this.src='https://placehold.co/320x320/374151/E5E7EB?text=Amin+Shabani';">
                 </div>
             </div>
         </div>
@@ -557,18 +117,21 @@
         <div class="container mx-auto max-w-5xl px-4 mt-8">
             <h3 class="text-2xl font-bold mb-6 text-gray-100">Research Interests</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
-                <h4 class="text-lg font-semibold mb-2 text-white">Generative Models</h4>
-                <p class="text-gray-300 text-sm">Exploring advanced generative models, including diffusion models, for diverse data synthesis.</p>
-            </div>
-            <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-500 hover:shadow-lg transition-shadow">
-                <h4 class="text-lg font-semibold mb-2 text-white">Time Series Forecasting</h4>
-                <p class="text-gray-300 text-sm">Developing robust models for predicting future data points in time-dependent sequences.</p>
-            </div>
-            <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-purple-500 hover:shadow-lg transition-shadow">
-                <h4 class="text-lg font-semibold mb-2 text-white">Large Language Models</h4>
-                <p class="text-gray-300 text-sm">Researching capabilities of large language models for NLP tasks.</p>
-            </div>
+                <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-semibold mb-2 text-white">Generative Models</h4>
+                    <p class="text-gray-300 text-sm">Exploring advanced generative models, including diffusion models,
+                        for diverse data synthesis.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-500 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-semibold mb-2 text-white">Time Series Forecasting</h4>
+                    <p class="text-gray-300 text-sm">Developing robust models for predicting future data points in
+                        time-dependent sequences.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-purple-500 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-semibold mb-2 text-white">Large Language Models</h4>
+                    <p class="text-gray-300 text-sm">Researching capabilities of large language models for NLP tasks.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -579,64 +142,87 @@
             <!-- News Section -->
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title text-white">News</h2>
-                <div class="news-scroll-container space-y-4 pr-4"> <!-- Added pr-4 for scrollbar space -->
+                <div class="news-scroll-container space-y-4 pr-4"> <!-- Restored news-scroll-container -->
+                    <!-- NEW ITEM 0 -->
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                        <p class="text-gray-300 news-item-line">
+                            <span class="text-blue-400 font-medium mr-2">January 2026</span>
+                            Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                                rel="noopener noreferrer" class="text-blue-400 hover:underline">Embedding-based
+                                Context-aware Reranker</a>" accepted at ICLR 2026. <span
+                                class="text-red-400 font-bold">(new)</span>
+                        </p>
+                    </div>
                     <!-- NEW ITEM 1 -->
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">October 2025</span>
-                            <b>1st Place Winner</b>, Financial Agentic Retrieval Grand Challenge (<a href="https://ai4f.org/2025-challenge" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">FinAgentBench</a>), AI for Finance Symposium ’25. <span class="text-red-400 font-bold">(new)</span>
+                            <b>1st Place Winner</b>, Financial Agentic Retrieval Grand Challenge (<a
+                                href="https://ai4f.org/2025-challenge" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:underline">FinAgentBench</a>), AI for Finance Symposium ’25.
+                            <span class="text-red-400 font-bold">(new)</span>
                         </p>
                     </div>
                     <!-- NEW ITEM 2 -->
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">September 2025</span>
-                            New arXiv preprint: "<a href="https://arxiv.org/pdf/2510.13329" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Embedding-based Context-aware Reranker</a>". <span class="text-red-400 font-bold">(new)</span>
-                        </p>
-                    </div>
-                    <!-- NEW ITEM 3 -->
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
-                        <p class="text-gray-300 news-item-line">
-                            <span class="text-blue-400 font-medium mr-2">September 2025</span>
-                            Paper "<a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">FACTS: Table Summarization via Offline Template Generation wtih Agentic Workflows</a>" accepted at NeurIPS 2025 Workshop on Generative AI in Finance. <span class="text-red-400 font-bold">(new)</span>
+                            Paper "<a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:underline">FACTS: Table Summarization via Offline Template
+                                Generation wtih Agentic Workflows</a>" accepted at NeurIPS 2025 Workshop on Generative
+                            AI in Finance. <span class="text-red-400 font-bold">(new)</span>
                         </p>
                     </div>
 
                     <!-- Existing Items -->
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">April 2024</span>
                             Joined RBC Borealis as a Machine Learning Researcher.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">March 2024</span>
-                            Paper "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation" accepted at CVPR 2024.
+                            Paper "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout
+                            Generation" accepted at CVPR 2024.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">January 2024</span>
-                            Gave a talk about my research on diffusion models for layout generation at Samsung AI Center in Toronto.
+                            Gave a talk about my research on diffusion models for layout generation at Samsung AI Center
+                            in Toronto.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">September 2023</span>
-                            Paper "PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving" accepted as Spotlight at NeurIPS 2023.
+                            Paper "PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving"
+                            accepted as Spotlight at NeurIPS 2023.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">March 2023</span>
-                            Paper "HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising" accepted at CVPR 2023.
+                            Paper "HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and
+                            Continuous Denoising" accepted at CVPR 2023.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
                         <p class="text-gray-300 news-item-line">
                             <span class="text-blue-400 font-medium mr-2">January 2023</span>
-                            Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting" accepted at ICLR 2023.
+                            Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting"
+                            accepted at ICLR 2023.
                         </p>
                     </div>
                 </div>
@@ -646,7 +232,8 @@
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title text-white">Photos</h2>
                 <div class="carousel-container">
-                    <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo" onerror="this.onerror=null; this.src='https://placehold.co/600x400/374151/E5E7EB?text=Photo+Not+Available';">
+                    <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/374151/E5E7EB?text=Photo+Not+Available';">
                     <div id="photo-title" class="photo-title"></div> <!-- Added div for photo title -->
                     <button id="prev-button" class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                     <button id="next-button" class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
@@ -670,12 +257,14 @@
                         </div>
                         <div class="flex items-center text-gray-300 mb-3">
                             <i class="fas fa-building mr-2"></i>
-                            <a href="https://rbcborealis.com/" target="_blank" class="hover:text-blue-400 transition-colors">RBC Borealis</a>
+                            <a href="https://rbcborealis.com/" target="_blank"
+                                class="hover:text-blue-400 transition-colors">RBC Borealis</a>
                         </div>
-                        <p class="text-gray-300">Contributing to research and development of machine learning models for real-world applications in finance.</p>
+                        <p class="text-gray-300">Contributing to research and development of machine learning models for
+                            real-world applications in finance.</p>
                     </div>
                 </div>
-                
+
                 <!-- Adobe -->
                 <div class="mb-10 relative timeline-item">
                     <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -685,15 +274,18 @@
                         </div>
                         <div class="flex items-center text-gray-300 mb-3">
                             <i class="fas fa-building mr-2"></i>
-                            <a href="https://www.adobe.com/ca/" target="_blank" class="hover:text-blue-400 transition-colors">Adobe</a>
+                            <a href="https://www.adobe.com/ca/" target="_blank"
+                                class="hover:text-blue-400 transition-colors">Adobe</a>
                         </div>
-                        <p class="text-gray-300">Worked on a new method for automatically generating layout designs. Published at CVPR 2024.</p>
-                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html" target="_blank" class="inline-block mt-3 text-blue-400 hover:underline transition-colors">
+                        <p class="text-gray-300">Worked on a new method for automatically generating layout designs.
+                            Published at CVPR 2024.</p>
+                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html"
+                            target="_blank" class="inline-block mt-3 text-blue-400 hover:underline transition-colors">
                             <i class="fas fa-external-link-alt mr-1"></i> View Publication
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Borealis AI -->
                 <div class="mb-10 relative timeline-item">
                     <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -703,15 +295,18 @@
                         </div>
                         <div class="flex items-center text-gray-300 mb-3">
                             <i class="fas fa-building mr-2"></i>
-                            <a href="https://www.borealisai.com/en/" target="_blank" class="hover:text-blue-400 transition-colors">Borealis AI (RBC Borealis)</a>
+                            <a href="https://www.borealisai.com/en/" target="_blank"
+                                class="hover:text-blue-400 transition-colors">Borealis AI (RBC Borealis)</a>
                         </div>
-                        <p class="text-gray-300">Worked on Iterative Multi-scale Refining Transformers for Time Series Forecasting. Published at ICLR 2023.</p>
-                        <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank" class="inline-block mt-3 text-blue-400 hover:underline transition-colors">
+                        <p class="text-gray-300">Worked on Iterative Multi-scale Refining Transformers for Time Series
+                            Forecasting. Published at ICLR 2023.</p>
+                        <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank"
+                            class="inline-block mt-3 text-blue-400 hover:underline transition-colors">
                             <i class="fas fa-external-link-alt mr-1"></i> View Publication
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Faraadid -->
                 <div class="relative timeline-item">
                     <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -721,9 +316,11 @@
                         </div>
                         <div class="flex items-center text-gray-300 mb-3">
                             <i class="fas fa-building mr-2"></i>
-                            <a href="http://faraadid.com/VisitorPages/default.aspx?itemid=3" target="_blank" class="hover:text-blue-400 transition-colors">Faraadid Company</a>
+                            <a href="http://faraadid.com/VisitorPages/default.aspx?itemid=3" target="_blank"
+                                class="hover:text-blue-400 transition-colors">Faraadid Company</a>
                         </div>
-                        <p class="text-gray-300">Worked on finding online methods for object detection, considering the trade-off between speed and accuracy.</p>
+                        <p class="text-gray-300">Worked on finding online methods for object detection, considering the
+                            trade-off between speed and accuracy.</p>
                     </div>
                 </div>
             </div>
@@ -772,71 +369,94 @@
     <section id="publications" class="py-16 bg-gray-900">
         <div class="container mx-auto max-w-5xl px-4">
             <h2 class="text-3xl font-bold mb-8 section-title text-white">Publications</h2>
-            <div class="publications-scroll-container space-y-6">
+            <div class="publications-scroll-container space-y-6"> <!-- Restored publications-scroll-container -->
                 <!-- ArXiv Preprint: Reranker -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/ebcar.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/ebcar.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Embedding-based Context-aware Reranker</h3>
-                            <span class="text-blue-400 font-medium md:ml-4">ArXiv Preprint, 2025</span>
+                            <span class="text-blue-400 font-medium md:ml-4">ICLR 2026</span>
                         </div>
                         <p class="text-gray-300 mb-3">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2510.13329" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- NeurIPS Workshop: FACTS -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/facts.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/facts.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">FACTS: Table Summarization via Offline Template Generation wtih Agentic Workflows</h3>
+                            <h3 class="text-xl font-semibold text-white">FACTS: Table Summarization via Offline Template
+                                Generation wtih Agentic Workflows</h3>
                             <span class="text-blue-400 font-medium md:ml-4">NeurIPS Workshop, 2025</span>
                         </div>
                         <p class="text-gray-300 mb-3">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- CVPR 2024 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/vlc.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/vlc.jpg" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=VLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation</h3>
+                            <h3 class="text-xl font-semibold text-white">Visual Layout Composer: Image-Vector Dual
+                                Diffusion Model for Design Layout Generation</h3>
                             <span class="text-blue-400 font-medium md:ml-4">CVPR 2024</span>
                         </div>
-                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan Zhao, Jimei Yang, Yasutaka Furukawa</p>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan
+                            Zhao, Jimei Yang, Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf"
+                                target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
-                            <a href="visual_layout_composer/index.html" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="visual_layout_composer/index.html" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- NeurIPS 2023 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/jigsawplan.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Puzzle';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/jigsawplan.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Puzzle';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving</h3>
+                            <h3 class="text-xl font-semibold text-white">PuzzleFusion: Unleashing the Power of Diffusion
+                                Models for Spatial Puzzle Solving</h3>
                             <span class="text-blue-400 font-medium md:ml-4">NeurIPS 2023 (Spotlight)</span>
                         </div>
-                        <p class="text-gray-300 mb-3">Sepidehsadat Hosseini, <strong>Amin Shabani</strong>, Saghar Irandoust, and Yasutaka Furukawa</p>
+                        <p class="text-gray-300 mb-3">Sepidehsadat Hosseini, <strong>Amin Shabani</strong>, Saghar
+                            Irandoust, and Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2211.13785" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/2211.13785" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <!-- <a href="https://youtu.be/wANagTkvyIY" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
@@ -845,24 +465,31 @@
                             <a href="https://github.com/sepidsh/PuzzleFussion" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-code mr-1"></i> Code
                             </a> -->
-                            <a href="https://sepidsh.github.io/puzzlefusion/" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://sepidsh.github.io/puzzlefusion/" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- CVPR 2023 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/housediffusion.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=House';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/housediffusion.jpg" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=House';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising</h3>
+                            <h3 class="text-xl font-semibold text-white">HouseDiffusion: Vector Floorplan Generation via
+                                a Diffusion Model with Discrete and Continuous Denoising</h3>
                             <span class="text-blue-400 font-medium md:ml-4">CVPR 2023</span>
                         </div>
-                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Sepidehsadat Hosseini, and Yasutaka Furukawa</p>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Sepidehsadat Hosseini, and Yasutaka
+                            Furukawa</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2211.13287.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/2211.13287.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <!-- <a href="https://youtu.be/BfGX4-Am9v8" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
@@ -871,30 +498,38 @@
                             <a href="https://github.com/aminshabani/house_diffusion" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-code mr-1"></i> Code
                             </a> -->
-                            <a href="housediffusion/index.html" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="housediffusion/index.html" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- ICLR 2023 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/scaleformer.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Scale';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/scaleformer.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Scale';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting</h3>
+                            <h3 class="text-xl font-semibold text-white">Scaleformer: Iterative Multi-scale Refining
+                                Transformers for Time Series Forecasting</h3>
                             <span class="text-blue-400 font-medium md:ml-4">ICLR 2023</span>
                         </div>
-                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan Sylvain</p>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan
+                            Sylvain</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2206.04038v3.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/2206.04038v3.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <!-- <a href="https://www.linkedin.com/events/7025842225947308032" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-video mr-1"></i> Video
                             </a> -->
-                            <a href="https://github.com/BorealisAI/scaleformer" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://github.com/BorealisAI/scaleformer" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-code mr-1"></i> Code
                             </a>
                         </div>
@@ -902,19 +537,26 @@
                 </div>
 
                 <!-- ACCV 2022 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/vectorizing_building.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Vector';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/vectorizing_building.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=Vector';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
                             <h3 class="text-xl font-semibold text-white">Vectorizing Building Blueprints</h3>
                             <span class="text-blue-400 font-medium md:ml-4">ACCV 2022</span>
                         </div>
-                        <p class="text-gray-300 mb-3">Weilian Song, Mahsa Maleki Abyaneh, <strong>Amin Shabani</strong>, and Yasutaka Furukawa</p>
+                        <p class="text-gray-300 mb-3">Weilian Song, Mahsa Maleki Abyaneh, <strong>Amin Shabani</strong>,
+                            and Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf"
+                                target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
-                            <a href="https://weiliansong.github.io/blueprint-vectorizer/" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://weiliansong.github.io/blueprint-vectorizer/" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                             <!-- <a href="https://github.com/weiliansong/blueprint-vectorizer" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
@@ -925,22 +567,29 @@
                 </div>
 
                 <!-- ICCV 2021 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/extreme_sfm.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=SfM';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/extreme_sfm.jpg" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=SfM';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps</h3>
+                            <h3 class="text-xl font-semibold text-white">Extreme Structure from Motion for Indoor
+                                Panoramas without Visual Overlaps</h3>
                             <span class="text-blue-400 font-medium md:ml-4">ICCV 2021</span>
                         </div>
-                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Weilian Song, Makoto Odamaki, Hirochika Fujiki, and Yasutaka Furukawa</p>
+                        <p class="text-gray-300 mb-3"><strong>Amin Shabani</strong>, Weilian Song, Makoto Odamaki,
+                            Hirochika Fujiki, and Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <!-- <a href="https://www.youtube.com/watch?v=_sikNaOL_B4" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-video mr-1"></i> Video
                             </a> -->
-                            <a href="publications/extreme_sfm/index.html" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="publications/extreme_sfm/index.html" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
@@ -948,19 +597,25 @@
                 </div>
 
                 <!-- BMVC 2017 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/lvm.jpg" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=LVM';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/lvm.jpg" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=LVM';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">Local Visual Microphones: Improved Sound Extraction from Silent Video</h3>
+                            <h3 class="text-xl font-semibold text-white">Local Visual Microphones: Improved Sound
+                                Extraction from Silent Video</h3>
                             <span class="text-blue-400 font-medium md:ml-4">BMVC 2017</span>
                         </div>
                         <p class="text-gray-300 mb-3"><strong>MA Shabani</strong>, L Samadfam, MA Sadeghi</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1801.09436.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/1801.09436.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
-                            <a href="https://www.youtube.com/watch?v=ZX0NSlHDWV4" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://www.youtube.com/watch?v=ZX0NSlHDWV4" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-video mr-1"></i> Video
                             </a>
                         </div>
@@ -968,16 +623,21 @@
                 </div>
 
                 <!-- 2019 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/lpkd.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=LPKD';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/lpkd.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=LPKD';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">Layer-wise Progressive Knowledge Distillation</h3>
+                            <h3 class="text-xl font-semibold text-white">Layer-wise Progressive Knowledge Distillation
+                            </h3>
                             <span class="text-blue-400 font-medium md:ml-4">2019</span>
                         </div>
                         <p class="text-gray-300 mb-3"><strong>MA Shabani</strong></p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="http://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="http://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
@@ -985,16 +645,22 @@
                 </div>
 
                 <!-- arXiv preprint -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/5cycle.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=5-cycle';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/5cycle.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=5-cycle';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">On decomposing complete tripartite graphs into 5-cycles</h3>
+                            <h3 class="text-xl font-semibold text-white">On decomposing complete tripartite graphs into
+                                5-cycles</h3>
                             <span class="text-blue-400 font-medium md:ml-4">arXiv preprint</span>
                         </div>
-                        <p class="text-gray-300 mb-3">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong>MA Shabani</strong></p>
+                        <p class="text-gray-300 mb-3">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong>MA
+                                Shabani</strong></p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1907.06187.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/1907.06187.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
@@ -1002,16 +668,22 @@
                 </div>
 
                 <!-- Graphs and Combinatorics, 2018 -->
-                <div class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/uklc.png" alt="Publication Image" class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=UKLC';">
+                <div
+                    class="publication-item bg-gray-800 p-6 rounded-lg hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/uklc.png" alt="Publication Image"
+                        class="rounded-md flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/374151/E5E7EB?text=UKLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-2">
-                            <h3 class="text-xl font-semibold text-white">On Uniquely k-List Colorable Planar Graphs, Graphs on Surfaces, and Regular Graphs</h3>
+                            <h3 class="text-xl font-semibold text-white">On Uniquely k-List Colorable Planar Graphs,
+                                Graphs on Surfaces, and Regular Graphs</h3>
                             <span class="text-blue-400 font-medium md:ml-4">Graphs and Combinatorics, 2018</span>
                         </div>
-                        <p class="text-gray-300 mb-3">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N Matsumoto, <strong>M. A. Shabani</strong></p>
+                        <p class="text-gray-300 mb-3">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N
+                            Matsumoto, <strong>M. A. Shabani</strong></p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1705.07434.pdf" target="_blank" class="inline-flex items-center text-blue-400 hover:underline transition-colors">
+                            <a href="https://arxiv.org/pdf/1705.07434.pdf" target="_blank"
+                                class="inline-flex items-center text-blue-400 hover:underline transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
@@ -1021,7 +693,8 @@
             </div>
             <!-- More publications button -->
             <div class="text-center mt-8">
-                <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors shadow-md">
+                <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors shadow-md">
                     View All Publications <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -1040,7 +713,8 @@
                             <i class="fas fa-envelope mt-1 mr-4 text-blue-400"></i>
                             <div>
                                 <p class="font-medium">Email</p>
-                                <a href="mailto:aminshabaany@gmail.com" class="text-blue-300 hover:text-blue-200 transition-colors">aminshabaany@gmail.com</a>
+                                <a href="mailto:aminshabaany@gmail.com"
+                                    class="text-blue-300 hover:text-blue-200 transition-colors">aminshabaany@gmail.com</a>
                             </div>
                         </div>
                         <!-- <div class="flex items-start">
@@ -1062,16 +736,20 @@
                 <div>
                     <h3 class="text-xl font-semibold mb-4 text-white">Connect With Me</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                        <a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105" target="_blank"
+                            class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-linkedin-in text-xl text-blue-400"></i>
                         </a>
-                        <a href="https://github.com/aminshabani" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                        <a href="https://github.com/aminshabani" target="_blank"
+                            class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-github text-xl text-blue-400"></i>
                         </a>
-                        <a href="https://twitter.com/amin_shabani" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                        <a href="https://twitter.com/amin_shabani" target="_blank"
+                            class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-twitter text-xl text-blue-400"></i>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
+                        <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
+                            class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors shadow-md">
                             <i class="fas fa-graduation-cap text-xl text-blue-400" title="Google Scholar"></i>
                         </a>
                     </div>
@@ -1084,7 +762,9 @@
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto max-w-5xl px-4 text-center">
             <p>
-                &copy; 2024 Mohammad Amin Shabani. Created with <span class="text-blue-400 font-semibold">Deepsite</span> &amp; <span class="text-blue-400 font-semibold">Gemini</span>.
+                &copy; 2024 Mohammad Amin Shabani. Created with <span
+                    class="text-blue-400 font-semibold">Deepsite</span> &amp; <span
+                    class="text-blue-400 font-semibold">Gemini</span>.
             </p>
         </div>
     </footer>
@@ -1097,242 +777,15 @@
     <!-- Image Pop-up Modal -->
     <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
         <div class="relative bg-gray-800 p-4 rounded-lg shadow-xl max-w-3xl max-h-[90vh] overflow-hidden">
-            <button id="close-image-modal" class="absolute top-2 right-2 text-white text-3xl font-bold leading-none hover:text-gray-300 transition-colors">&times;</button>
-            <img id="modal-image" src="" alt="Enlarged Publication Image" class="max-w-full max-h-full object-contain rounded-md">
+            <button id="close-image-modal"
+                class="absolute top-2 right-2 text-white text-3xl font-bold leading-none hover:text-gray-300 transition-colors">&times;</button>
+            <img id="modal-image" src="" alt="Enlarged Publication Image"
+                class="max-w-full max-h-full object-contain rounded-md">
         </div>
     </div>
 
-    <script>
-        // Theme toggle logic
-        const themeToggleButton = document.getElementById('theme-toggle-button');
-        const themeIcon = document.getElementById('theme-icon');
-        const htmlElement = document.documentElement; // This refers to the <html> tag
-
-        // Function to set the theme
-        function setTheme(theme) {
-            if (theme === 'light') {
-                htmlElement.classList.add('light-mode');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            } else {
-                htmlElement.classList.remove('light-mode');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            }
-            localStorage.setItem('theme', theme);
-        }
-
-        // Initialize theme on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                setTheme(savedTheme);
-            } else {
-                // Check system preference
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                    setTheme('light');
-                } else {
-                    setTheme('dark'); // Default to dark if no preference or system is dark
-                }
-            }
-        });
-
-        // Toggle theme on button click
-        themeToggleButton.addEventListener('click', () => {
-            const currentTheme = htmlElement.classList.contains('light-mode') ? 'light' : 'dark';
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    // Close mobile menu if open
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
-        });
-
-        // Highlight active section in navigation and show/hide back-to-top button
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            const backToTopButton = document.getElementById('back-to-top');
-            
-            let currentSection = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                // Adjust offset to trigger active state a bit before the section fully enters view
-                if (pageYOffset >= sectionTop - 300) { 
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active-section'); // Remove custom class
-                link.classList.remove('text-blue-600'); // Remove Tailwind class
-                // Ensure active state for nav links considers the light/dark theme color
-                if (htmlElement.classList.contains('light-mode')) {
-                    link.style.color = ''; // Reset inline style
-                } else {
-                    link.style.color = ''; // Reset inline style
-                }
-
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active-section'); // Add custom class
-                    link.classList.add('text-blue-600'); // Add Tailwind class
-                }
-            });
-
-            // Show/hide back to top button
-            if (window.pageYOffset > 300) { // Show button after scrolling 300px
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        });
-
-        // Scroll to top when back-to-top button is clicked
-        document.getElementById('back-to-top').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Photo Carousel Logic
-        const images = [
-            { src: "assets/photos/group-2023-cvpr.jpg", title: "CVPR 2023 Group Photo" },
-            { src: "assets/photos/group-2022-sfu.jpg", title: "SFU Lab Group Photo 2022" },
-        ];
-        let currentImageIndex = 0;
-        const carouselImage = document.getElementById('carousel-image');
-        const photoTitleElement = document.getElementById('photo-title'); // Get the new title element
-        const prevButton = document.getElementById('prev-button');
-        const nextButton = document.getElementById('next-button');
-        const carouselDotsContainer = document.getElementById('carousel-dots');
-        let autoSlideInterval;
-
-        function showImage(index) {
-            // Ensure index wraps around
-            currentImageIndex = (index + images.length) % images.length;
-            carouselImage.src = images[currentImageIndex].src;
-            photoTitleElement.textContent = images[currentImageIndex].title; // Set the title text
-            updateDots();
-        }
-
-        function nextImage() {
-            showImage(currentImageIndex + 1);
-        }
-
-        function prevImage() {
-            showImage(currentImageIndex - 1);
-        }
-
-        function createDots() {
-            carouselDotsContainer.innerHTML = ''; // Clear existing dots
-            images.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                dot.addEventListener('click', () => {
-                    showImage(index);
-                    resetAutoSlide();
-                });
-                carouselDotsContainer.appendChild(dot);
-            });
-            updateDots();
-        }
-
-        function updateDots() {
-            const dots = carouselDotsContainer.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-                if (index === currentImageIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextImage, 5000); // Change image every 5 seconds
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        // Event listeners for navigation buttons
-        prevButton.addEventListener('click', () => {
-            prevImage();
-            resetAutoSlide();
-        });
-        nextButton.addEventListener('click', () => {
-            nextImage();
-            resetAutoSlide();
-        });
-
-        // Initialize carousel on page load
-        window.addEventListener('load', () => {
-            if (images.length > 0) {
-                showImage(currentImageIndex);
-                createDots();
-                startAutoSlide();
-            }
-        });
-
-        // Image Pop-up Modal Logic
-        const imageModal = document.getElementById('image-modal');
-        const modalImage = document.getElementById('modal-image');
-        const closeImageModalButton = document.getElementById('close-image-modal');
-        // Select all images within publication-item divs
-        const publicationImages = document.querySelectorAll('#publications .publication-item img');
-
-        // Function to open the modal
-        function openImageModal(src) {
-            modalImage.src = src;
-            imageModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-
-        // Function to close the modal
-        function closeImageModal() {
-            imageModal.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore background scrolling
-        }
-
-        // Event listener for closing the modal via the close button
-        closeImageModalButton.addEventListener('click', closeImageModal);
-
-        // Event listener for closing the modal by clicking on the overlay (outside the image)
-        imageModal.addEventListener('click', (e) => {
-            if (e.target === imageModal) { // Check if the click was directly on the modal background
-                closeImageModal();
-            }
-        });
-
-        // Add click listeners to publication images to open the modal
-        publicationImages.forEach(img => {
-            img.addEventListener('click', () => {
-                openImageModal(img.src);
-            });
-        });
-    </script>
+    <!-- External JS -->
+    <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
