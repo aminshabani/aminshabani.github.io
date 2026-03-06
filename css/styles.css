@@ -45,7 +45,7 @@ body {
 
 /* ===== HERO BACKGROUND ===== */
 .hero-bg {
-    background: linear-gradient(160deg, #020617 60%, #071828 100%);
+    background: linear-gradient(160deg, #f8fafc 0%, #f0f9ff 100%);
 }
 
 /* ===== PUBLICATION ITEMS ===== */
@@ -63,7 +63,7 @@ body {
 /* ===== NAVIGATION LINKS ===== */
 .nav-link {
     position: relative;
-    color: #94a3b8;
+    color: #64748b;
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.01em;
@@ -71,7 +71,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #f1f5f9;
+    color: #0f172a;
 }
 
 .nav-link:after {
@@ -98,13 +98,13 @@ body {
     width: 100%;
 }
 
-/* ===== HEADER GLASSMORPHISM ===== */
+/* ===== HEADER ===== */
 .header-glass {
-    background: rgba(9, 18, 40, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(34, 211, 238, 0.08);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* ===== TIMELINE ===== */
@@ -116,7 +116,7 @@ body {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #22d3ee;
+    background: #0891b2;
     z-index: 1;
 }
 
@@ -127,7 +127,7 @@ body {
     top: 0;
     height: 100%;
     width: 2px;
-    background: linear-gradient(to bottom, #22d3ee, rgba(34, 211, 238, 0.1));
+    background: #e2e8f0;
 }
 
 /* ===== BACK TO TOP BUTTON ===== */
@@ -255,12 +255,12 @@ body {
 }
 
 .news-scroll-container::-webkit-scrollbar-thumb {
-    background-color: #334155;
+    background-color: #cbd5e1;
     border-radius: 3px;
 }
 
 .news-scroll-container::-webkit-scrollbar-track {
-    background-color: #0f172a;
+    background-color: #f1f5f9;
 }
 
 .news-item-line {
@@ -279,18 +279,18 @@ body {
 }
 
 .publications-scroll-container::-webkit-scrollbar-thumb {
-    background-color: #334155;
+    background-color: #cbd5e1;
     border-radius: 3px;
 }
 
 .publications-scroll-container::-webkit-scrollbar-track {
-    background-color: #0f172a;
+    background-color: #f1f5f9;
 }
 
 /* ===== PUBLICATION ABSTRACT ===== */
 .pub-abstract summary {
     font-size: 0.8rem;
-    color: #64748b;
+    color: #94a3b8;
     cursor: pointer;
     list-style: none;
     display: inline-flex;
@@ -314,17 +314,17 @@ body {
 }
 
 .pub-abstract summary:hover {
-    color: #22d3ee;
+    color: #0891b2;
 }
 
 .pub-abstract[open] summary {
-    color: #22d3ee;
+    color: #0891b2;
 }
 
 .pub-abstract p {
     margin-top: 8px;
     font-size: 0.85rem;
-    color: #64748b;
+    color: #94a3b8;
     line-height: 1.6;
 }
 

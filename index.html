@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg-slate-950 text-slate-200 font-sans">
+<body class="bg-white text-slate-800 font-sans">
     <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 header-glass">
         <div class="container mx-auto max-w-5xl px-4 py-4 flex justify-between items-center">
@@ -78,7 +78,7 @@
             </nav>
             <div class="flex items-center space-x-4">
                 <button id="theme-toggle-button"
-                    class="text-slate-500 hover:text-slate-200 focus:outline-none transition-colors">
+                    class="text-slate-400 hover:text-slate-700 focus:outline-none transition-colors">
                     <i class="fas fa-sun text-lg" id="theme-icon"></i>
                 </button>
                 <button id="mobile-menu-button" class="md:hidden text-slate-400 focus:outline-none">
@@ -87,19 +87,19 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 py-2 px-4 border-t border-slate-800">
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-slate-200">
             <a href="#about"
-                class="block py-2.5 border-b border-slate-800 rounded-md px-2 hover:bg-slate-800 text-slate-300 text-sm">About</a>
+                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">About</a>
             <a href="#news-photos"
-                class="block py-2.5 border-b border-slate-800 rounded-md px-2 hover:bg-slate-800 text-slate-300 text-sm">News &
+                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">News &
                 Photos</a>
             <a href="#experience"
-                class="block py-2.5 border-b border-slate-800 rounded-md px-2 hover:bg-slate-800 text-slate-300 text-sm">Experience</a>
+                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Experience</a>
             <a href="#education"
-                class="block py-2.5 border-b border-slate-800 rounded-md px-2 hover:bg-slate-800 text-slate-300 text-sm">Education</a>
+                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Education</a>
             <a href="#publications"
-                class="block py-2.5 border-b border-slate-800 rounded-md px-2 hover:bg-slate-800 text-slate-300 text-sm">Publications</a>
-            <a href="#contact" class="block py-2.5 rounded-md px-2 hover:bg-slate-800 text-slate-300 text-sm">Contact</a>
+                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Publications</a>
+            <a href="#contact" class="block py-2.5 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Contact</a>
         </div>
     </header>
 
@@ -107,16 +107,15 @@
     <section id="about" class="py-20 md:py-28 hero-bg">
         <div class="container mx-auto max-w-5xl px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
-                <p class="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">Machine Learning Researcher</p>
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 text-white leading-tight"> Amin <span
+                <h1 class="text-5xl md:text-6xl font-bold mb-2 text-slate-900 leading-tight">Amin <span
                         class="gradient-text">Shabani</span></h1>
-                <div class="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-indigo-400 mb-5 rounded-full"></div>
-                <p class="text-base text-slate-400 leading-relaxed">
+                <p class="text-slate-500 text-lg mb-5">ML Researcher at RBC Borealis</p>
+                <p class="text-base text-slate-600 leading-relaxed">
                     I received my Ph.D. in Computer Science from Simon Fraser University (SFU) under the supervision of
                     <a href="https://yasu-furukawa.github.io/" target="_blank"
-                        class="text-cyan-400 hover:text-cyan-300 transition-colors">Prof. Yasutaka Furukawa</a>, and my M.Sc. from Seoul
+                        class="text-cyan-600 hover:text-cyan-700 transition-colors">Prof. Yasutaka Furukawa</a>, and my M.Sc. from Seoul
                     National University (SNU) under <a href="https://cv.snu.ac.kr/" target="_blank"
-                        class="text-cyan-400 hover:text-cyan-300 transition-colors">Prof. Kyoung Mu Lee</a>.
+                        class="text-cyan-600 hover:text-cyan-700 transition-colors">Prof. Kyoung Mu Lee</a>.
                 </p>
             </div>
             <div class="md:w-1/2 flex justify-center">
@@ -134,136 +133,104 @@
         <div class="container mx-auto max-w-5xl px-4 mt-10">
             <div class="flex flex-wrap gap-3">
                 <a href="mailto:aminshabaany@gmail.com"
-                    class="btn-primary bg-cyan-500 hover:bg-cyan-400 text-slate-900 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all shadow-md text-sm font-semibold">
+                    class="btn-primary bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2.5 rounded-lg flex items-center justify-center transition-all shadow-sm text-sm font-medium">
                     <i class="fas fa-envelope mr-2"></i> Contact Me
                 </a>
                 <a href="CV-AminShabani.pdf" download="CV-AminShabani.pdf"
-                    class="btn-outline border border-cyan-500/50 text-cyan-400 hover:bg-slate-800 hover:border-cyan-400 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all text-sm font-semibold">
+                    class="btn-outline border border-slate-300 text-slate-700 hover:bg-slate-50 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all text-sm font-medium">
                     <i class="fas fa-download mr-2"></i> Download CV
                 </a>
                 <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
-                    class="btn-outline border border-cyan-500/50 text-cyan-400 hover:bg-slate-800 hover:border-cyan-400 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all text-sm font-semibold">
+                    class="btn-outline border border-slate-300 text-slate-700 hover:bg-slate-50 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all text-sm font-medium">
                     <i class="fas fa-graduation-cap mr-2"></i> Google Scholar
                 </a>
             </div>
         </div>
 
         <!-- Research Interests -->
-        <div class="container mx-auto max-w-5xl px-4 mt-12">
-            <h3 class="text-lg font-semibold mb-5 text-slate-300 uppercase tracking-widest text-xs">Research Interests</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="research-card bg-slate-800/50 p-4 rounded-xl border-l-4 border-cyan-500 border border-slate-700/40 hover:border-cyan-500/40 hover:bg-slate-800/70 transition-all">
-                    <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-3">
-                        <i class="fas fa-brain text-cyan-400 text-sm"></i>
-                    </div>
-                    <h4 class="text-sm font-semibold mb-1.5 text-white">Generative Models</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Exploring advanced generative models, including diffusion models,
-                        for diverse data synthesis.</p>
-                </div>
-                <div class="research-card bg-slate-800/50 p-4 rounded-xl border-l-4 border-teal-500 border border-slate-700/40 hover:border-teal-500/40 hover:bg-slate-800/70 transition-all">
-                    <div class="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center mb-3">
-                        <i class="fas fa-eye text-teal-400 text-sm"></i>
-                    </div>
-                    <h4 class="text-sm font-semibold mb-1.5 text-white">Computer Vision</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Researching scene understanding, 3D reconstruction, and visual
-                        layout generation from images.</p>
-                </div>
-                <div class="research-card bg-slate-800/50 p-4 rounded-xl border-l-4 border-violet-500 border border-slate-700/40 hover:border-violet-500/40 hover:bg-slate-800/70 transition-all">
-                    <div class="w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center mb-3">
-                        <i class="fas fa-chart-line text-violet-400 text-sm"></i>
-                    </div>
-                    <h4 class="text-sm font-semibold mb-1.5 text-white">Time Series Forecasting</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Developing robust models for predicting future data points in
-                        time-dependent sequences.</p>
-                </div>
-                <div class="research-card bg-slate-800/50 p-4 rounded-xl border-l-4 border-indigo-500 border border-slate-700/40 hover:border-indigo-500/40 hover:bg-slate-800/70 transition-all">
-                    <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-3">
-                        <i class="fas fa-comment-dots text-indigo-400 text-sm"></i>
-                    </div>
-                    <h4 class="text-sm font-semibold mb-1.5 text-white">Large Language Models</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Developing retrieval-augmented generation and agentic workflows
-                        for real-world financial applications.</p>
-                </div>
+        <div class="container mx-auto max-w-5xl px-4 mt-8">
+            <p class="text-slate-400 uppercase tracking-widest text-xs font-semibold mb-3">Research Interests</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Generative Models</span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Large Language Models</span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Computer Vision</span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Time Series Forecasting</span>
             </div>
         </div>
     </section>
 
     <!-- News and Photos Section -->
-    <section id="news-photos" class="py-16 bg-slate-900">
+    <section id="news-photos" class="py-16 bg-slate-50">
         <div class="container mx-auto max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- News Section -->
             <div>
-                <h2 class="text-3xl font-bold mb-8 section-title text-white">News</h2>
+                <h2 class="text-3xl font-bold mb-8 section-title text-slate-900">News</h2>
                 <div class="news-scroll-container space-y-3 pr-2">
                     <!-- NEW ITEM 0 -->
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-cyan-500 hover:border-l-cyan-400 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2026</span>
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2026</span>
                             Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
-                                rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors hover:underline">Embedding-based
-                                Context-aware Reranker</a>" accepted at ICLR 2026. <span
-                                class="text-red-400 font-bold text-xs">(new)</span>
+                                rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline">Embedding-based
+                                Context-aware Reranker</a>" accepted at <strong>ICLR 2026</strong>. <span
+                                class="text-red-500 font-semibold text-xs">(new)</span>
                         </p>
                     </div>
                     <!-- NEW ITEM 1 -->
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-cyan-500 hover:border-l-cyan-400 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Oct 2025</span>
-                            <b>1st Place Winner</b>, Financial Agentic Retrieval Grand Challenge (<a
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Oct 2025</span>
+                            <strong>1st Place Winner</strong>, Financial Agentic Retrieval Grand Challenge (<a
                                 href="https://ai4f.org/2025-challenge" target="_blank" rel="noopener noreferrer"
-                                class="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors">FinAgentBench</a>), AI for Finance Symposium '25.
-                            <span class="text-red-400 font-bold text-xs">(new)</span>
+                                class="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors">FinAgentBench</a>), <strong>AI for Finance Symposium '25</strong>.
+                            <span class="text-red-500 font-semibold text-xs">(new)</span>
                         </p>
                     </div>
                     <!-- NEW ITEM 2 -->
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-cyan-500 hover:border-l-cyan-400 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2025</span>
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2025</span>
                             Paper "<a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer"
-                                class="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors">FACTS: Table Summarization via Offline Template
-                                Generation with Agentic Workflows</a>" accepted at NeurIPS 2025 Workshop on Generative
-                            AI in Finance. <span class="text-red-400 font-bold text-xs">(new)</span>
+                                class="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors">FACTS: Table Summarization via Offline Template
+                                Generation with Agentic Workflows</a>" accepted at <strong>NeurIPS 2025 Workshop</strong> on Generative
+                            AI in Finance. <span class="text-red-500 font-semibold text-xs">(new)</span>
                         </p>
                     </div>
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-slate-600 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Apr 2024</span>
-                            Joined RBC Borealis as a Machine Learning Researcher.
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Apr 2024</span>
+                            Joined <strong>RBC Borealis</strong> as a Machine Learning Researcher.
                         </p>
                     </div>
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-slate-600 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Mar 2024</span>
-                            Paper "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout
-                            Generation" accepted at CVPR 2024.
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Mar 2024</span>
+                            Paper "Visual Layout Composer" accepted at <strong>CVPR 2024</strong>.
                         </p>
                     </div>
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-slate-600 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2024</span>
-                            Gave a talk about my research on diffusion models for layout generation at Samsung AI Center
-                            in Toronto.
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2024</span>
+                            Gave a talk on diffusion models for layout generation at <strong>Samsung AI Center</strong>, Toronto.
                         </p>
                     </div>
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-slate-600 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2023</span>
-                            Paper "PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving"
-                            accepted as Spotlight at NeurIPS 2023.
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2023</span>
+                            Paper "PuzzleFusion" accepted as <strong>Spotlight</strong> at <strong>NeurIPS 2023</strong>.
                         </p>
                     </div>
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-slate-600 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Mar 2023</span>
-                            Paper "HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and
-                            Continuous Denoising" accepted at CVPR 2023.
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Mar 2023</span>
+                            Paper "HouseDiffusion" accepted at <strong>CVPR 2023</strong>.
                         </p>
                     </div>
-                    <div class="news-card bg-slate-800/60 p-4 rounded-xl border border-slate-700/40 border-l-4 border-l-slate-600 transition-all">
-                        <p class="text-slate-300 news-item-line text-sm">
-                            <span class="text-cyan-400 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2023</span>
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2023</span>
                             Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting"
-                            accepted at ICLR 2023.
+                            accepted at <strong>ICLR 2023</strong>.
                         </p>
                     </div>
                 </div>
@@ -271,7 +238,7 @@
 
             <!-- Photos Section (Carousel) -->
             <div>
-                <h2 class="text-3xl font-bold mb-8 section-title text-white">Photos</h2>
+                <h2 class="text-3xl font-bold mb-8 section-title text-slate-900">Photos</h2>
                 <div class="carousel-container">
                     <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/0f172a/94a3b8?text=Photo+Not+Available';">
@@ -285,43 +252,43 @@
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" class="py-16 bg-slate-950">
+    <section id="experience" class="py-16 bg-white">
         <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-white">Work Experience</h2>
+            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Work Experience</h2>
             <div class="relative pl-8 timeline">
                 <!-- RBC Borealis -->
                 <div class="mb-8 relative timeline-item">
-                    <div class="experience-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-white">Machine Learning Researcher</h3>
-                            <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">Apr 2024 – Present</span>
+                            <h3 class="text-lg font-semibold text-slate-900">Machine Learning Researcher</h3>
+                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Apr 2024 – Present</span>
                         </div>
-                        <div class="flex items-center text-slate-400 mb-3 text-sm">
+                        <div class="flex items-center text-slate-500 mb-3 text-sm">
                             <i class="fas fa-building mr-2 text-xs"></i>
                             <a href="https://rbcborealis.com/" target="_blank"
                                 class="hover:text-cyan-400 transition-colors">RBC Borealis</a>
                         </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Contributing to research and development of machine learning models for
+                        <p class="text-slate-600 text-sm leading-relaxed">Contributing to research and development of machine learning models for
                             real-world applications in finance.</p>
                     </div>
                 </div>
 
                 <!-- Adobe -->
                 <div class="mb-8 relative timeline-item">
-                    <div class="experience-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-white">Research Scientist/Engineer Intern</h3>
-                            <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">Jun 2023 – Nov 2023</span>
+                            <h3 class="text-lg font-semibold text-slate-900">Research Scientist/Engineer Intern</h3>
+                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Jun 2023 – Nov 2023</span>
                         </div>
-                        <div class="flex items-center text-slate-400 mb-3 text-sm">
+                        <div class="flex items-center text-slate-500 mb-3 text-sm">
                             <i class="fas fa-building mr-2 text-xs"></i>
                             <a href="https://www.adobe.com/ca/" target="_blank"
                                 class="hover:text-cyan-400 transition-colors">Adobe</a>
                         </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Worked on a new method for automatically generating layout designs.
+                        <p class="text-slate-600 text-sm leading-relaxed">Worked on a new method for automatically generating layout designs.
                             Published at CVPR 2024.</p>
                         <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html"
-                            target="_blank" class="inline-block mt-3 text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                            target="_blank" class="inline-block mt-3 text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                             <i class="fas fa-external-link-alt mr-1"></i> View Publication
                         </a>
                     </div>
@@ -329,20 +296,20 @@
 
                 <!-- Borealis AI -->
                 <div class="mb-8 relative timeline-item">
-                    <div class="experience-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-white">Machine Learning Research Intern</h3>
-                            <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">Jan 2022 – May 2022</span>
+                            <h3 class="text-lg font-semibold text-slate-900">Machine Learning Research Intern</h3>
+                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Jan 2022 – May 2022</span>
                         </div>
-                        <div class="flex items-center text-slate-400 mb-3 text-sm">
+                        <div class="flex items-center text-slate-500 mb-3 text-sm">
                             <i class="fas fa-building mr-2 text-xs"></i>
                             <a href="https://www.borealisai.com/en/" target="_blank"
                                 class="hover:text-cyan-400 transition-colors">Borealis AI (RBC Borealis)</a>
                         </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Worked on Iterative Multi-scale Refining Transformers for Time Series
+                        <p class="text-slate-600 text-sm leading-relaxed">Worked on Iterative Multi-scale Refining Transformers for Time Series
                             Forecasting. Published at ICLR 2023.</p>
                         <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank"
-                            class="inline-block mt-3 text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                            class="inline-block mt-3 text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                             <i class="fas fa-external-link-alt mr-1"></i> View Publication
                         </a>
                     </div>
@@ -350,17 +317,17 @@
 
                 <!-- Faraadid -->
                 <div class="relative timeline-item">
-                    <div class="experience-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-white">Research and Development Engineer</h3>
-                            <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">Feb 2017 – Aug 2017</span>
+                            <h3 class="text-lg font-semibold text-slate-900">Research and Development Engineer</h3>
+                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Feb 2017 – Aug 2017</span>
                         </div>
-                        <div class="flex items-center text-slate-400 mb-3 text-sm">
+                        <div class="flex items-center text-slate-500 mb-3 text-sm">
                             <i class="fas fa-building mr-2 text-xs"></i>
                             <a href="http://faraadid.com/VisitorPages/default.aspx?itemid=3" target="_blank"
                                 class="hover:text-cyan-400 transition-colors">Faraadid Company</a>
                         </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Worked on finding online methods for object detection, considering the
+                        <p class="text-slate-600 text-sm leading-relaxed">Worked on finding online methods for object detection, considering the
                             trade-off between speed and accuracy.</p>
                     </div>
                 </div>
@@ -369,72 +336,72 @@
     </section>
 
     <!-- Education -->
-    <section id="education" class="py-16 bg-slate-900">
+    <section id="education" class="py-16 bg-slate-50">
         <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-white">Education</h2>
+            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Education</h2>
             <div class="space-y-4">
                 <!-- SFU -->
-                <div class="edu-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                <div class="edu-card bg-white p-6 rounded-lg border border-slate-200">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-                        <h3 class="text-lg font-semibold text-white">Simon Fraser University</h3>
-                        <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">2019 – 2025</span>
+                        <h3 class="text-lg font-semibold text-slate-900">Simon Fraser University</h3>
+                        <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">2019 – 2025</span>
                     </div>
-                    <p class="text-slate-300 font-medium text-sm">Ph.D. in Computer Science</p>
+                    <p class="text-slate-700 font-medium text-sm">Ph.D. in Computer Science</p>
                     <a href="https://summit.sfu.ca/item/39603"
-                        target="_blank" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-xs mt-2 transition-colors">
+                        target="_blank" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-xs mt-2 transition-colors">
                         <i class="fas fa-file-alt mr-1"></i> Ph.D. Thesis
                     </a>
                 </div>
 
                 <!-- Seoul National University -->
-                <div class="edu-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                <div class="edu-card bg-white p-6 rounded-lg border border-slate-200">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-                        <h3 class="text-lg font-semibold text-white">Seoul National University</h3>
-                        <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">2017 – 2019</span>
+                        <h3 class="text-lg font-semibold text-slate-900">Seoul National University</h3>
+                        <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">2017 – 2019</span>
                     </div>
-                    <p class="text-slate-300 font-medium text-sm">M.Sc. in Computer Engineering</p>
+                    <p class="text-slate-700 font-medium text-sm">M.Sc. in Computer Engineering</p>
                     <a href="https://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf"
-                        target="_blank" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-xs mt-2 transition-colors">
+                        target="_blank" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-xs mt-2 transition-colors">
                         <i class="fas fa-file-alt mr-1"></i> M.Sc. Thesis
                     </a>
                 </div>
 
                 <!-- Sharif University -->
-                <div class="edu-card bg-slate-800/60 p-6 rounded-xl border border-slate-700/40 card-hover">
+                <div class="edu-card bg-white p-6 rounded-lg border border-slate-200">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-                        <h3 class="text-lg font-semibold text-white">Sharif University of Technology</h3>
-                        <span class="text-cyan-400 font-medium text-sm mt-1 md:mt-0">2012 – 2017</span>
+                        <h3 class="text-lg font-semibold text-slate-900">Sharif University of Technology</h3>
+                        <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">2012 – 2017</span>
                     </div>
-                    <p class="text-slate-300 font-medium text-sm">B.Sc. in Computer Science</p>
+                    <p class="text-slate-700 font-medium text-sm">B.Sc. in Computer Science</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Publications -->
-    <section id="publications" class="py-16 bg-slate-950">
+    <section id="publications" class="py-16 bg-white">
         <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-white">Publications</h2>
+            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Publications</h2>
             <div class="publications-scroll-container space-y-4">
                 <!-- ICLR 2026: EBCAR -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/ebcar.png" alt="Embedding-based Context-aware Reranker diagram"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=EBCAR';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Embedding-based Context-aware Reranker</h3>
+                            <h3 class="text-base font-semibold text-slate-900">Embedding-based Context-aware Reranker</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ICLR 2026</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm">Ye Yuan, <strong class="text-slate-300">Amin Shabani</strong>, Siqi Liu</p>
+                        <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Proposes an embedding-based context-aware reranking method for retrieval-augmented generation (RAG) that improves document ranking by incorporating query context, leading to more relevant and accurate retrieval results.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proposes an embedding-based context-aware reranking method for retrieval-augmented generation (RAG) that improves document ranking by incorporating query context, leading to more relevant and accurate retrieval results.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>Retrieval-Augmented Generation (RAG) systems rely on retrieving relevant evidence from a corpus to support downstream generation. The common practice of splitting a long document into multiple shorter passages enables finer-grained and targeted information retrieval. However, it also introduces challenges when a correct retrieval would require inference across passages, such as resolving coreference, disambiguating entities, and aggregating evidence scattered across multiple sources. Many state-of-the-art (SOTA) reranking methods, despite utilizing powerful large pretrained language models with potentially high inference costs, still neglect the aforementioned challenges. Therefore, we propose Embedding-Based Context-Aware Reranker (EBCAR), a lightweight reranking framework operating directly on embeddings of retrieved passages with enhanced cross-passage understandings through the structural information of the passages and a hybrid attention mechanism, which captures both high-level interactions across documents and low-level relationships within each document. We evaluate EBCAR against SOTA rerankers on the ConTEB benchmark, demonstrating its effectiveness for information retrieval requiring cross-passage inference and its advantages in both accuracy and efficiency.</p>
@@ -444,24 +411,24 @@
 
                 <!-- NeurIPS Workshop: FACTS -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/facts.png" alt="FACTS table summarization pipeline overview"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=FACTS';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">FACTS: Table Summarization via Offline Template
+                            <h3 class="text-base font-semibold text-slate-900">FACTS: Table Summarization via Offline Template
                                 Generation with Agentic Workflows</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">NeurIPS Workshop, 2025</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm">Ye Yuan, <strong class="text-slate-300">Amin Shabani</strong>, Siqi Liu</p>
+                        <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>Query-focused table summarization requires generating natural language summaries of tabular data conditioned on a user query, enabling users to access insights beyond fact retrieval. Existing approaches face key limitations: table-to-text models require costly fine-tuning and struggle with complex reasoning, prompt-based LLM methods suffer from token-limit and efficiency issues while exposing sensitive data, and prior agentic pipelines often rely on decomposition, planning, or manual templates that lack robustness and scalability. To mitigate these issues, we introduce an agentic workflow, FACTS, a Fast, Accurate, and Privacy-Compliant Table Summarization approach via Offline Template Generation. FACTS produces offline templates, consisting of SQL queries and Jinja2 templates, which can be rendered into natural language summaries and are reusable across multiple tables sharing the same schema. It enables fast summarization through reusable offline templates, accurate outputs with executable SQL queries, and privacy compliance by sending only table schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS consistently outperforms baseline methods, establishing it as a practical solution for real-world query-focused table summarization.</p>
@@ -471,30 +438,30 @@
 
                 <!-- CVPR 2024 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/vlc.jpg" alt="Visual Layout Composer dual diffusion model overview"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=VLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Visual Layout Composer: Image-Vector Dual
+                            <h3 class="text-base font-semibold text-slate-900">Visual Layout Composer: Image-Vector Dual
                                 Diffusion Model for Design Layout Generation</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">CVPR 2024</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm"><strong class="text-slate-300">Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan
+                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan
                             Zhao, Jimei Yang, Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf"
                                 target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="visual_layout_composer/index.html" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Presents a dual diffusion model that jointly generates raster image content and corresponding vector layout for graphic design templates, enabling coherent, high-quality, and editable design generation from user-provided conditions.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Presents a dual diffusion model that jointly generates raster image content and corresponding vector layout for graphic design templates, enabling coherent, high-quality, and editable design generation from user-provided conditions.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>This paper proposes an image-vector dual diffusion model for generative layout design. Distinct from prior efforts that mostly ignore element-level visual information, our approach integrates the power of a pre-trained large image diffusion model to guide layout composition in a vector diffusion model by providing enhanced salient region understanding and high-level inter-element relationship reasoning. Our proposed model simultaneously operates in two domains: it generates the overall design appearance in the image domain while optimizing the size and position of each design element in the vector domain. The proposed method achieves the state-of-the-art results on several datasets and enables new layout design applications.</p>
@@ -504,29 +471,29 @@
 
                 <!-- NeurIPS 2023 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/jigsawplan.png" alt="PuzzleFusion jigsaw puzzle solving with diffusion models"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=Puzzle';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">PuzzleFusion: Unleashing the Power of Diffusion
+                            <h3 class="text-base font-semibold text-slate-900">PuzzleFusion: Unleashing the Power of Diffusion
                                 Models for Spatial Puzzle Solving</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">NeurIPS 2023 (Spotlight)</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm">Sepidehsadat Hosseini, <strong class="text-slate-300">Amin Shabani</strong>, Saghar
+                        <p class="text-slate-600 mb-2 text-sm">Sepidehsadat Hosseini, <strong class="text-slate-800">Amin Shabani</strong>, Saghar
                             Irandoust, and Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/2211.13785" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="https://sepidsh.github.io/puzzlefusion/" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Reformulates spatial jigsaw puzzle solving as a denoising diffusion process, jointly predicting piece positions and orientations without hand-crafted features or piece ordering assumptions, achieving state-of-the-art results on challenging benchmarks.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Reformulates spatial jigsaw puzzle solving as a denoising diffusion process, jointly predicting piece positions and orientations without hand-crafted features or piece ordering assumptions, achieving state-of-the-art results on challenging benchmarks.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>This paper presents an end-to-end neural architecture based on Diffusion Models for spatial puzzle solving, particularly jigsaw puzzle and room arrangement tasks. In the latter task, for instance, the proposed system "PuzzleFusion" takes a set of room layouts as polygonal curves in the top-down view and aligns the room layout pieces by estimating their 2D translations and rotations, akin to solving the jigsaw puzzle of room layouts. A surprising discovery of the paper is that the simple use of a Diffusion Model effectively solves these challenging spatial puzzle tasks as a conditional generation process. To enable learning of an end-to-end neural system, the paper introduces new datasets with ground-truth arrangements: 1) 2D Voronoi jigsaw dataset, a synthetic one where pieces are generated by Voronoi diagram of 2D pointset; and 2) MagicPlan dataset, a real one offered by MagicPlan from its production pipeline, where pieces are room layouts constructed by augmented reality App by real-estate consumers. The qualitative and quantitative evaluations demonstrate that our approach outperforms the competing methods by significant margins in all the tasks.</p>
@@ -536,29 +503,29 @@
 
                 <!-- CVPR 2023 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/housediffusion.jpg" alt="HouseDiffusion vector floorplan generation examples"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=House';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">HouseDiffusion: Vector Floorplan Generation via
+                            <h3 class="text-base font-semibold text-slate-900">HouseDiffusion: Vector Floorplan Generation via
                                 a Diffusion Model with Discrete and Continuous Denoising</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">CVPR 2023</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm"><strong class="text-slate-300">Amin Shabani</strong>, Sepidehsadat Hosseini, and Yasutaka
+                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Sepidehsadat Hosseini, and Yasutaka
                             Furukawa</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/2211.13287.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="housediffusion/index.html" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Generates structured vector floorplans using a diffusion model that simultaneously denoises discrete room types and continuous polygon coordinates, producing diverse and realistic architectural layouts from user-specified room programs.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Generates structured vector floorplans using a diffusion model that simultaneously denoises discrete room types and continuous polygon coordinates, producing diverse and realistic architectural layouts from user-specified room programs.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>The paper presents a novel approach for vector-floorplan generation via a diffusion model, which denoises 2D coordinates of room/door corners with two inference objectives: 1) a single-step noise as the continuous quantity to precisely invert the continuous forward process; and 2) the final 2D coordinate as the discrete quantity to establish geometric incident relationships such as parallelism, orthogonality, and corner-sharing. Our task is graph-conditioned floorplan generation, a common workflow in floorplan design. We represent a floorplan as 1D polygonal loops, each of which corresponds to a room or a door. Our diffusion model employs a Transformer architecture at the core, which controls the attention masks based on the input graph-constraint and directly generates vector-graphics floorplans via a discrete and continuous denoising process. We have evaluated our approach on RPLAN dataset. The proposed approach makes significant improvements in all the metrics against the state-of-the-art with significant margins, while being capable of generating non-Manhattan structures and controlling the exact number of corners per room.</p>
@@ -568,29 +535,29 @@
 
                 <!-- ICLR 2023 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/scaleformer.png" alt="Scaleformer iterative multi-scale architecture"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=Scale';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Scaleformer: Iterative Multi-scale Refining
+                            <h3 class="text-base font-semibold text-slate-900">Scaleformer: Iterative Multi-scale Refining
                                 Transformers for Time Series Forecasting</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ICLR 2023</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm"><strong class="text-slate-300">Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan
+                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan
                             Sylvain</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/2206.04038v3.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="https://github.com/BorealisAI/scaleformer" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-code mr-1"></i> Code
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Proposes an iterative multi-scale refining framework that applies Transformer-based forecasters at multiple temporal resolutions, progressively sharpening predictions from coarse to fine scales for improved time series forecasting accuracy.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proposes an iterative multi-scale refining framework that applies Transformer-based forecasters at multiple temporal resolutions, progressively sharpening predictions from coarse to fine scales for improved time series forecasting accuracy.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>The performance of time series forecasting has recently been greatly improved by the introduction of transformers. In this paper, we propose a general multi-scale framework that can be applied to the state-of-the-art transformer-based time series forecasting models (FEDformer, Autoformer, etc.). By iteratively refining a forecasted time series at multiple scales with shared weights, introducing architecture adaptations, and a specially-designed normalization scheme, we are able to achieve significant performance improvements, from 5.5% to 38.5% across datasets and transformer architectures, with minimal additional computational overhead. Via detailed ablation studies, we demonstrate the effectiveness of each of our contributions across the architecture and methodology. Furthermore, our experiments on various public datasets demonstrate that the proposed improvements outperform their corresponding baseline counterparts.</p>
@@ -600,29 +567,29 @@
 
                 <!-- ACCV 2022 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/vectorizing_building.png" alt="Vectorizing Building Blueprints method results"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=Vector';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Vectorizing Building Blueprints</h3>
+                            <h3 class="text-base font-semibold text-slate-900">Vectorizing Building Blueprints</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ACCV 2022</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm">Weilian Song, Mahsa Maleki Abyaneh, <strong class="text-slate-300">Amin Shabani</strong>,
+                        <p class="text-slate-600 mb-2 text-sm">Weilian Song, Mahsa Maleki Abyaneh, <strong class="text-slate-800">Amin Shabani</strong>,
                             and Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf"
                                 target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="https://weiliansong.github.io/blueprint-vectorizer/" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Converts raster building blueprint images into structured vector representations by detecting and reconstructing walls, doors, windows, and symbols as scalable primitives, enabling downstream architectural analysis.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Converts raster building blueprint images into structured vector representations by detecting and reconstructing walls, doors, windows, and symbols as scalable primitives, enabling downstream architectural analysis.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>This paper proposes a novel vectorization algorithm for high-definition floorplans with construction-level intricate architectural details, namely a blueprint. A state-of-the-art floorplan vectorization algorithm starts by detecting corners, whose process does not scale to high-definition floorplans with thin interior walls, small door frames, and long exterior walls. Our approach 1) obtains rough semantic segmentation by running off-the-shelf segmentation algorithms; 2) learning to infer missing smaller architectural components; 3) adding the missing components by a refinement generative adversarial network; and 4) simplifying the segmentation boundaries by heuristics. We have created a vectorized blueprint database consisting of 200 production scanned blueprint images. Qualitative and quantitative evaluations demonstrate the effectiveness of the approach, making significant boost in standard vectorization metrics over the current state-of-the-art and baseline methods.</p>
@@ -632,29 +599,29 @@
 
                 <!-- ICCV 2021 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/extreme_sfm.jpg" alt="Extreme SfM indoor panorama 3D reconstruction"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=SfM';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Extreme Structure from Motion for Indoor
+                            <h3 class="text-base font-semibold text-slate-900">Extreme Structure from Motion for Indoor
                                 Panoramas without Visual Overlaps</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ICCV 2021</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm"><strong class="text-slate-300">Amin Shabani</strong>, Weilian Song, Makoto Odamaki,
+                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Weilian Song, Makoto Odamaki,
                             Hirochika Fujiki, and Yasutaka Furukawa</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="publications/extreme_sfm/index.html" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Estimates 3D camera configurations for indoor panoramic images that have no visual feature overlap, leveraging structural layout constraints and Manhattan-world assumptions to recover global scene geometry.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Estimates 3D camera configurations for indoor panoramic images that have no visual feature overlap, leveraging structural layout constraints and Manhattan-world assumptions to recover global scene geometry.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>This paper proposes an extreme Structure from Motion (SfM) algorithm for residential indoor panoramas that have little to no visual overlaps. Only a single panorama is present in a room for many cases, making the task infeasible for existing SfM algorithms. Our idea is to learn to evaluate the realism of room/door/window arrangements in the top-down semantic space. After using heuristics to enumerate possible arrangements based on door detections, we evaluate their realism scores, pick the most realistic arrangement, and return the corresponding camera poses. We evaluate the proposed approach on a dataset of 1029 panorama images with 286 houses. Our qualitative and quantitative evaluations show that an existing SfM approach completely fails for most of the houses. The proposed approach achieves the mean positional error of less than 1.0 meter for 47% of the houses and even 78% when considering the top five reconstructions.</p>
@@ -664,28 +631,28 @@
 
                 <!-- BMVC 2017 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/lvm.jpg" alt="Local Visual Microphones sound extraction from video"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=LVM';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Local Visual Microphones: Improved Sound
+                            <h3 class="text-base font-semibold text-slate-900">Local Visual Microphones: Improved Sound
                                 Extraction from Silent Video</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">BMVC 2017</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm"><strong class="text-slate-300">MA Shabani</strong>, L Samadfam, MA Sadeghi</p>
+                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">MA Shabani</strong>, L Samadfam, MA Sadeghi</p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/1801.09436.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                             <a href="https://www.youtube.com/watch?v=ZX0NSlHDWV4" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-video mr-1"></i> Video
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Recovers audio signals from silent video by analyzing subtle, high-frequency vibrations in local image regions, improving over global visual microphone methods by capturing spatially-varying sound sources more accurately.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Recovers audio signals from silent video by analyzing subtle, high-frequency vibrations in local image regions, improving over global visual microphone methods by capturing spatially-varying sound sources more accurately.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>Sound waves cause small vibrations in nearby objects. A few techniques exist in the literature that can extract sound from video. In this paper we study local vibration patterns at different image locations. We show that different locations in the image vibrate differently. We carefully aggregate local vibrations and produce a sound quality that improves state-of-the-art. We show that local vibrations could have a time delay because sound waves take time to travel through the air. We use this phenomenon to estimate sound direction. We also present a novel algorithm that speeds up sound extraction by two to three orders of magnitude and reaches real-time performance in a 20KHz video.</p>
@@ -695,48 +662,48 @@
 
                 <!-- 2019 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation diagram"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=LPKD';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">Layer-wise Progressive Knowledge Distillation
+                            <h3 class="text-base font-semibold text-slate-900">Layer-wise Progressive Knowledge Distillation
                             </h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">2019</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm"><strong class="text-slate-300">MA Shabani</strong></p>
+                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">MA Shabani</strong></p>
                         <div class="flex flex-wrap gap-3">
                             <a href="http://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Introduces a layer-wise progressive knowledge distillation strategy that transfers knowledge from a teacher to a student network one layer at a time, improving the efficiency and effectiveness of model compression.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a layer-wise progressive knowledge distillation strategy that transfers knowledge from a teacher to a student network one layer at a time, improving the efficiency and effectiveness of model compression.</p>
                     </div>
                 </div>
 
                 <!-- arXiv preprint -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/5cycle.png" alt="Complete tripartite graph 5-cycle decomposition illustration"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=5-cycle';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">On decomposing complete tripartite graphs into
+                            <h3 class="text-base font-semibold text-slate-900">On decomposing complete tripartite graphs into
                                 5-cycles</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">arXiv preprint</span>
+                            <span class="text-cyan-600 font-medium md:ml-4 text-sm mt-1 md:mt-0">arXiv preprint</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong class="text-slate-300">MA
+                        <p class="text-slate-600 mb-2 text-sm">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong class="text-slate-800">MA
                                 Shabani</strong></p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/1907.06187.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Proves necessary and sufficient conditions for decomposing complete tripartite graphs into 5-cycles, extending known results on cycle decompositions in combinatorial graph theory.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proves necessary and sufficient conditions for decomposing complete tripartite graphs into 5-cycles, extending known results on cycle decompositions in combinatorial graph theory.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>The problem of finding necessary and sufficient conditions to decompose a complete tripartite graph K<sub>r,s,t</sub> into 5-cycles was first considered by E.S. Mahmoodian and Maryam Mirzakhani (1995). They stated some necessary conditions and conjectured that those conditions are also sufficient. Since then, many cases of the problem have been solved by various authors; however, the case when the partite sets r≤s≤t have odd and distinct sizes remained open. We show the conjecture is true when r, s and t are all multiples of 5, t+90 ≤ 4rs/(r+s), and t ≠ s+10.</p>
@@ -746,25 +713,25 @@
 
                 <!-- Graphs and Combinatorics, 2018 -->
                 <div
-                    class="publication-item bg-slate-800/50 p-5 rounded-xl hover:shadow-md transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                     <img src="images/uklc.png" alt="Uniquely k-list colorable graph examples"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=UKLC';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-white">On Uniquely k-List Colorable Planar Graphs,
+                            <h3 class="text-base font-semibold text-slate-900">On Uniquely k-List Colorable Planar Graphs,
                                 Graphs on Surfaces, and Regular Graphs</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">Graphs and Combinatorics, 2018</span>
                         </div>
-                        <p class="text-slate-400 mb-2 text-sm">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N
-                            Matsumoto, <strong class="text-slate-300">M. A. Shabani</strong></p>
+                        <p class="text-slate-600 mb-2 text-sm">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N
+                            Matsumoto, <strong class="text-slate-800">M. A. Shabani</strong></p>
                         <div class="flex flex-wrap gap-3">
                             <a href="https://arxiv.org/pdf/1705.07434.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2"><span class="font-semibold not-italic text-slate-400">TL;DR:</span> Characterizes uniquely k-list colorable planar graphs and graphs on surfaces, establishing new structural properties and bounds for list coloring in graph theory.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Characterizes uniquely k-list colorable planar graphs and graphs on surfaces, establishing new structural properties and bounds for list coloring in graph theory.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>A graph G is called uniquely k-list colorable (UkLC) if there exists a list of colors on its vertices, say L={S<sub>v</sub> | v ∈ V(G)}, each of size k, such that there is a unique proper list coloring of G from this list of colors. A graph G is said to have property M(k) if it is not uniquely k-list colorable. Mahmoodian and Mahdian characterized all graphs with property M(2). For k≥3 property M(k) has been studied only for multipartite graphs. Here we find bounds on M(k) for graphs embedded on surfaces, and obtain new results on planar graphs. We begin a general study of bounds on M(k) for regular graphs, as well as for graphs with varying list sizes.</p>
@@ -776,7 +743,7 @@
             <!-- More publications button -->
             <div class="text-center mt-10">
                 <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
-                    class="inline-flex items-center bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-6 py-3 rounded-xl transition-all shadow-md">
+                    class="inline-flex items-center bg-cyan-600 hover:bg-cyan-700 text-white font-medium px-6 py-3 rounded-lg transition-all shadow-sm">
                     View All Publications <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -784,52 +751,42 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-16 bg-slate-900 text-slate-300">
+    <section id="contact" class="py-16 bg-slate-50 text-slate-700">
         <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-white">Get In Touch</h2>
+            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Get In Touch</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                    <h3 class="text-base font-semibold mb-5 text-white uppercase tracking-widest text-xs">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center mr-4 flex-shrink-0 mt-0.5">
-                                <i class="fas fa-envelope text-cyan-400 text-sm"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase tracking-wide font-medium mb-0.5">Email</p>
-                                <a href="mailto:aminshabaany@gmail.com"
-                                    class="text-cyan-400 hover:text-cyan-300 transition-colors text-sm">aminshabaany@gmail.com</a>
-                            </div>
+                    <h3 class="text-base font-semibold mb-4 text-slate-900">Contact</h3>
+                    <div class="space-y-3 text-sm text-slate-600">
+                        <div>
+                            <span class="text-slate-500">Email — </span>
+                            <a href="mailto:aminshabaany@gmail.com"
+                                class="text-cyan-600 hover:text-cyan-700 transition-colors">aminshabaany@gmail.com</a>
                         </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center mr-4 flex-shrink-0 mt-0.5">
-                                <i class="fas fa-map-marker-alt text-cyan-400 text-sm"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase tracking-wide font-medium mb-0.5">Location</p>
-                                <p class="text-slate-300 text-sm">Vancouver, Canada</p>
-                            </div>
+                        <div>
+                            <span class="text-slate-500">Location — </span>
+                            <span>Vancouver, Canada</span>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-base font-semibold mb-5 text-white uppercase tracking-widest text-xs">Connect With Me</h3>
+                    <h3 class="text-base font-semibold mb-4 text-slate-900">Connect</h3>
                     <div class="flex space-x-3">
                         <a href="https://www.linkedin.com/in/mohammad-amin-shabani-bbab02105" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700/50 hover:border-cyan-500/30 flex items-center justify-center transition-all shadow-md">
-                            <i class="fab fa-linkedin-in text-cyan-400"></i>
+                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
+                            <i class="fab fa-linkedin-in text-slate-600"></i>
                         </a>
                         <a href="https://github.com/aminshabani" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700/50 hover:border-cyan-500/30 flex items-center justify-center transition-all shadow-md">
-                            <i class="fab fa-github text-cyan-400"></i>
+                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
+                            <i class="fab fa-github text-slate-600"></i>
                         </a>
                         <a href="https://twitter.com/amin_shabani" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700/50 hover:border-cyan-500/30 flex items-center justify-center transition-all shadow-md">
-                            <i class="fab fa-twitter text-cyan-400"></i>
+                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
+                            <i class="fab fa-twitter text-slate-600"></i>
                         </a>
                         <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700/50 hover:border-cyan-500/30 flex items-center justify-center transition-all shadow-md">
-                            <i class="fas fa-graduation-cap text-cyan-400" title="Google Scholar"></i>
+                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
+                            <i class="fas fa-graduation-cap text-slate-600" title="Google Scholar"></i>
                         </a>
                     </div>
                 </div>
@@ -838,12 +795,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-500 py-6 border-t border-slate-800/50">
+    <footer class="bg-white text-slate-400 py-6 border-t border-slate-200">
         <div class="container mx-auto max-w-5xl px-4 text-center text-sm">
             <p>
-                &copy; 2026 Mohammad Amin Shabani. Created with <span
-                    class="text-cyan-400 font-semibold">Deepsite</span> &amp; <span
-                    class="text-cyan-400 font-semibold">Gemini</span>.
+                &copy; 2026 Mohammad Amin Shabani. Designed with <span
+                    class="text-cyan-600 font-semibold">Claude</span>, built with <span
+                    class="text-cyan-600 font-semibold">Deepsite</span> &amp; <span
+                    class="text-cyan-600 font-semibold">Gemini</span>.
             </p>
         </div>
     </footer>
@@ -855,9 +813,9 @@
 
     <!-- Image Pop-up Modal -->
     <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden p-4">
-        <div class="relative bg-slate-800 p-4 rounded-xl shadow-2xl max-w-3xl max-h-[90vh] overflow-hidden border border-slate-700/50">
+        <div class="relative bg-white p-4 rounded-xl shadow-2xl max-w-3xl max-h-[90vh] overflow-hidden border border-slate-200">
             <button id="close-image-modal"
-                class="absolute top-2 right-2 text-slate-400 hover:text-white text-3xl font-bold leading-none transition-colors">&times;</button>
+                class="absolute top-2 right-2 text-slate-400 hover:text-slate-800 text-3xl font-bold leading-none transition-colors">&times;</button>
             <img id="modal-image" src="" alt="Enlarged Publication Image"
                 class="max-w-full max-h-full object-contain rounded-lg">
         </div>
