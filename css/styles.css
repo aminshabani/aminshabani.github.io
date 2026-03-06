@@ -283,6 +283,55 @@ body {
     /* gray-800 */
 }
 
+/* Publication abstract expandable */
+.pub-abstract summary {
+    font-size: 0.8rem;
+    color: #9ca3af; /* gray-400 */
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.pub-abstract summary::-webkit-details-marker {
+    display: none;
+}
+
+.pub-abstract summary::before {
+    content: '▶';
+    font-size: 0.6rem;
+    transition: transform 0.2s ease;
+}
+
+.pub-abstract[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.pub-abstract summary:hover {
+    color: #60a5fa; /* blue-400 */
+}
+
+.pub-abstract[open] summary {
+    color: #60a5fa;
+}
+
+.pub-abstract p {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #9ca3af; /* gray-400 */
+    line-height: 1.5;
+}
+
+/* Profile picture gradient ring */
+.profile-gradient-ring {
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.35);
+}
+
 /* Light Mode Styles - Applied when html has class="light-mode" */
 html.light-mode body {
     background-color: #f9fafb;
@@ -608,6 +657,19 @@ html.light-mode #publications .bg-gray-800 a:hover {
 html.light-mode #publications .bg-gray-800 .text-blue-400 {
     color: #3b82f6;
     /* blue-600 */
+}
+
+html.light-mode .pub-abstract summary {
+    color: #6b7280; /* gray-500 */
+}
+
+html.light-mode .pub-abstract summary:hover,
+html.light-mode .pub-abstract[open] summary {
+    color: #2563eb; /* blue-600 */
+}
+
+html.light-mode .pub-abstract p {
+    color: #6b7280; /* gray-500 */
 }
 
 html.light-mode .publications-scroll-container::-webkit-scrollbar-thumb {
