@@ -166,14 +166,22 @@
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title text-slate-900">News</h2>
                 <div class="news-scroll-container space-y-3 pr-2">
-                    <!-- NEW ITEM 0 -->
+                    <!-- ACL Findings 2026: FACTS -->
+                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
+                        <p class="text-slate-700 news-item-line text-sm">
+                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Apr 2026</span>
+                            Paper "<a href="https://openreview.net/forum?id=tl9RvW3JLN" target="_blank"
+                                rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline">FACTS: Table Summarization via Offline Template Generation with Agentic Workflows</a>" accepted at <strong>ACL Findings 2026</strong>. <span
+                                class="text-red-500 font-semibold text-xs">(new)</span>
+                        </p>
+                    </div>
+                    <!-- ICLR 2026: EBCAR -->
                     <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
                         <p class="text-slate-700 news-item-line text-sm">
                             <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2026</span>
                             Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
                                 rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline">Embedding-based
-                                Context-aware Reranker</a>" accepted at <strong>ICLR 2026</strong>. <span
-                                class="text-red-500 font-semibold text-xs">(new)</span>
+                                Context-aware Reranker</a>" accepted at <strong>ICLR 2026</strong>.
                         </p>
                     </div>
                     <!-- NEW ITEM 1 -->
@@ -186,14 +194,14 @@
                             <span class="text-red-500 font-semibold text-xs">(new)</span>
                         </p>
                     </div>
-                    <!-- NEW ITEM 2 -->
+                    <!-- NeurIPS Workshop 2025 -->
                     <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
                         <p class="text-slate-700 news-item-line text-sm">
                             <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2025</span>
-                            Paper "<a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer"
-                                class="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors">FACTS: Table Summarization via Offline Template
-                                Generation with Agentic Workflows</a>" accepted at <strong>NeurIPS 2025 Workshop</strong> on Generative
-                            AI in Finance. <span class="text-red-500 font-semibold text-xs">(new)</span>
+                            Paper "<a href="https://openreview.net/forum?id=wfhumSU3lw" target="_blank" rel="noopener noreferrer"
+                                class="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors">Fast, Accurate, and Privacy-Compliant Table
+                                Summarization via Offline Template Generation</a>" accepted at <strong>NeurIPS 2025 Workshop</strong> on Generative
+                            AI in Finance.
                         </p>
                     </div>
                     <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
@@ -393,6 +401,32 @@
         <div class="container mx-auto max-w-5xl px-4">
             <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Publications</h2>
             <div class="publications-scroll-container space-y-4">
+                <!-- ACL Findings 2026: FACTS -->
+                <div
+                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="images/facts.png" alt="FACTS table summarization pipeline overview"
+                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=FACTS';">
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
+                            <h3 class="text-base font-semibold text-slate-900">FACTS: Table Summarization via Offline Template Generation with Agentic Workflows</h3>
+                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ACL Findings 2026</span>
+                        </div>
+                        <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://openreview.net/pdf?id=tl9RvW3JLN" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                                <i class="fas fa-file-pdf mr-1"></i> PDF
+                            </a>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data.</p>
+                        <details class="pub-abstract mt-2">
+                            <summary>Show Abstract</summary>
+                            <p>Query-focused table summarization requires generating natural language summaries of tabular data conditioned on a user query, enabling users to access insights beyond fact retrieval. Existing approaches face key limitations: table-to-text models require costly fine-tuning and struggle with complex reasoning, prompt-based LLM methods suffer from token-limit and efficiency issues while exposing sensitive data, and prior agentic pipelines often rely on decomposition, planning, or manual templates that lack robustness and scalability. To mitigate these issues, we introduce an agentic workflow, FACTS, a Fast, Accurate, and Privacy-Compliant Table Summarization approach via Offline Template Generation. FACTS produces offline templates, consisting of SQL queries and Jinja2 templates, which can be rendered into natural language summaries and are reusable across multiple tables sharing the same schema. It enables fast summarization through reusable offline templates, accurate outputs with executable SQL queries, and privacy compliance by sending only table schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS consistently outperforms baseline methods, establishing it as a practical solution for real-world query-focused table summarization.</p>
+                        </details>
+                    </div>
+                </div>
+
                 <!-- ICLR 2026: EBCAR -->
                 <div
                     class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
@@ -419,26 +453,25 @@
                     </div>
                 </div>
 
-                <!-- NeurIPS Workshop: FACTS -->
+                <!-- NeurIPS Workshop 2025 -->
                 <div
                     class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/facts.png" alt="FACTS table summarization pipeline overview"
+                    <img src="images/facts.png" alt="Fast, Accurate, and Privacy-Compliant Table Summarization"
                         class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=FACTS';">
                     <div class="flex-grow">
                         <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">FACTS: Table Summarization via Offline Template
-                                Generation with Agentic Workflows</h3>
+                            <h3 class="text-base font-semibold text-slate-900">Fast, Accurate, and Privacy-Compliant Table Summarization via Offline Template Generation</h3>
                             <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">NeurIPS Workshop, 2025</span>
                         </div>
                         <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2510.13920" target="_blank" rel="noopener noreferrer"
+                            <a href="https://openreview.net/pdf?id=wfhumSU3lw" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-file-pdf mr-1"></i> PDF
                             </a>
                         </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data.</p>
+                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data while preserving data privacy.</p>
                         <details class="pub-abstract mt-2">
                             <summary>Show Abstract</summary>
                             <p>Query-focused table summarization requires generating natural language summaries of tabular data conditioned on a user query, enabling users to access insights beyond fact retrieval. Existing approaches face key limitations: table-to-text models require costly fine-tuning and struggle with complex reasoning, prompt-based LLM methods suffer from token-limit and efficiency issues while exposing sensitive data, and prior agentic pipelines often rely on decomposition, planning, or manual templates that lack robustness and scalability. To mitigate these issues, we introduce an agentic workflow, FACTS, a Fast, Accurate, and Privacy-Compliant Table Summarization approach via Offline Template Generation. FACTS produces offline templates, consisting of SQL queries and Jinja2 templates, which can be rendered into natural language summaries and are reusable across multiple tables sharing the same schema. It enables fast summarization through reusable offline templates, accurate outputs with executable SQL queries, and privacy compliance by sending only table schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS consistently outperforms baseline methods, establishing it as a practical solution for real-world query-focused table summarization.</p>
