@@ -73,7 +73,7 @@
                 <a href="#news-photos" class="nav-link">News & Photos</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#education" class="nav-link">Education</a>
-                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#publications" class="nav-link">Research</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
@@ -98,7 +98,7 @@
             <a href="#education"
                 class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Education</a>
             <a href="#publications"
-                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Publications</a>
+                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Research</a>
             <a href="#contact" class="block py-2.5 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Contact</a>
         </div>
     </header>
@@ -181,7 +181,8 @@
                             <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2026</span>
                             Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
                                 rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline">Embedding-based
-                                Context-aware Reranker</a>" accepted at <strong>ICLR 2026</strong>.
+                                Context-aware Reranker</a>" accepted at <strong>ICLR 2026</strong>. <span
+                                class="text-red-500 font-semibold text-xs">(new)</span>
                         </p>
                     </div>
                     <!-- NEW ITEM 1 -->
@@ -503,6 +504,10 @@
                                 class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-globe mr-1"></i> Project Website
                             </a>
+                            <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                                <i class="fas fa-certificate mr-1"></i> Related Patent
+                            </a>
                         </div>
                         <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Presents a dual diffusion model that jointly generates raster image content and corresponding vector layout for graphic design templates, enabling coherent, high-quality, and editable design generation from user-provided conditions.</p>
                         <details class="pub-abstract mt-2">
@@ -598,6 +603,10 @@
                             <a href="https://github.com/BorealisAI/scaleformer" target="_blank"
                                 class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
                                 <i class="fas fa-code mr-1"></i> Code
+                            </a>
+                            <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                                <i class="fas fa-certificate mr-1"></i> Related Patent
                             </a>
                         </div>
                         <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proposes an iterative multi-scale refining framework that applies Transformer-based forecasters at multiple temporal resolutions, progressively sharpening predictions from coarse to fine scales for improved time series forecasting accuracy.</p>
@@ -793,8 +802,64 @@
         </div>
     </section>
 
+    <!-- Patents -->
+    <section id="patents" class="py-16 bg-slate-50">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Patents</h2>
+            <div class="space-y-4">
+
+                <!-- Patent 1: Adobe / Visual Layout Composer -->
+                <div class="bg-white p-6 rounded-lg border border-slate-200">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
+                        <h3 class="text-base font-semibold text-slate-900">Generating Visually Aware Design Layouts Using a Multi-Domain Diffusion Neural Network</h3>
+                        <span class="text-cyan-600 font-medium text-sm whitespace-nowrap">Oct 2025</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-1">Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu, <strong class="text-slate-800">Mohammad Amin Shabani</strong></p>
+                    <p class="text-slate-500 text-xs mb-3">
+                        <span class="font-medium">US20250329081A1</span> &middot; Adobe Inc &middot; Filed Apr 2024
+                    </p>
+                    <p class="text-xs text-slate-500 italic leading-relaxed mb-3">Describes a diffusion framework that jointly generates design layouts in image and vector domains, using visual element characteristics as conditions to improve diversity and saliency reasoning.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View on Google Patents
+                        </a>
+                        <a href="#publications" onclick="document.querySelector('#publications').scrollIntoView({behavior:'smooth'}); return false;"
+                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                            <i class="fas fa-file-alt mr-1"></i> Related Publication (CVPR 2024)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Patent 2: RBC / Scaleformer -->
+                <div class="bg-white p-6 rounded-lg border border-slate-200">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
+                        <h3 class="text-base font-semibold text-slate-900">Multi-Scale Artificial Neural Network and a Method for Operating Same for Time Series Forecasting</h3>
+                        <span class="text-cyan-600 font-medium text-sm whitespace-nowrap">Nov 2023</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-1"><strong class="text-slate-800">Amin Shabani</strong>, Tristan Sylvain, Lili Meng, Amir Abdi</p>
+                    <p class="text-slate-500 text-xs mb-3">
+                        <span class="font-medium">US20230368002A1</span> &middot; Royal Bank of Canada &middot; Filed May 2023
+                    </p>
+                    <p class="text-xs text-slate-500 italic leading-relaxed mb-3">Describes an iterative multi-scale neural network approach for time series forecasting that progressively refines predictions from coarse to fine temporal resolutions, achieving 5.5–38.5% error reduction across benchmarks.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                            <i class="fas fa-external-link-alt mr-1"></i> View on Google Patents
+                        </a>
+                        <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
+                            <i class="fas fa-file-alt mr-1"></i> Related Publication (ICLR 2023)
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
-    <section id="contact" class="py-16 bg-slate-50 text-slate-700">
+    <section id="contact" class="py-16 bg-white text-slate-700">
         <div class="container mx-auto max-w-5xl px-4">
             <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Get In Touch</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
