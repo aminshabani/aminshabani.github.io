@@ -111,6 +111,7 @@ document.getElementById('back-to-top').addEventListener('click', function() {
 
 // Photo Carousel Logic
 const images = [
+    { src: "assets/photos/upperbound-2026.jpeg", title: "Talk at Upper Bound 2026, Edmonton" },
     { src: "assets/photos/group-2023-cvpr.jpg", title: "CVPR 2023 Group Photo" },
     { src: "assets/photos/group-2022-sfu.jpg", title: "SFU Lab Group Photo 2022" },
 ];
