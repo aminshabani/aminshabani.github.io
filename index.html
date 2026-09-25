@@ -74,6 +74,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Header / Navigation -->
     <header class="site-header">
@@ -108,7 +109,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
 
         <!-- Hero -->
         <section id="about" class="hero">
@@ -154,7 +155,7 @@
                     <h2>News</h2>
                 </div>
                 <div class="split">
-                    <div class="news-scroll" tabindex="0">
+                    <div class="news-scroll" tabindex="0" role="region" aria-label="News">
                         <div class="news-row is-new">
                             <span class="news-date">Jul 2026</span>
                             <p>Promoted to <strong>Senior Machine Learning Researcher</strong> at RBC Borealis.</p>
@@ -230,8 +231,20 @@
                                 <span id="photo-title" class="carousel-caption"></span>
                                 <span class="carousel-controls">
                                     <span id="carousel-counter" class="carousel-counter">1 / 1</span>
-                                    <button id="prev-button" aria-label="Previous photo">←</button>
-                                    <button id="next-button" aria-label="Next photo">→</button>
+                                    <button id="carousel-toggle" type="button" aria-label="Pause slideshow"
+                                        aria-pressed="false">
+                                        <svg class="icon-pause" viewBox="0 0 12 12" width="10" height="10"
+                                            fill="currentColor" aria-hidden="true">
+                                            <rect x="2" y="1.5" width="3" height="9" />
+                                            <rect x="7" y="1.5" width="3" height="9" />
+                                        </svg>
+                                        <svg class="icon-play" viewBox="0 0 12 12" width="10" height="10"
+                                            fill="currentColor" aria-hidden="true">
+                                            <path d="M3 1.5v9l7-4.5z" />
+                                        </svg>
+                                    </button>
+                                    <button id="prev-button" type="button" aria-label="Previous photo">←</button>
+                                    <button id="next-button" type="button" aria-label="Next photo">→</button>
                                 </span>
                             </figcaption>
                         </figure>
@@ -390,8 +403,9 @@
 
                     <!-- ACL Findings 2026: FACTS -->
                     <article class="pub">
-                        <img src="images/facts_acl.png" alt="FACTS table summarization pipeline overview"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/facts_acl.png" alt="FACTS table summarization pipeline overview" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">ACL Findings 2026</span>
@@ -433,8 +447,9 @@
 
                     <!-- ICLR 2026: EBCAR -->
                     <article class="pub">
-                        <img src="images/ebcar.png" alt="Embedding-based Context-aware Reranker diagram"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/ebcar.png" alt="Embedding-based Context-aware Reranker diagram" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">ICLR 2026</span>
@@ -476,8 +491,9 @@
 
                     <!-- NeurIPS Workshop 2025 -->
                     <article class="pub">
-                        <img src="images/facts.png" alt="Fast, Accurate, and Privacy-Compliant Table Summarization"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/facts.png" alt="Fast, Accurate, and Privacy-Compliant Table Summarization" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">NeurIPS Workshop 2025</span>
@@ -520,8 +536,9 @@
 
                     <!-- CVPR 2024 -->
                     <article class="pub">
-                        <img src="images/vlc.jpg" alt="Visual Layout Composer dual diffusion model overview"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/vlc.jpg" alt="Visual Layout Composer dual diffusion model overview" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">CVPR 2024</span>
@@ -559,8 +576,9 @@
 
                     <!-- NeurIPS 2023 -->
                     <article class="pub">
-                        <img src="images/jigsawplan.png"
-                            alt="PuzzleFusion jigsaw puzzle solving with diffusion models" class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/jigsawplan.png" alt="PuzzleFusion jigsaw puzzle solving with diffusion models" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">NeurIPS 2023</span>
@@ -604,8 +622,9 @@
 
                     <!-- CVPR 2023 -->
                     <article class="pub">
-                        <img src="images/housediffusion.jpg"
-                            alt="HouseDiffusion vector floorplan generation examples" class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/housediffusion.jpg" alt="HouseDiffusion vector floorplan generation examples" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">CVPR 2023</span>
@@ -646,8 +665,9 @@
 
                     <!-- ICLR 2023 -->
                     <article class="pub">
-                        <img src="images/scaleformer.png" alt="Scaleformer iterative multi-scale architecture"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/scaleformer.png" alt="Scaleformer iterative multi-scale architecture" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">ICLR 2023</span>
@@ -689,8 +709,9 @@
 
                     <!-- ACCV 2022 -->
                     <article class="pub">
-                        <img src="images/vectorizing_building.png"
-                            alt="Vectorizing Building Blueprints method results" class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/vectorizing_building.png" alt="Vectorizing Building Blueprints method results" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">ACCV 2022</span>
@@ -729,8 +750,9 @@
 
                     <!-- ICCV 2021 -->
                     <article class="pub">
-                        <img src="images/extreme_sfm.jpg" alt="Extreme SfM indoor panorama 3D reconstruction"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/extreme_sfm.jpg" alt="Extreme SfM indoor panorama 3D reconstruction" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">ICCV 2021</span>
@@ -766,8 +788,9 @@
 
                     <!-- BMVC 2017 -->
                     <article class="pub">
-                        <img src="images/lvm.jpg" alt="Local Visual Microphones sound extraction from video"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/lvm.jpg" alt="Local Visual Microphones sound extraction from video" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">BMVC 2017</span>
@@ -801,8 +824,9 @@
 
                     <!-- M.Sc. Thesis 2019 -->
                     <article class="pub">
-                        <img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation diagram"
-                            class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation diagram" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">M.Sc. Thesis · 2019</span>
@@ -821,8 +845,9 @@
 
                     <!-- arXiv preprint -->
                     <article class="pub">
-                        <img src="images/5cycle.png"
-                            alt="Complete tripartite graph 5-cycle decomposition illustration" class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/5cycle.png" alt="Complete tripartite graph 5-cycle decomposition illustration" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">arXiv preprint</span>
@@ -853,7 +878,9 @@
 
                     <!-- Graphs and Combinatorics, 2018 -->
                     <article class="pub">
-                        <img src="images/uklc.png" alt="Uniquely k-list colorable graph examples" class="pub-thumb">
+                        <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
+                            <img src="images/uklc.png" alt="Uniquely k-list colorable graph examples" class="pub-thumb">
+                        </button>
                         <div class="pub-body">
                             <div class="pub-top">
                                 <span class="badge">Graphs and Combinatorics 2018</span>
@@ -948,12 +975,12 @@
 
                 <div class="fun-tabs" role="tablist" aria-label="Playable demos">
                     <button class="fun-tab active" id="tab-puzzle" role="tab" aria-selected="true"
-                        aria-controls="panel-puzzle" type="button">PuzzleFusion · jigsaw</button>
+                        aria-controls="panel-puzzle" type="button" tabindex="0">PuzzleFusion · jigsaw</button>
                     <button class="fun-tab" id="tab-forecast" role="tab" aria-selected="false"
-                        aria-controls="panel-forecast" type="button">Scaleformer · forecast</button>
+                        aria-controls="panel-forecast" type="button" tabindex="-1">Scaleformer · forecast</button>
                 </div>
 
-                <div id="panel-puzzle" role="tabpanel" aria-labelledby="tab-puzzle">
+                <div id="panel-puzzle" role="tabpanel" aria-labelledby="tab-puzzle" tabindex="0">
                     <div class="puzzle-grid">
                         <div class="puzzle-text">
                             <p class="puzzle-blurb">
@@ -972,14 +999,14 @@
                             <p class="puzzle-status" id="puzzle-status" aria-live="polite"></p>
                         </div>
                         <div class="puzzle-frame">
-                            <div class="puzzle-board" id="puzzle-board"
+                            <div class="puzzle-board" id="puzzle-board" role="group"
                                 aria-label="Jigsaw puzzle of a fjord landscape">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="panel-forecast" role="tabpanel" aria-labelledby="tab-forecast" hidden>
+                <div id="panel-forecast" role="tabpanel" aria-labelledby="tab-forecast" tabindex="0" hidden>
                     <div class="puzzle-grid forecast-grid">
                         <div class="puzzle-text">
                             <p class="puzzle-blurb">
@@ -997,8 +1024,8 @@
                             <p class="puzzle-status" id="fc-status" aria-live="polite"></p>
                         </div>
                         <div class="forecast-frame">
-                            <canvas id="fc-canvas" aria-label="Forecasting game: draw your prediction for the shaded
-                                region of the time series"></canvas>
+                            <canvas id="fc-canvas"
+                                aria-label="Forecasting game: draw your prediction for the shaded region of the time series"></canvas>
                             <p class="fc-legend">
                                 <span class="fc-key"><span class="fc-swatch fc-swatch-hist"></span>history</span>
                                 <span class="fc-key"><span class="fc-swatch fc-swatch-you"></span>you</span>
@@ -1065,9 +1092,9 @@
     </footer>
 
     <!-- Image lightbox -->
-    <div id="image-modal" class="lightbox" hidden>
-        <button id="close-image-modal" aria-label="Close">&times;</button>
-        <img id="modal-image" src="" alt="Enlarged publication image">
+    <div id="image-modal" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure" hidden>
+        <button id="close-image-modal" type="button" aria-label="Close">&times;</button>
+        <img id="modal-image" src="" alt="">
     </div>
 
     <script src="js/main.js"></script>

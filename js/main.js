@@ -39,13 +39,25 @@ if (themeToggle) {
 darkMedia.addEventListener('change', reflectTheme);
 reflectTheme();
 
+const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const scrollBehavior = () => (reduceMotionQuery.matches ? 'auto' : 'smooth');
+
 // Mobile navigation
 const navToggle = document.getElementById('nav-toggle');
 const siteNav = document.getElementById('site-nav');
 
-navToggle.addEventListener('click', () => {
-    const open = siteNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
+function setNavOpen(open) {
+    siteNav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
+navToggle.addEventListener('click', () => setNavOpen(!siteNav.classList.contains('open')));
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && siteNav.classList.contains('open')) {
+        setNavOpen(false);
+        navToggle.focus();
+    }
 });
 
 // Smooth scrolling for anchor links (and close mobile nav)
@@ -54,16 +66,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetId = this.getAttribute('href');
         if (targetId === '#') {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: scrollBehavior() });
         } else {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                targetElement.scrollIntoView({ behavior: 'smooth' });
+                targetElement.scrollIntoView({ behavior: scrollBehavior() });
+                // Skip link and section anchors: move keyboard focus along with the scroll.
+                if (targetElement.hasAttribute('tabindex')) {
+                    targetElement.focus({ preventScroll: true });
+                }
             }
         }
-        siteNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        setNavOpen(false);
     });
 });
 
@@ -76,22 +91,43 @@ const images = [
 let currentImageIndex = 0;
 let autoSlideInterval;
 
+const carouselEl = document.getElementById('carousel');
 const carouselImage = document.getElementById('carousel-image');
 const photoTitleElement = document.getElementById('photo-title');
 const carouselCounter = document.getElementById('carousel-counter');
+const carouselToggle = document.getElementById('carousel-toggle');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
+
+// Autoplay is off for reduced-motion users; everyone can pause it. Hover and
+// keyboard focus pause temporarily; a hidden tab pauses too.
+let autoplayOn = !reduceMotionQuery.matches;
+let carouselHeld = false;
 
 function showImage(index) {
     currentImageIndex = (index + images.length) % images.length;
     carouselImage.src = images[currentImageIndex].src;
+    carouselImage.alt = images[currentImageIndex].title;
     photoTitleElement.textContent = images[currentImageIndex].title;
     carouselCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
 }
 
-function resetAutoSlide() {
+function stopAutoSlide() {
     clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(() => showImage(currentImageIndex + 1), 6000);
+    autoSlideInterval = null;
+}
+
+function resetAutoSlide() {
+    stopAutoSlide();
+    if (autoplayOn && !carouselHeld && !document.hidden) {
+        autoSlideInterval = setInterval(() => showImage(currentImageIndex + 1), 6000);
+    }
+    carouselEl.dataset.autoplay = autoSlideInterval ? 'on' : 'off';
+}
+
+function reflectAutoplay() {
+    carouselToggle.setAttribute('aria-pressed', String(!autoplayOn));
+    carouselToggle.setAttribute('aria-label', autoplayOn ? 'Pause slideshow' : 'Play slideshow');
 }
 
 prevButton.addEventListener('click', () => {
@@ -102,9 +138,24 @@ nextButton.addEventListener('click', () => {
     showImage(currentImageIndex + 1);
     resetAutoSlide();
 });
+carouselToggle.addEventListener('click', () => {
+    autoplayOn = !autoplayOn;
+    reflectAutoplay();
+    resetAutoSlide();
+});
+['mouseenter', 'focusin'].forEach(ev => carouselEl.addEventListener(ev, () => {
+    carouselHeld = true;
+    stopAutoSlide();
+}));
+['mouseleave', 'focusout'].forEach(ev => carouselEl.addEventListener(ev, () => {
+    carouselHeld = false;
+    resetAutoSlide();
+}));
+document.addEventListener('visibilitychange', resetAutoSlide);
 
 if (images.length > 0) {
     showImage(0);
+    reflectAutoplay();
     resetAutoSlide();
 }
 
@@ -113,15 +164,24 @@ const imageModal = document.getElementById('image-modal');
 const modalImage = document.getElementById('modal-image');
 const closeImageModalButton = document.getElementById('close-image-modal');
 
-function openImageModal(src) {
+let modalReturnFocus = null;
+
+function openImageModal(src, alt) {
     modalImage.src = src;
+    modalImage.alt = alt || 'Enlarged figure';
     imageModal.hidden = false;
     document.body.style.overflow = 'hidden';
+    modalReturnFocus = document.activeElement;
+    closeImageModalButton.focus();
 }
 
 function closeImageModal() {
     imageModal.hidden = true;
     document.body.style.overflow = '';
+    if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') {
+        modalReturnFocus.focus();
+    }
+    modalReturnFocus = null;
 }
 
 closeImageModalButton.addEventListener('click', closeImageModal);
@@ -129,11 +189,18 @@ imageModal.addEventListener('click', (e) => {
     if (e.target === imageModal) closeImageModal();
 });
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !imageModal.hidden) closeImageModal();
+    if (imageModal.hidden) return;
+    if (e.key === 'Escape') closeImageModal();
+    // The close button is the dialog's only focusable element: keep focus on it.
+    if (e.key === 'Tab') {
+        e.preventDefault();
+        closeImageModalButton.focus();
+    }
 });
 
-document.querySelectorAll('.pub-thumb').forEach(img => {
-    img.addEventListener('click', () => openImageModal(img.src));
+document.querySelectorAll('.pub-thumb-btn').forEach(btn => {
+    const img = btn.querySelector('img');
+    btn.addEventListener('click', () => openImageModal(img.src, img.alt));
 });
 
 // PuzzleFusion mini-game: tap two tiles to swap, or solve via "reverse diffusion"
@@ -143,7 +210,7 @@ if (puzzleBoard) {
     const statusEl = document.getElementById('puzzle-status');
     const shuffleBtn = document.getElementById('puzzle-shuffle');
     const solveBtn = document.getElementById('puzzle-solve');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion = reduceMotionQuery.matches;
 
     let slotOf = [];        // tile index -> current slot on the board
     let selected = null;
@@ -271,16 +338,29 @@ if (puzzleBoard) {
     shuffle();
 }
 
-// Fun section tabs
-const funTabs = document.querySelectorAll('.fun-tab');
-funTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        funTabs.forEach(t => {
-            const active = t === tab;
-            t.classList.toggle('active', active);
-            t.setAttribute('aria-selected', active);
-            document.getElementById(t.getAttribute('aria-controls')).hidden = !active;
-        });
+// Fun section tabs (click, or Arrow/Home/End keys per the ARIA tabs pattern)
+const funTabs = Array.from(document.querySelectorAll('.fun-tab'));
+
+function activateTab(tab) {
+    funTabs.forEach(t => {
+        const active = t === tab;
+        t.classList.toggle('active', active);
+        t.setAttribute('aria-selected', String(active));
+        t.tabIndex = active ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !active;
+    });
+    document.dispatchEvent(new CustomEvent('tabchange', { detail: tab.id }));
+}
+
+funTabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => activateTab(tab));
+    tab.addEventListener('keydown', (e) => {
+        const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: funTabs.length - 1 };
+        if (!(e.key in keys)) return;
+        e.preventDefault();
+        const next = funTabs[(keys[e.key] + funTabs.length) % funTabs.length];
+        activateTab(next);
+        next.focus();
     });
 });
 
@@ -291,7 +371,7 @@ if (fcCanvas) {
     const fcStatus = document.getElementById('fc-status');
     const fcNew = document.getElementById('fc-new');
     const fcReveal = document.getElementById('fc-reveal');
-    const fcReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fcReduceMotion = reduceMotionQuery.matches;
 
     const HIST = 84, HORIZON = 36, PERIOD = 24;
     const TOTAL = HIST + HORIZON;
@@ -631,8 +711,8 @@ if (fcCanvas) {
     });
 
     // The panel starts hidden, so size once it becomes visible.
-    document.getElementById('tab-forecast').addEventListener('click', () => {
-        if (!fcCanvas.clientWidth) return;
+    document.addEventListener('tabchange', (e) => {
+        if (e.detail !== 'tab-forecast' || !fcCanvas.clientWidth) return;
         sizeCanvas();
         draw();
     });
