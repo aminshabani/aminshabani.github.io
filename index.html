@@ -175,7 +175,7 @@
                         </div>
                         <div class="news-row is-new">
                             <span class="news-date">Jan 2026</span>
-                            <p>Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                            <p>Paper "<a href="https://arxiv.org/abs/2510.13329" target="_blank"
                                     rel="noopener noreferrer">Embedding-based Context-aware Reranker</a>" accepted
                                 at <strong>ICLR 2026</strong>.</p>
                         </div>
@@ -192,6 +192,17 @@
                                     rel="noopener noreferrer">Fast, Accurate, and Privacy-Compliant Table
                                     Summarization via Offline Template Generation</a>" accepted at <strong>NeurIPS
                                     2025 Workshop</strong> on Generative AI in Finance.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Aug 2025</span>
+                            <p>Defended my <a href="https://summit.sfu.ca/item/39603" target="_blank"
+                                    rel="noopener noreferrer">Ph.D. thesis</a> on diffusion models for structured
+                                geometry at <strong>SFU</strong>.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Jun 2024</span>
+                            <p>Presented <strong>Visual Layout Composer</strong> at <strong>CVPR 2024</strong>,
+                                Seattle.</p>
                         </div>
                         <div class="news-row">
                             <span class="news-date">Apr 2024</span>
@@ -287,7 +298,7 @@
                                         alt="RBC Borealis" class="org-logo org-logo-wide"></a></p>
                             <p class="tl-desc">Contributing to research and development of machine learning models
                                 for real-world applications in finance.</p>
-                            <p class="tl-links"><a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                            <p class="tl-links"><a href="https://arxiv.org/abs/2510.13329" target="_blank"
                                     rel="noopener noreferrer">EBCAR · ICLR 2026 ↗</a><br><a
                                     href="https://aclanthology.org/2026.findings-acl.453.pdf" target="_blank"
                                     rel="noopener noreferrer">FACTS · ACL Findings 2026 ↗</a><br><a
@@ -320,9 +331,9 @@
                                 <h3>Machine Learning Research Intern</h3>
                                 <span class="tl-date">Jan 2022 — May 2022</span>
                             </div>
-                            <p class="tl-org"><a href="https://www.borealisai.com/en/" target="_blank"
+                            <p class="tl-org"><a href="https://rbcborealis.com/" target="_blank"
                                     rel="noopener noreferrer"><img src="images/rbc-borealis-logo.svg"
-                                        alt="Borealis AI" class="org-logo org-logo-wide"></a></p>
+                                        alt="Borealis AI (now RBC Borealis)" class="org-logo org-logo-wide"></a></p>
                             <p class="tl-desc">Worked on Iterative Multi-scale Refining Transformers for Time
                                 Series Forecasting. Published at ICLR 2023.</p>
                             <p class="tl-links"><a href="https://openreview.net/pdf?id=sCrnllCtjoE"
@@ -385,6 +396,8 @@
                             <h3>Sharif University of Technology</h3>
                             <p class="edu-degree">B.Sc. in Computer Science</p>
                             <p class="edu-date">2012 — 2017</p>
+                            <a class="edu-link" href="https://en.sharif.edu/" target="_blank"
+                                rel="noopener noreferrer">sharif.edu ↗</a>
                         </div>
                     </article>
 
@@ -402,7 +415,7 @@
                 <div class="pubs">
 
                     <!-- ACL Findings 2026: FACTS -->
-                    <article class="pub">
+                    <article class="pub" id="pub-facts">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/facts_acl.png" alt="FACTS table summarization pipeline overview" class="pub-thumb">
                         </button>
@@ -446,7 +459,7 @@
                     </article>
 
                     <!-- ICLR 2026: EBCAR -->
-                    <article class="pub">
+                    <article class="pub" id="pub-ebcar">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/ebcar.png" alt="Embedding-based Context-aware Reranker diagram" class="pub-thumb">
                         </button>
@@ -461,10 +474,12 @@
                                 incorporating query context, leading to more relevant and accurate retrieval
                                 results.</p>
                             <div class="pub-links">
-                                <a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                                <a href="https://arxiv.org/abs/2510.13329" target="_blank"
                                     rel="noopener noreferrer">PDF</a>
                                 <a href="https://github.com/BorealisAI/EBCAR" target="_blank"
                                     rel="noopener noreferrer">Code</a>
+                                <a href="https://openreview.net/forum?id=OBMcxeSK5U" target="_blank"
+                                    rel="noopener noreferrer">OpenReview</a>
                             </div>
                             <details class="pub-abstract">
                                 <summary>Abstract</summary>
@@ -490,52 +505,31 @@
                     </article>
 
                     <!-- NeurIPS Workshop 2025 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-facts-w">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/facts.png" alt="Fast, Accurate, and Privacy-Compliant Table Summarization" class="pub-thumb">
                         </button>
                         <div class="pub-body">
                             <div class="pub-top">
-                                <span class="badge">NeurIPS Workshop 2025</span>
+                                <span class="badge">NeurIPS-W 2025</span>
+                                <span class="badge">Workshop version of FACTS</span>
                             </div>
                             <h3>Fast, Accurate, and Privacy-Compliant Table Summarization via Offline Template
                                 Generation</h3>
                             <p class="pub-authors">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
-                            <p class="pub-tldr">Introduces a framework for financial table summarization that
-                                combines offline template generation with agentic workflows, enabling structured
-                                and accurate natural language summaries of complex tabular financial data while
-                                preserving data privacy.</p>
+                            <p class="pub-tldr">Earlier workshop version of <a href="#pub-facts">FACTS (ACL Findings
+                                    2026)</a>, presented at the NeurIPS 2025 Workshop on Generative AI in Finance.</p>
                             <div class="pub-links">
                                 <a href="https://openreview.net/pdf?id=wfhumSU3lw" target="_blank"
                                     rel="noopener noreferrer">PDF</a>
                                 <a href="https://github.com/BorealisAI/FACTS" target="_blank"
                                     rel="noopener noreferrer">Code</a>
                             </div>
-                            <details class="pub-abstract">
-                                <summary>Abstract</summary>
-                                <p>Query-focused table summarization requires generating natural language summaries
-                                    of tabular data conditioned on a user query, enabling users to access insights
-                                    beyond fact retrieval. Existing approaches face key limitations: table-to-text
-                                    models require costly fine-tuning and struggle with complex reasoning,
-                                    prompt-based LLM methods suffer from token-limit and efficiency issues while
-                                    exposing sensitive data, and prior agentic pipelines often rely on
-                                    decomposition, planning, or manual templates that lack robustness and
-                                    scalability. To mitigate these issues, we introduce an agentic workflow, FACTS,
-                                    a Fast, Accurate, and Privacy-Compliant Table Summarization approach via
-                                    Offline Template Generation. FACTS produces offline templates, consisting of
-                                    SQL queries and Jinja2 templates, which can be rendered into natural language
-                                    summaries and are reusable across multiple tables sharing the same schema. It
-                                    enables fast summarization through reusable offline templates, accurate outputs
-                                    with executable SQL queries, and privacy compliance by sending only table
-                                    schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS
-                                    consistently outperforms baseline methods, establishing it as a practical
-                                    solution for real-world query-focused table summarization.</p>
-                            </details>
                         </div>
                     </article>
 
                     <!-- CVPR 2024 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-vlc">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/vlc.jpg" alt="Visual Layout Composer dual diffusion model overview" class="pub-thumb">
                         </button>
@@ -554,7 +548,7 @@
                             <div class="pub-links">
                                 <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf"
                                     target="_blank" rel="noopener noreferrer">PDF</a>
-                                <a href="visual_layout_composer/index.html" target="_blank">Project website</a>
+                                <a href="visual_layout_composer/">Project website</a>
                                 <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank"
                                     rel="noopener noreferrer">Related patent</a>
                             </div>
@@ -575,7 +569,7 @@
                     </article>
 
                     <!-- NeurIPS 2023 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-puzzlefusion">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/jigsawplan.png" alt="PuzzleFusion jigsaw puzzle solving with diffusion models" class="pub-thumb">
                         </button>
@@ -587,7 +581,7 @@
                             <h3>PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving
                             </h3>
                             <p class="pub-authors">Sepidehsadat Hosseini, <strong>Amin Shabani</strong>, Saghar
-                                Irandoust, and Yasutaka Furukawa</p>
+                                Irandoust, Yasutaka Furukawa</p>
                             <p class="pub-tldr">Reformulates spatial jigsaw puzzle solving as a denoising diffusion
                                 process, jointly predicting piece positions and orientations without hand-crafted
                                 features or piece ordering assumptions, achieving state-of-the-art results on
@@ -621,7 +615,7 @@
                     </article>
 
                     <!-- CVPR 2023 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-housediffusion">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/housediffusion.jpg" alt="HouseDiffusion vector floorplan generation examples" class="pub-thumb">
                         </button>
@@ -631,7 +625,7 @@
                             </div>
                             <h3>HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and
                                 Continuous Denoising</h3>
-                            <p class="pub-authors"><strong>Amin Shabani</strong>, Sepidehsadat Hosseini, and
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Sepidehsadat Hosseini,
                                 Yasutaka Furukawa</p>
                             <p class="pub-tldr">Generates structured vector floorplans using a diffusion model that
                                 simultaneously denoises discrete room types and continuous polygon coordinates,
@@ -640,7 +634,9 @@
                             <div class="pub-links">
                                 <a href="https://arxiv.org/pdf/2211.13287.pdf" target="_blank"
                                     rel="noopener noreferrer">PDF</a>
-                                <a href="housediffusion/index.html" target="_blank">Project website</a>
+                                <a href="housediffusion/">Project website</a>
+                                <a href="https://github.com/aminshabani/house_diffusion" target="_blank"
+                                    rel="noopener noreferrer">Code</a>
                             </div>
                             <details class="pub-abstract">
                                 <summary>Abstract</summary>
@@ -664,7 +660,7 @@
                     </article>
 
                     <!-- ICLR 2023 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-scaleformer">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/scaleformer.png" alt="Scaleformer iterative multi-scale architecture" class="pub-thumb">
                         </button>
@@ -674,7 +670,7 @@
                             </div>
                             <h3>Scaleformer: Iterative Multi-scale Refining Transformers for Time Series
                                 Forecasting</h3>
-                            <p class="pub-authors"><strong>Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Amir Abdi, Lili Meng, Tristan
                                 Sylvain</p>
                             <p class="pub-tldr">Proposes an iterative multi-scale refining framework that applies
                                 Transformer-based forecasters at multiple temporal resolutions, progressively
@@ -708,7 +704,7 @@
                     </article>
 
                     <!-- ACCV 2022 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-blueprints">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/vectorizing_building.png" alt="Vectorizing Building Blueprints method results" class="pub-thumb">
                         </button>
@@ -718,7 +714,7 @@
                             </div>
                             <h3>Vectorizing Building Blueprints</h3>
                             <p class="pub-authors">Weilian Song, Mahsa Maleki Abyaneh, <strong>Amin
-                                    Shabani</strong>, and Yasutaka Furukawa</p>
+                                    Shabani</strong>, Yasutaka Furukawa</p>
                             <p class="pub-tldr">Converts raster building blueprint images into structured vector
                                 representations by detecting and reconstructing walls, doors, windows, and symbols
                                 as scalable primitives, enabling downstream architectural analysis.</p>
@@ -749,7 +745,7 @@
                     </article>
 
                     <!-- ICCV 2021 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-extreme-sfm">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/extreme_sfm.jpg" alt="Extreme SfM indoor panorama 3D reconstruction" class="pub-thumb">
                         </button>
@@ -759,13 +755,13 @@
                             </div>
                             <h3>Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps</h3>
                             <p class="pub-authors"><strong>Amin Shabani</strong>, Weilian Song, Makoto Odamaki,
-                                Hirochika Fujiki, and Yasutaka Furukawa</p>
+                                Hirochika Fujiki, Yasutaka Furukawa</p>
                             <p class="pub-tldr">Estimates 3D camera configurations for indoor panoramic images that
                                 have no visual feature overlap, leveraging structural layout constraints and
                                 Manhattan-world assumptions to recover global scene geometry.</p>
                             <div class="pub-links">
                                 <a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" target="_blank">PDF</a>
-                                <a href="publications/extreme_sfm/index.html" target="_blank">Project website</a>
+                                <a href="publications/extreme_sfm/">Project website</a>
                             </div>
                             <details class="pub-abstract">
                                 <summary>Abstract</summary>
@@ -787,7 +783,7 @@
                     </article>
 
                     <!-- BMVC 2017 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-lvm">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/lvm.jpg" alt="Local Visual Microphones sound extraction from video" class="pub-thumb">
                         </button>
@@ -796,7 +792,7 @@
                                 <span class="badge">BMVC 2017</span>
                             </div>
                             <h3>Local Visual Microphones: Improved Sound Extraction from Silent Video</h3>
-                            <p class="pub-authors"><strong>MA Shabani</strong>, L Samadfam, MA Sadeghi</p>
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Laleh Samadfam, Mohammad Amin Sadeghi</p>
                             <p class="pub-tldr">Recovers audio signals from silent video by analyzing subtle,
                                 high-frequency vibrations in local image regions, improving over global visual
                                 microphone methods by capturing spatially-varying sound sources more accurately.
@@ -823,16 +819,16 @@
                     </article>
 
                     <!-- M.Sc. Thesis 2019 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-lpkd">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation diagram" class="pub-thumb">
                         </button>
                         <div class="pub-body">
                             <div class="pub-top">
-                                <span class="badge">M.Sc. Thesis · 2019</span>
+                                <span class="badge">M.Sc. Thesis 2019</span>
                             </div>
                             <h3>Layer-wise Progressive Knowledge Distillation</h3>
-                            <p class="pub-authors"><strong>MA Shabani</strong></p>
+                            <p class="pub-authors"><strong>Amin Shabani</strong></p>
                             <p class="pub-tldr">Introduces a layer-wise progressive knowledge distillation strategy
                                 that transfers knowledge from a teacher to a student network one layer at a time,
                                 improving the efficiency and effectiveness of model compression.</p>
@@ -844,17 +840,17 @@
                     </article>
 
                     <!-- arXiv preprint -->
-                    <article class="pub">
+                    <article class="pub" id="pub-5cycles">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/5cycle.png" alt="Complete tripartite graph 5-cycle decomposition illustration" class="pub-thumb">
                         </button>
                         <div class="pub-body">
                             <div class="pub-top">
-                                <span class="badge">arXiv preprint</span>
+                                <span class="badge">arXiv 2019</span>
                             </div>
                             <h3>On decomposing complete tripartite graphs into 5-cycles</h3>
-                            <p class="pub-authors">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong>MA
-                                    Shabani</strong></p>
+                            <p class="pub-authors">M. Abdolmaleki, S. Gh. Ilchi, E. S. Mahmoodian, <strong>Amin
+                                    Shabani</strong> <span class="pub-note">alphabetical order</span></p>
                             <p class="pub-tldr">Proves necessary and sufficient conditions for decomposing complete
                                 tripartite graphs into 5-cycles, extending known results on cycle decompositions in
                                 combinatorial graph theory.</p>
@@ -877,7 +873,7 @@
                     </article>
 
                     <!-- Graphs and Combinatorics, 2018 -->
-                    <article class="pub">
+                    <article class="pub" id="pub-uklc">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img src="images/uklc.png" alt="Uniquely k-list colorable graph examples" class="pub-thumb">
                         </button>
@@ -887,8 +883,9 @@
                             </div>
                             <h3>On Uniquely k-List Colorable Planar Graphs, Graphs on Surfaces, and Regular Graphs
                             </h3>
-                            <p class="pub-authors">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian,
-                                N Matsumoto, <strong>M. A. Shabani</strong></p>
+                            <p class="pub-authors">M. Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian,
+                                N. Matsumoto, <strong>Amin Shabani</strong> <span class="pub-note">alphabetical
+                                    order</span></p>
                             <p class="pub-tldr">Characterizes uniquely k-list colorable planar graphs and graphs on
                                 surfaces, establishing new structural properties and bounds for list coloring in
                                 graph theory.</p>
@@ -933,14 +930,14 @@
                         <h3>Generating Visually Aware Design Layouts Using a Multi-Domain Diffusion Neural Network
                         </h3>
                         <p class="pub-authors">Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu,
-                            <strong>Mohammad Amin Shabani</strong></p>
+                            <strong>Amin Shabani</strong></p>
                         <p class="pub-tldr">Describes a diffusion framework that jointly generates design layouts
                             in image and vector domains, using visual element characteristics as conditions to
                             improve diversity and saliency reasoning.</p>
                         <div class="pub-links">
                             <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank"
                                 rel="noopener noreferrer">Google Patents</a>
-                            <a href="#publications">Related publication · CVPR 2024</a>
+                            <a href="#pub-vlc">Related publication · CVPR 2024</a>
                         </div>
                     </article>
 
@@ -956,8 +953,7 @@
                         <div class="pub-links">
                             <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank"
                                 rel="noopener noreferrer">Google Patents</a>
-                            <a href="https://openreview.net/pdf?id=sCrnllCtjoE" target="_blank"
-                                rel="noopener noreferrer">Related publication · ICLR 2023</a>
+                            <a href="#pub-scaleformer">Related publication · ICLR 2023</a>
                         </div>
                     </article>
 
@@ -1085,7 +1081,7 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="wrap footer-inner">
-            <p>&copy; 2026 Mohammad Amin Shabani. Designed with <a href="https://claude.com/claude-code"
+            <p>&copy; <span id="year">2026</span> Mohammad Amin Shabani. Designed with <a href="https://claude.com/claude-code"
                     target="_blank" rel="noopener noreferrer">Claude</a>.</p>
             <a href="#" class="to-top">Back to top ↑</a>
         </div>

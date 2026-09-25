@@ -721,6 +721,10 @@ if (fcCanvas) {
     newSeries();
 }
 
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
 // Scroll reveal
 const revealTargets = document.querySelectorAll('.section .wrap, .hero-grid');
 revealTargets.forEach(el => el.classList.add('reveal'));

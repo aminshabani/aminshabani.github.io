@@ -798,6 +798,17 @@ main:focus {
     font-weight: 600;
 }
 
+.pub-note {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+}
+
+.pub-note::before {
+    content: '· ';
+}
+
 .pub-tldr {
     font-size: 0.92rem;
     color: var(--ink-soft);
