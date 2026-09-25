@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amin Shabani — Senior Machine Learning Researcher</title>
 
+    <!-- Google tag (gtag.js) — same property as the project pages -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-98RNZEQP3C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-98RNZEQP3C');
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +24,14 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Personal website of Amin Shabani, Senior Machine Learning Researcher at RBC Borealis specializing in Generative Models, Time Series Forecasting, and Computer Vision.">
+        content="Amin Shabani is a Senior Machine Learning Researcher at RBC Borealis working on diffusion models for structured geometry (HouseDiffusion, PuzzleFusion), LLM systems for finance, and time-series forecasting. Ph.D. from Simon Fraser University.">
     <meta name="keywords"
         content="Amin Shabani, Machine Learning, Research, Computer Vision, Generative Models, Diffusion Models, Time Series Forecasting, RBC Borealis, SFU, Seoul National University, Sharif University">
     <meta name="author" content="Amin Shabani">
-    <link rel="canonical" href="https://aminshabani.github.io/">
+    <link rel="canonical" href="https://shabani.me/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
     <meta name="robots" content="index, follow">
 
     <!-- JSON-LD Structured Data -->
@@ -28,37 +39,278 @@
     {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://shabani.me/#person",
         "name": "Amin Shabani",
-        "url": "https://aminshabani.github.io/",
-        "image": "https://aminshabani.github.io/images/profpic.jpeg",
+        "givenName": "Amin",
+        "familyName": "Shabani",
+        "alternateName": [
+            "Mohammad Amin Shabani",
+            "M. A. Shabani"
+        ],
+        "url": "https://shabani.me/",
+        "image": "https://shabani.me/images/profpic.jpeg",
         "jobTitle": "Senior Machine Learning Researcher",
         "worksFor": {
             "@type": "Organization",
-            "name": "RBC Borealis"
+            "name": "RBC Borealis",
+            "url": "https://rbcborealis.com/"
         },
         "alumniOf": [
-            { "@type": "CollegeOrUniversity", "name": "Simon Fraser University" },
-            { "@type": "CollegeOrUniversity", "name": "Seoul National University" },
-            { "@type": "CollegeOrUniversity", "name": "Sharif University of Technology" }
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Simon Fraser University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Seoul National University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Sharif University of Technology"
+            }
+        ],
+        "knowsAbout": [
+            "Diffusion models",
+            "Generative models",
+            "Structured and vector generation",
+            "Large language models",
+            "Retrieval-augmented generation",
+            "Time series forecasting",
+            "Computer vision"
         ],
         "sameAs": [
             "https://www.linkedin.com/in/aminshabani",
             "https://github.com/aminshabani",
-            "https://twitter.com/amin_shabani",
+            "https://x.com/amin_shabani",
             "https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en"
         ],
         "email": "aminshabaany@gmail.com",
-        "description": "Senior Machine Learning Researcher at RBC Borealis specializing in Generative Models, Computer Vision, and Time Series Forecasting."
+        "description": "Senior Machine Learning Researcher at RBC Borealis working on diffusion models for structured geometry, LLM systems for finance, and time-series forecasting."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://shabani.me/#pub-facts",
+                "url": "https://shabani.me/#pub-facts",
+                "headline": "FACTS: Table Summarization via Offline Template Generation with Agentic Workflows",
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "Ye Yuan"
+                    },
+                    {
+                        "@id": "https://shabani.me/#person"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Siqi Liu"
+                    }
+                ],
+                "datePublished": "2026",
+                "isPartOf": {
+                    "@type": "PublicationEvent",
+                    "name": "Findings of ACL 2026"
+                },
+                "sameAs": [
+                    "https://aclanthology.org/2026.findings-acl.453.pdf"
+                ],
+                "image": "https://shabani.me/images/facts_acl.png"
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://shabani.me/#pub-ebcar",
+                "url": "https://shabani.me/#pub-ebcar",
+                "headline": "Embedding-based Context-aware Reranker",
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "Ye Yuan"
+                    },
+                    {
+                        "@id": "https://shabani.me/#person"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Siqi Liu"
+                    }
+                ],
+                "datePublished": "2026",
+                "isPartOf": {
+                    "@type": "PublicationEvent",
+                    "name": "International Conference on Learning Representations (ICLR) 2026"
+                },
+                "sameAs": [
+                    "https://arxiv.org/abs/2510.13329",
+                    "https://openreview.net/forum?id=OBMcxeSK5U"
+                ],
+                "image": "https://shabani.me/images/ebcar.png"
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://shabani.me/#pub-vlc",
+                "url": "https://shabani.me/#pub-vlc",
+                "headline": "Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation",
+                "author": [
+                    {
+                        "@id": "https://shabani.me/#person"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Zhaowen Wang"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Difan Liu"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Nanxuan Zhao"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Jimei Yang"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Yasutaka Furukawa"
+                    }
+                ],
+                "datePublished": "2024",
+                "isPartOf": {
+                    "@type": "PublicationEvent",
+                    "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024"
+                },
+                "sameAs": [
+                    "https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html"
+                ],
+                "image": "https://shabani.me/images/vlc.jpg"
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://shabani.me/#pub-puzzlefusion",
+                "url": "https://shabani.me/#pub-puzzlefusion",
+                "headline": "PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving",
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "Sepidehsadat Hosseini"
+                    },
+                    {
+                        "@id": "https://shabani.me/#person"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Saghar Irandoust"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Yasutaka Furukawa"
+                    }
+                ],
+                "datePublished": "2023",
+                "isPartOf": {
+                    "@type": "PublicationEvent",
+                    "name": "Advances in Neural Information Processing Systems (NeurIPS) 2023"
+                },
+                "sameAs": [
+                    "https://arxiv.org/abs/2211.13785"
+                ],
+                "image": "https://shabani.me/images/jigsawplan.png"
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://shabani.me/#pub-housediffusion",
+                "url": "https://shabani.me/#pub-housediffusion",
+                "headline": "HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising",
+                "author": [
+                    {
+                        "@id": "https://shabani.me/#person"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Sepidehsadat Hosseini"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Yasutaka Furukawa"
+                    }
+                ],
+                "datePublished": "2023",
+                "isPartOf": {
+                    "@type": "PublicationEvent",
+                    "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2023"
+                },
+                "sameAs": [
+                    "https://arxiv.org/abs/2211.13287",
+                    "https://shabani.me/housediffusion/"
+                ],
+                "image": "https://shabani.me/images/housediffusion.jpg"
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://shabani.me/#pub-scaleformer",
+                "url": "https://shabani.me/#pub-scaleformer",
+                "headline": "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting",
+                "author": [
+                    {
+                        "@id": "https://shabani.me/#person"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Amir Abdi"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Lili Meng"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Tristan Sylvain"
+                    }
+                ],
+                "datePublished": "2023",
+                "isPartOf": {
+                    "@type": "PublicationEvent",
+                    "name": "International Conference on Learning Representations (ICLR) 2023"
+                },
+                "sameAs": [
+                    "https://arxiv.org/abs/2206.04038",
+                    "https://openreview.net/forum?id=sCrnllCtjoE"
+                ],
+                "image": "https://shabani.me/images/scaleformer.png"
+            }
+        ]
     }
     </script>
 
-    <!-- Open Graph (OG) Meta Tags -->
-    <meta property="og:title" content="Amin Shabani - Senior Machine Learning Researcher">
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Amin Shabani">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shabani.me/">
+    <meta property="og:title" content="Amin Shabani — Senior Machine Learning Researcher">
     <meta property="og:description"
-        content="Personal website of Amin Shabani, Senior Machine Learning Researcher at RBC Borealis.">
-    <meta property="og:image" content="https://aminshabani.github.io/images/profpic.jpeg">
-    <meta property="og:url" content="https://aminshabani.github.io/">
-    <meta property="og:type" content="website">
+        content="Diffusion models for structured geometry, LLM systems for finance, and time-series forecasting. Senior ML Researcher at RBC Borealis; Ph.D. SFU.">
+    <meta property="og:image" content="https://shabani.me/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Amin Shabani — Senior Machine Learning Researcher, shabani.me">
+    <meta property="profile:first_name" content="Amin">
+    <meta property="profile:last_name" content="Shabani">
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@amin_shabani">
+    <meta name="twitter:creator" content="@amin_shabani">
+    <meta name="twitter:title" content="Amin Shabani — Senior Machine Learning Researcher">
+    <meta name="twitter:description"
+        content="Diffusion models for structured geometry, LLM systems for finance, and time-series forecasting.">
+    <meta name="twitter:image" content="https://shabani.me/images/og-card.png">
+    <meta name="twitter:image:alt" content="Amin Shabani — Senior Machine Learning Researcher, shabani.me">
 
     <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#141a20" media="(prefers-color-scheme: dark)">
@@ -214,7 +466,7 @@
                     <h2>News</h2>
                 </div>
                 <div class="split">
-                    <div class="news-scroll" tabindex="0" role="region" aria-label="News">
+                    <section class="news-scroll" tabindex="0" aria-label="News">
                         <div class="news-row is-new">
                             <span class="news-date">Jul 2026</span>
                             <p>Promoted to <strong>Senior Machine Learning Researcher</strong> at RBC Borealis.</p>
@@ -290,12 +542,12 @@
                             <p>Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series
                                 Forecasting" accepted at <strong>ICLR 2023</strong>.</p>
                         </div>
-                    </div>
+                    </section>
 
                     <aside class="photos-col">
                         <figure class="carousel" id="carousel">
                             <div class="carousel-stage">
-                                <img id="carousel-image" src="" alt="Personal photo">
+                                <img id="carousel-image" src="assets/photos/upperbound-2026.jpeg" alt="Talk at Upper Bound 2026, Edmonton">
                             </div>
                             <figcaption class="carousel-bar">
                                 <span id="photo-title" class="carousel-caption"></span>
@@ -1130,8 +1382,11 @@
                             <p class="puzzle-status" id="fc-status" aria-live="polite"></p>
                         </div>
                         <div class="forecast-frame">
-                            <canvas id="fc-canvas"
-                                aria-label="Forecasting game: draw your prediction for the shaded region of the time series"></canvas>
+                            <canvas id="fc-canvas" role="img"
+                                aria-label="Forecasting game: draw your prediction for the shaded region of the time series">
+                                A time-series chart. Draw your forecast with a pointer; this demo needs a pointing
+                                device.
+                            </canvas>
                             <p class="fc-legend">
                                 <span class="fc-key"><span class="fc-swatch fc-swatch-hist"></span>history</span>
                                 <span class="fc-key"><span class="fc-swatch fc-swatch-you"></span>you</span>
@@ -1168,7 +1423,7 @@
                                 d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.67.8.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
                         </svg>
                     </a>
-                    <a href="https://twitter.com/amin_shabani" target="_blank" rel="noopener noreferrer"
+                    <a href="https://x.com/amin_shabani" target="_blank" rel="noopener noreferrer"
                         aria-label="Twitter / X">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
                             <path
@@ -1200,7 +1455,7 @@
     <!-- Image lightbox -->
     <div id="image-modal" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure" hidden>
         <button id="close-image-modal" type="button" aria-label="Close">&times;</button>
-        <img id="modal-image" src="" alt="">
+        <img id="modal-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
     </div>
 
     <script src="js/main.js"></script>

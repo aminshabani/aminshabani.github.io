@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG card</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative; background: #fdfdfc; color: #1d2126; font-family: 'Public Sans', sans-serif;
+    background-image: linear-gradient(rgba(35,90,131,.07) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(35,90,131,.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .plan { position: absolute; right: 48px; top: 44px; width: 470px; height: 392px; color: #235a83; opacity: .38; }
+  .plan path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; }
+  .plan .wall { stroke-width: 3.5; }
+  .text { position: absolute; left: 80px; top: 118px; width: 720px; }
+  .status { display: inline-block; font: 500 20px/1 'IBM Plex Mono', monospace; color: #4c545c; background: #fdfdfc; border: 1px solid #e3e3de; border-radius: 4px; padding: 12px 18px; margin-bottom: 30px; }
+  .status::before { content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #235a83; margin-right: 12px; vertical-align: 1px; }
+  h1 { font: 500 118px/1 'Newsreader', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 30px; }
+  h1 span { color: #235a83; }
+  p { font-size: 30px; line-height: 1.4; color: #4c545c; margin: 0 0 46px; max-width: 600px; }
+  .url { font: 500 24px/1 'IBM Plex Mono', monospace; color: #235a83; letter-spacing: .04em; }
+  .rule { position: absolute; left: 80px; right: 80px; bottom: 60px; border-top: 1px solid #e3e3de; }
+</style>
+</head>
+<body>
+  <svg class="plan" viewBox="0 0 360 300" aria-hidden="true">
+    <path class="wall" d="M20 20H340V180H240V280H20Z"/>
+    <path d="M160 20V60M160 88V180"/>
+    <path d="M160 100H280M308 100H340"/>
+    <path d="M20 120H110M138 120H160"/>
+    <path d="M160 180H240"/>
+    <path d="M160 60H132A28 28 0 0 0 160 88"/>
+    <path d="M280 100V72A28 28 0 0 1 308 100"/>
+    <path d="M110 120V148A28 28 0 0 0 138 120"/>
+    <path d="M200 16H250M200 24H250"/>
+  </svg>
+  <div class="text">
+    <div class="status">Senior ML Researcher @ RBC Borealis</div>
+    <h1>Amin <span>Shabani</span></h1>
+    <p>Diffusion models for structured geometry, LLM systems for finance, and time-series forecasting.</p>
+    <div class="url">shabani.me</div>
+  </div>
+  <div class="rule"></div>
+</body>
+</html>
