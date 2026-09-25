@@ -1,0 +1,186 @@
+\documentclass[margin]{res} 
+\usepackage[dvipsnames]{xcolor}
+\definecolor{myc}{RGB}{0,0,100}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=myc,
+    pdftitle={CV - Amin Shabani},
+    pdfauthor={Amin Shabani}
+}
+% Widen the printed block: pull in the page margins and trim the section
+% column so the body isn't squeezed into the right half of the page.
+\resumewidth=7.0in
+\newsectionwidth{1.15in}   % body width = \resumewidth - \sectionwidth
+\oddsidemargin=-0.25in
+\evensidemargin=-0.25in
+\emergencystretch=1em     % let long link/title lines stretch instead of overhanging
+
+\begin{document} 
+    \name{\Large \textbf{Amin Shabani}\\[12pt]}
+    \address{{\bf Senior Machine Learning Researcher}
+        \\ RBC Borealis, Vancouver
+        \\
+        BC, Canada}
+    \address{{\bf Contact}\\Email: \href{mailto:aminshabaany@gmail.com}{aminshabaany@gmail.com} \\ \href{https://aminshabani.github.io}{https://aminshabani.github.io}}
+    
+    \begin{resume} 
+        \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+
+        \section{Research Summary}
+        {\small I build generative and structured-prediction models whose outputs are \emph{discrete and constrained} --- vector floorplans, editable layouts, spatial arrangements, ranked evidence sets --- rather than free-form pixels or text. Recurring threads: diffusion over vector and geometric representations under exact relational constraints; transformers whose attention is shaped by problem structure; and LLM systems built to the accuracy, latency, and privacy budgets of real deployments. 11 peer-reviewed papers (CVPR $\times$2, ICLR $\times$2, NeurIPS, ICCV, ACL, BMVC, ACCV) and 2 US patent applications.}
+
+        \section{Education} 
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item Ph.D. in \textbf{Computing Science} \hfill Sep 2019 - Aug 2025\\ 
+            Simon Fraser University, BC, Canada\\
+            {\small Advisor: Prof. \href{https://www2.cs.sfu.ca/~furukawa/}{Yasutaka Furukawa}. Diffusion models for structured geometry: vector floorplans, spatial puzzles, design layouts.}
+            \item M.S. in \textbf{Electrical and Computer Engineering} \hfill Sep 2017 - Aug 2019\\ 
+            Seoul National University, Seoul, Korea
+            \item B.S. in \textbf{Computer Science} \hfill Oct 2012 - Aug 2017 \\ 
+            Sharif University of Technology, Tehran, Iran
+        \end{itemize}
+
+        \section{Work Experience}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \renewcommand{\labelitemii}{$\cdot$}
+
+            \item \href{https://rbcborealis.com/}{RBC Borealis} \hfill Apr 2024 - Present\\[4pt]
+            \textbf{Senior Machine Learning Researcher} \hfill Jul 2026 - Present\\
+            {\small Machine learning research for quantitative finance: models that stay accurate, auditable, and privacy-compliant under the data-governance constraints of a regulated bank.}\\[6pt]
+            \textbf{Machine Learning Researcher} \hfill Apr 2024 - Jun 2026\\
+            {\small LLM systems for finance, from prototype to production. Two lines of work, both published and open-sourced:}
+            \begin{itemize}
+                \item {\small \textbf{Agentic table summarization} (\href{https://aclanthology.org/2026.findings-acl.453.pdf}{FACTS}, ACL Findings 2026; \href{https://github.com/BorealisAI/FACTS}{code}). Recast query-focused table summarization as \emph{offline template generation}: an agentic workflow synthesizes guiding questions, SQL, and a Jinja2 template, each stage validated by an \emph{LLM Council} ensemble. Only schemas --- never records --- reach the LLM, and reusable templates keep runtime flat in table size. 97\% intent match, 94\% SQL accuracy; best or second-best on every metric across FeTaQA, QTSumm, QFMTS.}
+                \item {\small \textbf{Efficient context-aware reranking} (\href{https://arxiv.org/abs/2510.13329}{EBCAR}, ICLR 2026; \href{https://github.com/BorealisAI/EBCAR}{code}). A 126M-parameter reranker running entirely on pre-computed passage embeddings: document-ID and position encodings plus hybrid full/document-masked attention capture cross-document evidence and intra-document coreference. Best average nDCG@10 (64.92) on ConTEB at 29.33 queries/s on one A100 --- an order of magnitude faster than LLM-based listwise rerankers.}
+                \item {\small \textbf{1st place}, Financial Agentic Retrieval Grand Challenge (\href{https://ai4f.org/2025-challenge}{FinAgentBench}), AI for Finance Symposium 2025.}
+            \end{itemize}
+
+            \item \href{https://www.adobe.com/ca/}{Adobe Research} \hfill Jun 2023 - Nov 2023\\
+            \textbf{Research Scientist/Engineer Intern}\\
+            {\small Developed \href{https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html}{Visual Layout Composer} (CVPR 2024): an image diffusion model and a vector diffusion model over element boxes denoise in lockstep through cross-domain attention, so element appearance informs geometry while the output stays a layered, editable vector design. State of the art on multiple layout benchmarks; filed as a US patent application.}
+
+            \item \href{https://www.borealisai.com/en/}{Borealis AI (RBC Borealis)} \hfill Jan 2022 - May 2022\\
+            \textbf{Machine Learning Research Intern}\\
+            {\small Developed \href{https://openreview.net/forum?id=sCrnllCtjoE}{Scaleformer} (ICLR 2023), a model-agnostic multi-scale framework for time-series forecasting: coarse-to-fine refinement with shared weights, cross-scale normalization against inter-step distribution shift, and an adaptive loss against error accumulation. Reduced error 5.5\%--38.5\% atop five transformer backbones at minimal overhead; filed as a US patent application.}
+
+            \item \href{http://faraadid.com/VisitorPages/default.aspx?itemid=3}{Faraadid Company} \hfill Feb 2017 - Aug 2017 \\
+            \textbf{Research and Development Engineer}\\
+            {\small Benchmarked online object-detection architectures along the accuracy--latency trade-off for real-time deployment.}
+        \end{itemize}
+        
+        \section{Publications and Preprints}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item Ye Yuan, \textbf{Amin Shabani}, Siqi Liu, \textit{``\href{https://aclanthology.org/2026.findings-acl.453.pdf}{FACTS: Table Summarization via Offline Template Generation with Agentic Workflows},"} Findings of the 64th Annual Meeting of the Association for Computational Linguistics (\textbf{ACL Findings}), 2026.\\
+            {\small Reusable SQL + Jinja2 templates; schema-only LLM exposure, runtime flat in table size.}
+
+           \item Ye Yuan, \textbf{Amin Shabani}, Siqi Liu, \textit{``\href{https://arxiv.org/abs/2510.13329}{Embedding-based Context-aware Reranker},"} International Conference on Learning Representations \textbf{(ICLR)}, 2026.\\
+           {\small Embedding-space reranker with hybrid full/masked attention; SOTA nDCG@10 on ConTEB at 29 queries/s.}
+
+           \item Ye Yuan, \textbf{Amin Shabani}, Siqi Liu, \textit{``\href{https://openreview.net/pdf?id=wfhumSU3lw}{Fast, Accurate, and Privacy-Compliant Table
+Summarization via Offline Template Generation},"} NeurIPS workshop on Generative AI in Finance (\textbf{NeurIPS Workshop}), 2025.
+
+           \item \textbf{Amin Shabani}, Zhaowen Wang, Difan Liu, Nanxuan Zhao, Jimei Yang, Yasutaka Furukawa, \textit{``\href{https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf}{Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation},"} Conference on Computer Vision and Pattern Recognition (\textbf{CVPR}), 2024.\\
+           {\small Coupled image--vector diffusion; appearance-aware yet fully editable layouts.}
+
+           \item Sepidehsadat Hosseini, \textbf{Amin Shabani}, Yasutaka Furukawa, \textit{``\href{https://arxiv.org/abs/2211.13785}{PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving},"} Thirty-seventh Conference on Neural Information Processing Systems (\textbf{NeurIPS}), 2023. (\textbf{Spotlight})\\
+           {\small Jigsaw and room-arrangement solving as diffusion over SE(2) piece transforms; new Voronoi-jigsaw and MagicPlan benchmarks.}
+               
+            \item \textbf{Amin Shabani}, Sepidehsadat Hosseini, Yasutaka Furukawa, \textit{``\href{https://aminshabani.github.io/housediffusion}{HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising},"} Conference on Computer Vision and Pattern Recognition (\textbf{CVPR}), 2023.\\
+            {\small Discrete/continuous denoising over polygonal loops with graph-conditioned attention; exact parallelism, orthogonality, corner-sharing.}
+            
+            \item \textbf{Amin Shabani}, Amir Abdi, Lili Meng, and Tristan Sylvain, \textit{``\href{https://arxiv.org/abs/2206.04038}{Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting},"} International Conference on Learning Representations \textbf{(ICLR)}, 2023.\\
+            {\small Architecture-agnostic coarse-to-fine refinement; 5.5\%--38.5\% error reduction over five transformer backbones.}
+            
+            \item Weilian Song, Mahsa Maleki, \textbf{Amin Shabani}, Yasutaka Furukawa,         \textit{``\href{https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf}{Vectorizing Building Blueprints},"} Proc. 16th Asian Conference on Computer Vision \textbf{(ACCV)}, 2022.
+   
+            \item  \textbf{Amin Shabani}, Weilian Song, Yasutaka Furukawa, Makoto Odamaki, Hirochika Fujiki, \textit{``\href{https://aminshabani.github.io/publications/extreme_sfm/index.html}{Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps},"} Proc. International Conference on Computer Vision \textbf{(ICCV)}, 2021.\\
+            {\small Poses for non-overlapping indoor panoramas via a learned realism score over top-down room layouts; sub-meter error on 47\% of 286 houses.}
+            
+            \item  \textbf{Mohammad Amin Shabani}, Laleh Samadfam, Mohammad Amin Sadeghi, \textit{``\href{https://arxiv.org/abs/1801.09436}{Local Visual Microphones: Improved Sound Extraction from Silent Video},"} Proc. British Machine Vision Conference \textbf{(BMVC)}, 2017. (Spotlight)\\
+            {\small Aggregates local vibration phases for higher audio quality and sound direction; real-time (2--3 orders of magnitude faster).}
+            
+            \item M. Abdolmaleki $\cdot$ J. P. Hutchinson $\cdot$ S. Gh. Ilchi $\cdot$ E. S. Mahmoodian $\cdot$ N. Matsumoto $\cdot$ \textbf{M. A. Shabani}, \textit{``\href{https://link.springer.com/article/10.1007/s00373-018-1879-7}{On uniquely k-list colorable planar graphs, graphs on surfaces, and regular graphs},"} Graphs and Combinatorics \textbf{(GCOM)}, Article No s00373-018-1879-7. (Authors are ordered alphabetically)
+        \end{itemize}
+
+        \section{Patents}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item  Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu, Mohammad Amin Shabani, \textit{``\href{https://patents.google.com/patent/US20250329081A1}{Generating visually aware design layouts using a multi-domain diffusion neural network}"}, US Patent App. 18/641,137.
+            \item  Amin Shabani, Tristan Sylvain, Lili Meng, Amir Abdi, \textit{``\href{https://patents.google.com/patent/US20230368002A1}{Multi-scale artificial neural network and a method for operating same for time series forecasting}"}, US Patent App. 18/197,197.
+        \end{itemize} 
+
+        \section{Academic Service}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item Reviewer: CVPR 2026, ECCV 2024, NeurIPS 2023, SIGGRAPH 2023, ICCV 2023, CVPR 2023, ACCV 2022, ICCV 2021
+        \end{itemize}
+
+        \section{Presented Seminars}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item M. Abdolmaleki, S. Gh. Ilchi, E.S. Mahmoodian, and M. A. Shabani, \textit{``\href{https://arxiv.org/abs/1907.06187}{On decomposing complete tripartite graphs into 5-cycles},"} \textbf{IPM}, Institute for Research in Fundamental Sciences, Iran, 2017. (Authors are ordered alphabetically)
+        \end{itemize} 
+        
+        \section{Teaching Experience}
+            \textbf{Simon Fraser University}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+                \item Teaching Assistant for {Computer Vision}. \hfill Fall 2023
+                \item Teaching Assistant for {Special Topics in Network}. \hfill Spring 2023
+                \item Teaching Assistant for {Special Topics in Computing Systems}. \hfill Spring 2023
+                \item Teaching Assistant for {Software Development Methods}. \hfill Fall 2022
+                \item Teaching Assistant for {Introduction to Programming}. \hfill Fall 2021
+                \item Teaching Assistant for {Data Structures and Programming}. \hfill Summer 2021
+                \item Teaching Assistant for {Communication Strategies}. \hfill Spring 2021
+                \item Teaching Assistant for {Computer Vision}. \hfill Fall 2020
+                \item Teaching Assistant for {Introduction to Programming}. \hfill Summer 2020
+                \item Teaching Assistant for {Data Structures and Programming}. \hfill Summer 2020
+        \end{itemize}
+            \textbf{Sharif University of Technology}
+            \begin{itemize}
+                \renewcommand{\labelitemi}{$\diamond$}
+                \item Teaching Assistant for {Image Processing}. \hfill Fall 2016
+            \item Teaching Assistant for {Data Structures}.  \hfill Fall 2014
+            \item Teaching Assistant for {Discrete Mathematics}. \hfill Spring 2014 
+            \item Teaching Assistant for {Computer Programming}. \hfill Fall 2013 
+            \end{itemize}
+            \textbf{NODET High Schools}
+            \begin{itemize}
+                \renewcommand{\labelitemi}{$\diamond$}
+                \item Teaching {Informatics Olympiad} courses, NODET High Schools.\hfill 2011 - 2017
+            \item Teaching {C++ Programming}, NODET High Schools. \hfill 2011 - 2017 \end{itemize}
+        
+        \section{Honors and Awards}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item 1st Place Winner, Financial Agentic Retrieval Grand Challenge (\href{https://ai4f.org/2025-challenge}{FinAgentBench}), AI for Finance Symposium 2025 \hfill Fall 2025
+            \item \textbf{Spotlight} presentations at NeurIPS 2023 and BMVC 2017
+            \item Helmut \& Hugo Eppich Family Grad Scholarship, SFU \hfill     Spring 2021, 2023
+            \item SFU Computing Science Graduate Fellowship \hfill Fall 2020 - 2022
+            \item Graduate Scholarship for Excellent Foreign Students, SNU \hfill  Sep 2017 - Sep 2019
+            \item SFU Research Assistant Scholarship \hfill Spring 2020 - Spring 2023
+            \item SFU Teaching Assistant Scholarship \hfill Summer 2020 - Fall 2022
+            \item Bronze Medal in the 20th Iranian National Olympiad in\\ Informatics (INOI), Tehran, Iran. \hfill Jul 2010 
+        \end{itemize}
+        
+        \section{Extracurricular Activities}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item \href{http://math.sharif.ir/}{\textbf{Hamband}}, Student council of department of mathematics, SUT. \hfill 2014 - 2016
+            \item \href{http://schoolnet.ir}{\textbf{Algorithms and Problem Solving Laboratory}}, under supervision of Prof. \href{http://sharif.ir/~tabesh/}{Yahya Tabesh}, Sharif University of Technology, Tehran, Iran. \hfill 2015 - 2016
+        \end{itemize}
+        
+        \section{Technical Skills}
+        \begin{itemize}
+            \renewcommand{\labelitemi}{$\diamond$}
+            \item {\sl Methods:} Diffusion and generative models, transformers, structured/vector output prediction, contrastive learning, retrieval-augmented generation and reranking, agentic LLM workflows, time-series forecasting, 3D vision.
+            \item {\sl Languages \& Frameworks:} Python, C++ (STL), PyTorch, TensorFlow, SQL, Matlab.
+        \end{itemize}
+        
+    \end{resume}
+\end{document}

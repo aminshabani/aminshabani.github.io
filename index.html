@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amin Shabani - Personal Website</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Amin Shabani — Senior Machine Learning Researcher</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Personal website of Amin Shabani, Machine Learning Researcher at RBC Borealis specializing in Generative Models, Time Series Forecasting, and Computer Vision.">
+        content="Personal website of Amin Shabani, Senior Machine Learning Researcher at RBC Borealis specializing in Generative Models, Time Series Forecasting, and Computer Vision.">
     <meta name="keywords"
         content="Amin Shabani, Machine Learning, Research, Computer Vision, Generative Models, Diffusion Models, Time Series Forecasting, RBC Borealis, SFU, Seoul National University, Sharif University">
     <meta name="author" content="Amin Shabani">
@@ -30,7 +31,7 @@
         "name": "Amin Shabani",
         "url": "https://aminshabani.github.io/",
         "image": "https://aminshabani.github.io/images/profpic.jpeg",
-        "jobTitle": "Machine Learning Researcher",
+        "jobTitle": "Senior Machine Learning Researcher",
         "worksFor": {
             "@type": "Organization",
             "name": "RBC Borealis"
@@ -47,899 +48,1005 @@
             "https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en"
         ],
         "email": "aminshabaany@gmail.com",
-        "description": "Machine Learning Researcher at RBC Borealis specializing in Generative Models, Computer Vision, and Time Series Forecasting."
+        "description": "Senior Machine Learning Researcher at RBC Borealis specializing in Generative Models, Computer Vision, and Time Series Forecasting."
     }
     </script>
 
     <!-- Open Graph (OG) Meta Tags -->
-    <meta property="og:title" content="Amin Shabani - Machine Learning Researcher">
+    <meta property="og:title" content="Amin Shabani - Senior Machine Learning Researcher">
     <meta property="og:description"
-        content="Personal website of Amin Shabani, Machine Learning Researcher at RBC Borealis.">
+        content="Personal website of Amin Shabani, Senior Machine Learning Researcher at RBC Borealis.">
     <meta property="og:image" content="https://aminshabani.github.io/images/profpic.jpeg">
     <meta property="og:url" content="https://aminshabani.github.io/">
     <meta property="og:type" content="website">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg-white text-slate-800 font-sans">
-    <!-- Header/Navigation -->
-    <header class="sticky top-0 z-50 header-glass">
-        <div class="container mx-auto max-w-5xl px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold gradient-text tracking-tight">Amin Shabani</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#news-photos" class="nav-link">News & Photos</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#publications" class="nav-link">Research</a>
-                <a href="#contact" class="nav-link">Contact</a>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="#" class="brand">amin<span class="brand-accent">shabani</span></a>
+            <nav class="site-nav" id="site-nav" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#news-photos">News</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Research</a>
+                <a href="#fun">Fun</a>
+                <a href="#contact">Contact</a>
             </nav>
-            <div class="flex items-center space-x-4">
-                <button id="theme-toggle-button"
-                    class="text-slate-400 hover:text-slate-700 focus:outline-none transition-colors">
-                    <i class="fas fa-sun text-lg" id="theme-icon"></i>
-                </button>
-                <button id="mobile-menu-button" class="md:hidden text-slate-400 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-slate-200">
-            <a href="#about"
-                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">About</a>
-            <a href="#news-photos"
-                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">News &
-                Photos</a>
-            <a href="#experience"
-                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Experience</a>
-            <a href="#education"
-                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Education</a>
-            <a href="#publications"
-                class="block py-2.5 border-b border-slate-100 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Research</a>
-            <a href="#contact" class="block py-2.5 rounded-md px-2 hover:bg-slate-50 text-slate-600 text-sm">Contact</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="site-nav">
+                <span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section & Research Interests (Combined) -->
-    <section id="about" class="py-20 md:py-28 hero-bg">
-        <div class="container mx-auto max-w-5xl px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
-                <h1 class="text-5xl md:text-6xl font-bold mb-2 text-slate-900 leading-tight">Amin <span
-                        class="gradient-text">Shabani</span></h1>
-                <p class="text-slate-500 text-lg mb-5">ML Researcher at RBC Borealis</p>
-                <p class="text-base text-slate-600 leading-relaxed">
-                    I received my Ph.D. in Computer Science from Simon Fraser University (SFU) under the supervision of
-                    <a href="https://yasu-furukawa.github.io/" target="_blank"
-                        class="text-cyan-600 hover:text-cyan-700 transition-colors">Prof. Yasutaka Furukawa</a>, and my M.Sc. from Seoul
-                    National University (SNU) under <a href="https://cv.snu.ac.kr/" target="_blank"
-                        class="text-cyan-600 hover:text-cyan-700 transition-colors">Prof. Kyoung Mu Lee</a>.
+    <main>
+
+        <!-- Hero -->
+        <section id="about" class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-text">
+                    <p class="hero-status"><span class="status-dot"></span>Senior ML Researcher @ <a
+                            href="https://rbcborealis.com/" target="_blank" rel="noopener noreferrer">RBC
+                            Borealis</a></p>
+                    <h1 class="hero-name">Amin <span class="grad-text">Shabani</span></h1>
+                    <p class="hero-lede">
+                        I received my Ph.D. in Computer Science from Simon Fraser University (SFU) under the
+                        supervision of <a href="https://yasu-furukawa.github.io/" target="_blank"
+                            rel="noopener noreferrer">Prof.&nbsp;Yasutaka Furukawa</a>, and my M.Sc. from Seoul
+                        National University (SNU) under <a href="https://cv.snu.ac.kr/" target="_blank"
+                            rel="noopener noreferrer">Prof.&nbsp;Kyoung Mu Lee</a>.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-solid" href="mailto:aminshabaany@gmail.com">Contact me</a>
+                        <a class="btn" href="cv/CV-AminShabani.pdf" download="CV-AminShabani.pdf">Download CV</a>
+                        <a class="btn" href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en"
+                            target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+                    </div>
+                    <div class="hero-interests">
+                        <span class="chip">Generative Models</span>
+                        <span class="chip">Large Language Models</span>
+                        <span class="chip">Computer Vision</span>
+                        <span class="chip">Time Series Forecasting</span>
+                    </div>
+                </div>
+                <div class="hero-portrait">
+                    <div class="portrait-ring">
+                        <img src="images/profpic.jpeg" width="640" height="640" alt="Portrait of Amin Shabani">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Photos -->
+        <section id="news-photos" class="section section-alt">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label">Latest</p>
+                    <h2>News</h2>
+                </div>
+                <div class="split">
+                    <div class="news-scroll" tabindex="0">
+                        <div class="news-row is-new">
+                            <span class="news-date">Jul 2026</span>
+                            <p>Promoted to <strong>Senior Machine Learning Researcher</strong> at RBC Borealis.</p>
+                        </div>
+                        <div class="news-row is-new">
+                            <span class="news-date">May 2026</span>
+                            <p>Gave a talk at <a href="https://www.upperbound.ai/" target="_blank"
+                                    rel="noopener noreferrer">Upper Bound 2026</a>, Amii's annual AI conference in
+                                Edmonton.</p>
+                        </div>
+                        <div class="news-row is-new">
+                            <span class="news-date">Apr 2026</span>
+                            <p>Paper "<a href="https://aclanthology.org/2026.findings-acl.453.pdf" target="_blank"
+                                    rel="noopener noreferrer">FACTS: Table Summarization via Offline Template
+                                    Generation with Agentic Workflows</a>" accepted at <strong>ACL Findings
+                                    2026</strong>.</p>
+                        </div>
+                        <div class="news-row is-new">
+                            <span class="news-date">Jan 2026</span>
+                            <p>Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                                    rel="noopener noreferrer">Embedding-based Context-aware Reranker</a>" accepted
+                                at <strong>ICLR 2026</strong>.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Oct 2025</span>
+                            <p><strong>1st place winner</strong>, Financial Agentic Retrieval Grand Challenge (<a
+                                    href="https://ai4f.org/2025-challenge" target="_blank"
+                                    rel="noopener noreferrer">FinAgentBench</a>), AI for Finance
+                                Symposium&nbsp;'25.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Sep 2025</span>
+                            <p>Paper "<a href="https://openreview.net/pdf?id=wfhumSU3lw" target="_blank"
+                                    rel="noopener noreferrer">Fast, Accurate, and Privacy-Compliant Table
+                                    Summarization via Offline Template Generation</a>" accepted at <strong>NeurIPS
+                                    2025 Workshop</strong> on Generative AI in Finance.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Apr 2024</span>
+                            <p>Joined <strong>RBC Borealis</strong> as a Machine Learning Researcher.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Mar 2024</span>
+                            <p>Paper "Visual Layout Composer" accepted at <strong>CVPR 2024</strong>.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Jan 2024</span>
+                            <p>Gave a talk on diffusion models for layout generation at <strong>Samsung AI
+                                    Center</strong>, Toronto.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Sep 2023</span>
+                            <p>Paper "PuzzleFusion" accepted as <strong>Spotlight</strong> at <strong>NeurIPS
+                                    2023</strong>.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Mar 2023</span>
+                            <p>Paper "HouseDiffusion" accepted at <strong>CVPR 2023</strong>.</p>
+                        </div>
+                        <div class="news-row">
+                            <span class="news-date">Jan 2023</span>
+                            <p>Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series
+                                Forecasting" accepted at <strong>ICLR 2023</strong>.</p>
+                        </div>
+                    </div>
+
+                    <aside class="photos-col">
+                        <figure class="carousel" id="carousel">
+                            <div class="carousel-stage">
+                                <img id="carousel-image" src="" alt="Personal photo">
+                            </div>
+                            <figcaption class="carousel-bar">
+                                <span id="photo-title" class="carousel-caption"></span>
+                                <span class="carousel-controls">
+                                    <span id="carousel-counter" class="carousel-counter">1 / 1</span>
+                                    <button id="prev-button" aria-label="Previous photo">←</button>
+                                    <button id="next-button" aria-label="Next photo">→</button>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label">Career</p>
+                    <h2>Experience</h2>
+                </div>
+                <div class="timeline">
+
+                    <article class="tl-item">
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <h3>Senior Machine Learning Researcher</h3>
+                                <span class="tl-date">Jul 2026 — Present</span>
+                            </div>
+                            <p class="tl-org"><a href="https://rbcborealis.com/" target="_blank"
+                                    rel="noopener noreferrer"><img src="images/rbc-borealis-logo.svg"
+                                        alt="RBC Borealis" class="org-logo org-logo-wide"></a></p>
+                            <p class="tl-desc">Leading research and development of machine learning models for
+                                real-world applications in finance.</p>
+                        </div>
+                    </article>
+
+                    <article class="tl-item">
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <h3>Machine Learning Researcher</h3>
+                                <span class="tl-date">Apr 2024 — Jun 2026</span>
+                            </div>
+                            <p class="tl-org"><a href="https://rbcborealis.com/" target="_blank"
+                                    rel="noopener noreferrer"><img src="images/rbc-borealis-logo.svg"
+                                        alt="RBC Borealis" class="org-logo org-logo-wide"></a></p>
+                            <p class="tl-desc">Contributing to research and development of machine learning models
+                                for real-world applications in finance.</p>
+                            <p class="tl-links"><a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                                    rel="noopener noreferrer">EBCAR · ICLR 2026 ↗</a><br><a
+                                    href="https://aclanthology.org/2026.findings-acl.453.pdf" target="_blank"
+                                    rel="noopener noreferrer">FACTS · ACL Findings 2026 ↗</a><br><a
+                                    href="https://openreview.net/pdf?id=wfhumSU3lw" target="_blank"
+                                    rel="noopener noreferrer">Table Summarization · NeurIPS Workshop 2025 ↗</a></p>
+                        </div>
+                    </article>
+
+                    <article class="tl-item">
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <h3>Research Scientist/Engineer Intern</h3>
+                                <span class="tl-date">Jun 2023 — Nov 2023</span>
+                            </div>
+                            <p class="tl-org"><a href="https://www.adobe.com/ca/" target="_blank"
+                                    rel="noopener noreferrer"><img src="images/adobe-logo.svg" alt=""
+                                        class="org-logo">Adobe</a></p>
+                            <p class="tl-desc">Worked on a new method for automatically generating layout designs.
+                                Published at CVPR 2024.</p>
+                            <p class="tl-links"><a
+                                    href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html"
+                                    target="_blank" rel="noopener noreferrer">Visual Layout Composer · CVPR 2024
+                                    ↗</a></p>
+                        </div>
+                    </article>
+
+                    <article class="tl-item">
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <h3>Machine Learning Research Intern</h3>
+                                <span class="tl-date">Jan 2022 — May 2022</span>
+                            </div>
+                            <p class="tl-org"><a href="https://www.borealisai.com/en/" target="_blank"
+                                    rel="noopener noreferrer"><img src="images/rbc-borealis-logo.svg"
+                                        alt="Borealis AI" class="org-logo org-logo-wide"></a></p>
+                            <p class="tl-desc">Worked on Iterative Multi-scale Refining Transformers for Time
+                                Series Forecasting. Published at ICLR 2023.</p>
+                            <p class="tl-links"><a href="https://openreview.net/pdf?id=sCrnllCtjoE"
+                                    target="_blank" rel="noopener noreferrer">Scaleformer · ICLR 2023 ↗</a></p>
+                        </div>
+                    </article>
+
+                    <article class="tl-item">
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <h3>Research and Development Engineer</h3>
+                                <span class="tl-date">Feb 2017 — Aug 2017</span>
+                            </div>
+                            <p class="tl-org"><a href="http://faraadid.com/VisitorPages/default.aspx?itemid=3"
+                                    target="_blank" rel="noopener noreferrer">Faraadid Company</a></p>
+                            <p class="tl-desc">Worked on finding online methods for object detection, considering
+                                the trade-off between speed and accuracy.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section section-alt">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label">Background</p>
+                    <h2>Education</h2>
+                </div>
+                <div class="edu-grid">
+
+                    <article class="edu-card">
+                        <img src="images/sfu-logo.png" alt="" class="edu-logo">
+                        <div>
+                            <h3>Simon Fraser University</h3>
+                            <p class="edu-degree">Ph.D. in Computer Science</p>
+                            <p class="edu-date">2019 — 2025</p>
+                            <a class="edu-link" href="https://summit.sfu.ca/item/39603" target="_blank"
+                                rel="noopener noreferrer">Ph.D. Thesis ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="edu-card">
+                        <img src="images/snu-logo.svg" alt="" class="edu-logo">
+                        <div>
+                            <h3>Seoul National University</h3>
+                            <p class="edu-degree">M.Sc. in Computer Engineering</p>
+                            <p class="edu-date">2017 — 2019</p>
+                            <a class="edu-link"
+                                href="https://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf"
+                                target="_blank" rel="noopener noreferrer">M.Sc. Thesis ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="edu-card">
+                        <img src="images/sharif-logo.png" alt="" class="edu-logo">
+                        <div>
+                            <h3>Sharif University of Technology</h3>
+                            <p class="edu-degree">B.Sc. in Computer Science</p>
+                            <p class="edu-date">2012 — 2017</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications" class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label">Research</p>
+                    <h2>Publications</h2>
+                </div>
+                <div class="pubs">
+
+                    <!-- ACL Findings 2026: FACTS -->
+                    <article class="pub">
+                        <img src="images/facts_acl.png" alt="FACTS table summarization pipeline overview"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">ACL Findings 2026</span>
+                            </div>
+                            <h3>FACTS: Table Summarization via Offline Template Generation with Agentic Workflows
+                            </h3>
+                            <p class="pub-authors">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
+                            <p class="pub-tldr">Introduces a framework for financial table summarization that
+                                combines offline template generation with agentic workflows, enabling structured
+                                and accurate natural language summaries of complex tabular financial data.</p>
+                            <div class="pub-links">
+                                <a href="https://aclanthology.org/2026.findings-acl.453.pdf" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="https://github.com/BorealisAI/FACTS" target="_blank"
+                                    rel="noopener noreferrer">Code</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>Query-focused table summarization requires generating natural language summaries
+                                    of tabular data conditioned on a user query, enabling users to access insights
+                                    beyond fact retrieval. Existing approaches face key limitations: table-to-text
+                                    models require costly fine-tuning and struggle with complex reasoning,
+                                    prompt-based LLM methods suffer from token-limit and efficiency issues while
+                                    exposing sensitive data, and prior agentic pipelines often rely on
+                                    decomposition, planning, or manual templates that lack robustness and
+                                    scalability. To mitigate these issues, we introduce an agentic workflow, FACTS,
+                                    a Fast, Accurate, and Privacy-Compliant Table Summarization approach via
+                                    Offline Template Generation. FACTS produces offline templates, consisting of
+                                    SQL queries and Jinja2 templates, which can be rendered into natural language
+                                    summaries and are reusable across multiple tables sharing the same schema. It
+                                    enables fast summarization through reusable offline templates, accurate outputs
+                                    with executable SQL queries, and privacy compliance by sending only table
+                                    schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS
+                                    consistently outperforms baseline methods, establishing it as a practical
+                                    solution for real-world query-focused table summarization.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- ICLR 2026: EBCAR -->
+                    <article class="pub">
+                        <img src="images/ebcar.png" alt="Embedding-based Context-aware Reranker diagram"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">ICLR 2026</span>
+                            </div>
+                            <h3>Embedding-based Context-aware Reranker</h3>
+                            <p class="pub-authors">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
+                            <p class="pub-tldr">Proposes an embedding-based context-aware reranking method for
+                                retrieval-augmented generation (RAG) that improves document ranking by
+                                incorporating query context, leading to more relevant and accurate retrieval
+                                results.</p>
+                            <div class="pub-links">
+                                <a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="https://github.com/BorealisAI/EBCAR" target="_blank"
+                                    rel="noopener noreferrer">Code</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>Retrieval-Augmented Generation (RAG) systems rely on retrieving relevant
+                                    evidence from a corpus to support downstream generation. The common practice of
+                                    splitting a long document into multiple shorter passages enables finer-grained
+                                    and targeted information retrieval. However, it also introduces challenges when
+                                    a correct retrieval would require inference across passages, such as resolving
+                                    coreference, disambiguating entities, and aggregating evidence scattered across
+                                    multiple sources. Many state-of-the-art (SOTA) reranking methods, despite
+                                    utilizing powerful large pretrained language models with potentially high
+                                    inference costs, still neglect the aforementioned challenges. Therefore, we
+                                    propose Embedding-Based Context-Aware Reranker (EBCAR), a lightweight reranking
+                                    framework operating directly on embeddings of retrieved passages with enhanced
+                                    cross-passage understandings through the structural information of the passages
+                                    and a hybrid attention mechanism, which captures both high-level interactions
+                                    across documents and low-level relationships within each document. We evaluate
+                                    EBCAR against SOTA rerankers on the ConTEB benchmark, demonstrating its
+                                    effectiveness for information retrieval requiring cross-passage inference and
+                                    its advantages in both accuracy and efficiency.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- NeurIPS Workshop 2025 -->
+                    <article class="pub">
+                        <img src="images/facts.png" alt="Fast, Accurate, and Privacy-Compliant Table Summarization"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">NeurIPS Workshop 2025</span>
+                            </div>
+                            <h3>Fast, Accurate, and Privacy-Compliant Table Summarization via Offline Template
+                                Generation</h3>
+                            <p class="pub-authors">Ye Yuan, <strong>Amin Shabani</strong>, Siqi Liu</p>
+                            <p class="pub-tldr">Introduces a framework for financial table summarization that
+                                combines offline template generation with agentic workflows, enabling structured
+                                and accurate natural language summaries of complex tabular financial data while
+                                preserving data privacy.</p>
+                            <div class="pub-links">
+                                <a href="https://openreview.net/pdf?id=wfhumSU3lw" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="https://github.com/BorealisAI/FACTS" target="_blank"
+                                    rel="noopener noreferrer">Code</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>Query-focused table summarization requires generating natural language summaries
+                                    of tabular data conditioned on a user query, enabling users to access insights
+                                    beyond fact retrieval. Existing approaches face key limitations: table-to-text
+                                    models require costly fine-tuning and struggle with complex reasoning,
+                                    prompt-based LLM methods suffer from token-limit and efficiency issues while
+                                    exposing sensitive data, and prior agentic pipelines often rely on
+                                    decomposition, planning, or manual templates that lack robustness and
+                                    scalability. To mitigate these issues, we introduce an agentic workflow, FACTS,
+                                    a Fast, Accurate, and Privacy-Compliant Table Summarization approach via
+                                    Offline Template Generation. FACTS produces offline templates, consisting of
+                                    SQL queries and Jinja2 templates, which can be rendered into natural language
+                                    summaries and are reusable across multiple tables sharing the same schema. It
+                                    enables fast summarization through reusable offline templates, accurate outputs
+                                    with executable SQL queries, and privacy compliance by sending only table
+                                    schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS
+                                    consistently outperforms baseline methods, establishing it as a practical
+                                    solution for real-world query-focused table summarization.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- CVPR 2024 -->
+                    <article class="pub">
+                        <img src="images/vlc.jpg" alt="Visual Layout Composer dual diffusion model overview"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">CVPR 2024</span>
+                            </div>
+                            <h3>Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout
+                                Generation</h3>
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan
+                                Zhao, Jimei Yang, Yasutaka Furukawa</p>
+                            <p class="pub-tldr">Presents a dual diffusion model that jointly generates raster image
+                                content and corresponding vector layout for graphic design templates, enabling
+                                coherent, high-quality, and editable design generation from user-provided
+                                conditions.</p>
+                            <div class="pub-links">
+                                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf"
+                                    target="_blank" rel="noopener noreferrer">PDF</a>
+                                <a href="visual_layout_composer/index.html" target="_blank">Project website</a>
+                                <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank"
+                                    rel="noopener noreferrer">Related patent</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>This paper proposes an image-vector dual diffusion model for generative layout
+                                    design. Distinct from prior efforts that mostly ignore element-level visual
+                                    information, our approach integrates the power of a pre-trained large image
+                                    diffusion model to guide layout composition in a vector diffusion model by
+                                    providing enhanced salient region understanding and high-level inter-element
+                                    relationship reasoning. Our proposed model simultaneously operates in two
+                                    domains: it generates the overall design appearance in the image domain while
+                                    optimizing the size and position of each design element in the vector domain.
+                                    The proposed method achieves the state-of-the-art results on several datasets
+                                    and enables new layout design applications.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- NeurIPS 2023 -->
+                    <article class="pub">
+                        <img src="images/jigsawplan.png"
+                            alt="PuzzleFusion jigsaw puzzle solving with diffusion models" class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">NeurIPS 2023</span>
+                                <span class="badge badge-hot">Spotlight</span>
+                            </div>
+                            <h3>PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving
+                            </h3>
+                            <p class="pub-authors">Sepidehsadat Hosseini, <strong>Amin Shabani</strong>, Saghar
+                                Irandoust, and Yasutaka Furukawa</p>
+                            <p class="pub-tldr">Reformulates spatial jigsaw puzzle solving as a denoising diffusion
+                                process, jointly predicting piece positions and orientations without hand-crafted
+                                features or piece ordering assumptions, achieving state-of-the-art results on
+                                challenging benchmarks.</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2211.13785" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="https://sepidsh.github.io/puzzlefusion/" target="_blank"
+                                    rel="noopener noreferrer">Project website</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>This paper presents an end-to-end neural architecture based on Diffusion Models
+                                    for spatial puzzle solving, particularly jigsaw puzzle and room arrangement
+                                    tasks. In the latter task, for instance, the proposed system "PuzzleFusion"
+                                    takes a set of room layouts as polygonal curves in the top-down view and aligns
+                                    the room layout pieces by estimating their 2D translations and rotations, akin
+                                    to solving the jigsaw puzzle of room layouts. A surprising discovery of the
+                                    paper is that the simple use of a Diffusion Model effectively solves these
+                                    challenging spatial puzzle tasks as a conditional generation process. To enable
+                                    learning of an end-to-end neural system, the paper introduces new datasets with
+                                    ground-truth arrangements: 1) 2D Voronoi jigsaw dataset, a synthetic one where
+                                    pieces are generated by Voronoi diagram of 2D pointset; and 2) MagicPlan
+                                    dataset, a real one offered by MagicPlan from its production pipeline, where
+                                    pieces are room layouts constructed by augmented reality App by real-estate
+                                    consumers. The qualitative and quantitative evaluations demonstrate that our
+                                    approach outperforms the competing methods by significant margins in all the
+                                    tasks.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- CVPR 2023 -->
+                    <article class="pub">
+                        <img src="images/housediffusion.jpg"
+                            alt="HouseDiffusion vector floorplan generation examples" class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">CVPR 2023</span>
+                            </div>
+                            <h3>HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and
+                                Continuous Denoising</h3>
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Sepidehsadat Hosseini, and
+                                Yasutaka Furukawa</p>
+                            <p class="pub-tldr">Generates structured vector floorplans using a diffusion model that
+                                simultaneously denoises discrete room types and continuous polygon coordinates,
+                                producing diverse and realistic architectural layouts from user-specified room
+                                programs.</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2211.13287.pdf" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="housediffusion/index.html" target="_blank">Project website</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>The paper presents a novel approach for vector-floorplan generation via a
+                                    diffusion model, which denoises 2D coordinates of room/door corners with two
+                                    inference objectives: 1) a single-step noise as the continuous quantity to
+                                    precisely invert the continuous forward process; and 2) the final 2D coordinate
+                                    as the discrete quantity to establish geometric incident relationships such as
+                                    parallelism, orthogonality, and corner-sharing. Our task is graph-conditioned
+                                    floorplan generation, a common workflow in floorplan design. We represent a
+                                    floorplan as 1D polygonal loops, each of which corresponds to a room or a door.
+                                    Our diffusion model employs a Transformer architecture at the core, which
+                                    controls the attention masks based on the input graph-constraint and directly
+                                    generates vector-graphics floorplans via a discrete and continuous denoising
+                                    process. We have evaluated our approach on RPLAN dataset. The proposed approach
+                                    makes significant improvements in all the metrics against the state-of-the-art
+                                    with significant margins, while being capable of generating non-Manhattan
+                                    structures and controlling the exact number of corners per room.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- ICLR 2023 -->
+                    <article class="pub">
+                        <img src="images/scaleformer.png" alt="Scaleformer iterative multi-scale architecture"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">ICLR 2023</span>
+                            </div>
+                            <h3>Scaleformer: Iterative Multi-scale Refining Transformers for Time Series
+                                Forecasting</h3>
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan
+                                Sylvain</p>
+                            <p class="pub-tldr">Proposes an iterative multi-scale refining framework that applies
+                                Transformer-based forecasters at multiple temporal resolutions, progressively
+                                sharpening predictions from coarse to fine scales for improved time series
+                                forecasting accuracy.</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2206.04038v3.pdf" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="https://github.com/BorealisAI/scaleformer" target="_blank"
+                                    rel="noopener noreferrer">Code</a>
+                                <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank"
+                                    rel="noopener noreferrer">Related patent</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>The performance of time series forecasting has recently been greatly improved by
+                                    the introduction of transformers. In this paper, we propose a general
+                                    multi-scale framework that can be applied to the state-of-the-art
+                                    transformer-based time series forecasting models (FEDformer, Autoformer, etc.).
+                                    By iteratively refining a forecasted time series at multiple scales with shared
+                                    weights, introducing architecture adaptations, and a specially-designed
+                                    normalization scheme, we are able to achieve significant performance
+                                    improvements, from 5.5% to 38.5% across datasets and transformer architectures,
+                                    with minimal additional computational overhead. Via detailed ablation studies,
+                                    we demonstrate the effectiveness of each of our contributions across the
+                                    architecture and methodology. Furthermore, our experiments on various public
+                                    datasets demonstrate that the proposed improvements outperform their
+                                    corresponding baseline counterparts.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- ACCV 2022 -->
+                    <article class="pub">
+                        <img src="images/vectorizing_building.png"
+                            alt="Vectorizing Building Blueprints method results" class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">ACCV 2022</span>
+                            </div>
+                            <h3>Vectorizing Building Blueprints</h3>
+                            <p class="pub-authors">Weilian Song, Mahsa Maleki Abyaneh, <strong>Amin
+                                    Shabani</strong>, and Yasutaka Furukawa</p>
+                            <p class="pub-tldr">Converts raster building blueprint images into structured vector
+                                representations by detecting and reconstructing walls, doors, windows, and symbols
+                                as scalable primitives, enabling downstream architectural analysis.</p>
+                            <div class="pub-links">
+                                <a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf"
+                                    target="_blank" rel="noopener noreferrer">PDF</a>
+                                <a href="https://weiliansong.github.io/blueprint-vectorizer/" target="_blank"
+                                    rel="noopener noreferrer">Project website</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>This paper proposes a novel vectorization algorithm for high-definition
+                                    floorplans with construction-level intricate architectural details, namely a
+                                    blueprint. A state-of-the-art floorplan vectorization algorithm starts by
+                                    detecting corners, whose process does not scale to high-definition floorplans
+                                    with thin interior walls, small door frames, and long exterior walls. Our
+                                    approach 1) obtains rough semantic segmentation by running off-the-shelf
+                                    segmentation algorithms; 2) learning to infer missing smaller architectural
+                                    components; 3) adding the missing components by a refinement generative
+                                    adversarial network; and 4) simplifying the segmentation boundaries by
+                                    heuristics. We have created a vectorized blueprint database consisting of 200
+                                    production scanned blueprint images. Qualitative and quantitative evaluations
+                                    demonstrate the effectiveness of the approach, making significant boost in
+                                    standard vectorization metrics over the current state-of-the-art and baseline
+                                    methods.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- ICCV 2021 -->
+                    <article class="pub">
+                        <img src="images/extreme_sfm.jpg" alt="Extreme SfM indoor panorama 3D reconstruction"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">ICCV 2021</span>
+                            </div>
+                            <h3>Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps</h3>
+                            <p class="pub-authors"><strong>Amin Shabani</strong>, Weilian Song, Makoto Odamaki,
+                                Hirochika Fujiki, and Yasutaka Furukawa</p>
+                            <p class="pub-tldr">Estimates 3D camera configurations for indoor panoramic images that
+                                have no visual feature overlap, leveraging structural layout constraints and
+                                Manhattan-world assumptions to recover global scene geometry.</p>
+                            <div class="pub-links">
+                                <a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" target="_blank">PDF</a>
+                                <a href="publications/extreme_sfm/index.html" target="_blank">Project website</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>This paper proposes an extreme Structure from Motion (SfM) algorithm for
+                                    residential indoor panoramas that have little to no visual overlaps. Only a
+                                    single panorama is present in a room for many cases, making the task infeasible
+                                    for existing SfM algorithms. Our idea is to learn to evaluate the realism of
+                                    room/door/window arrangements in the top-down semantic space. After using
+                                    heuristics to enumerate possible arrangements based on door detections, we
+                                    evaluate their realism scores, pick the most realistic arrangement, and return
+                                    the corresponding camera poses. We evaluate the proposed approach on a dataset
+                                    of 1029 panorama images with 286 houses. Our qualitative and quantitative
+                                    evaluations show that an existing SfM approach completely fails for most of the
+                                    houses. The proposed approach achieves the mean positional error of less than
+                                    1.0 meter for 47% of the houses and even 78% when considering the top five
+                                    reconstructions.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- BMVC 2017 -->
+                    <article class="pub">
+                        <img src="images/lvm.jpg" alt="Local Visual Microphones sound extraction from video"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">BMVC 2017</span>
+                            </div>
+                            <h3>Local Visual Microphones: Improved Sound Extraction from Silent Video</h3>
+                            <p class="pub-authors"><strong>MA Shabani</strong>, L Samadfam, MA Sadeghi</p>
+                            <p class="pub-tldr">Recovers audio signals from silent video by analyzing subtle,
+                                high-frequency vibrations in local image regions, improving over global visual
+                                microphone methods by capturing spatially-varying sound sources more accurately.
+                            </p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/1801.09436.pdf" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                                <a href="https://www.youtube.com/watch?v=ZX0NSlHDWV4" target="_blank"
+                                    rel="noopener noreferrer">Video</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>Sound waves cause small vibrations in nearby objects. A few techniques exist in
+                                    the literature that can extract sound from video. In this paper we study local
+                                    vibration patterns at different image locations. We show that different
+                                    locations in the image vibrate differently. We carefully aggregate local
+                                    vibrations and produce a sound quality that improves state-of-the-art. We show
+                                    that local vibrations could have a time delay because sound waves take time to
+                                    travel through the air. We use this phenomenon to estimate sound direction. We
+                                    also present a novel algorithm that speeds up sound extraction by two to three
+                                    orders of magnitude and reaches real-time performance in a 20KHz video.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- M.Sc. Thesis 2019 -->
+                    <article class="pub">
+                        <img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation diagram"
+                            class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">M.Sc. Thesis · 2019</span>
+                            </div>
+                            <h3>Layer-wise Progressive Knowledge Distillation</h3>
+                            <p class="pub-authors"><strong>MA Shabani</strong></p>
+                            <p class="pub-tldr">Introduces a layer-wise progressive knowledge distillation strategy
+                                that transfers knowledge from a teacher to a student network one layer at a time,
+                                improving the efficiency and effectiveness of model compression.</p>
+                            <div class="pub-links">
+                                <a href="http://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf"
+                                    target="_blank" rel="noopener noreferrer">PDF</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- arXiv preprint -->
+                    <article class="pub">
+                        <img src="images/5cycle.png"
+                            alt="Complete tripartite graph 5-cycle decomposition illustration" class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">arXiv preprint</span>
+                            </div>
+                            <h3>On decomposing complete tripartite graphs into 5-cycles</h3>
+                            <p class="pub-authors">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong>MA
+                                    Shabani</strong></p>
+                            <p class="pub-tldr">Proves necessary and sufficient conditions for decomposing complete
+                                tripartite graphs into 5-cycles, extending known results on cycle decompositions in
+                                combinatorial graph theory.</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/1907.06187.pdf" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>The problem of finding necessary and sufficient conditions to decompose a
+                                    complete tripartite graph K<sub>r,s,t</sub> into 5-cycles was first considered
+                                    by E.S. Mahmoodian and Maryam Mirzakhani (1995). They stated some necessary
+                                    conditions and conjectured that those conditions are also sufficient. Since
+                                    then, many cases of the problem have been solved by various authors; however,
+                                    the case when the partite sets r≤s≤t have odd and distinct sizes remained open.
+                                    We show the conjecture is true when r, s and t are all multiples of 5, t+90 ≤
+                                    4rs/(r+s), and t ≠ s+10.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Graphs and Combinatorics, 2018 -->
+                    <article class="pub">
+                        <img src="images/uklc.png" alt="Uniquely k-list colorable graph examples" class="pub-thumb">
+                        <div class="pub-body">
+                            <div class="pub-top">
+                                <span class="badge">Graphs and Combinatorics 2018</span>
+                            </div>
+                            <h3>On Uniquely k-List Colorable Planar Graphs, Graphs on Surfaces, and Regular Graphs
+                            </h3>
+                            <p class="pub-authors">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian,
+                                N Matsumoto, <strong>M. A. Shabani</strong></p>
+                            <p class="pub-tldr">Characterizes uniquely k-list colorable planar graphs and graphs on
+                                surfaces, establishing new structural properties and bounds for list coloring in
+                                graph theory.</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/1705.07434.pdf" target="_blank"
+                                    rel="noopener noreferrer">PDF</a>
+                            </div>
+                            <details class="pub-abstract">
+                                <summary>Abstract</summary>
+                                <p>A graph G is called uniquely k-list colorable (UkLC) if there exists a list of
+                                    colors on its vertices, say L={S<sub>v</sub> | v ∈ V(G)}, each of size k, such
+                                    that there is a unique proper list coloring of G from this list of colors. A
+                                    graph G is said to have property M(k) if it is not uniquely k-list colorable.
+                                    Mahmoodian and Mahdian characterized all graphs with property M(2). For k≥3
+                                    property M(k) has been studied only for multipartite graphs. Here we find
+                                    bounds on M(k) for graphs embedded on surfaces, and obtain new results on
+                                    planar graphs. We begin a general study of bounds on M(k) for regular graphs,
+                                    as well as for graphs with varying list sizes.</p>
+                            </details>
+                        </div>
+                    </article>
+
+                </div>
+                <p class="pubs-more">
+                    <a class="btn btn-solid" href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en"
+                        target="_blank" rel="noopener noreferrer">View all publications on Google Scholar →</a>
                 </p>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="profile-gradient-ring">
-                    <div class="relative w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden">
-                        <img src="images/profpic.jpeg" class="rounded mx-auto" width="320" height="320"
-                            style="width:100%;height:auto;" alt="Amin Shabani Profile Picture"
-                            onerror="this.onerror=null; this.src='https://placehold.co/320x320/0f172a/94a3b8?text=Amin+Shabani';">
+        </section>
+
+        <!-- Patents -->
+        <section id="patents" class="section section-alt">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label">IP</p>
+                    <h2>Patents</h2>
+                </div>
+                <div class="patent-grid">
+
+                    <article class="patent-card">
+                        <p class="patent-meta">US20250329081A1 · Adobe Inc · Filed Apr 2024</p>
+                        <h3>Generating Visually Aware Design Layouts Using a Multi-Domain Diffusion Neural Network
+                        </h3>
+                        <p class="pub-authors">Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu,
+                            <strong>Mohammad Amin Shabani</strong></p>
+                        <p class="pub-tldr">Describes a diffusion framework that jointly generates design layouts
+                            in image and vector domains, using visual element characteristics as conditions to
+                            improve diversity and saliency reasoning.</p>
+                        <div class="pub-links">
+                            <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank"
+                                rel="noopener noreferrer">Google Patents</a>
+                            <a href="#publications">Related publication · CVPR 2024</a>
+                        </div>
+                    </article>
+
+                    <article class="patent-card">
+                        <p class="patent-meta">US20230368002A1 · Royal Bank of Canada · Filed May 2023</p>
+                        <h3>Multi-Scale Artificial Neural Network and a Method for Operating Same for Time Series
+                            Forecasting</h3>
+                        <p class="pub-authors"><strong>Amin Shabani</strong>, Tristan Sylvain, Lili Meng, Amir Abdi
+                        </p>
+                        <p class="pub-tldr">Describes an iterative multi-scale neural network approach for time
+                            series forecasting that progressively refines predictions from coarse to fine temporal
+                            resolutions, achieving 5.5–38.5% error reduction across benchmarks.</p>
+                        <div class="pub-links">
+                            <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank"
+                                rel="noopener noreferrer">Google Patents</a>
+                            <a href="https://openreview.net/pdf?id=sCrnllCtjoE" target="_blank"
+                                rel="noopener noreferrer">Related publication · ICLR 2023</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun: playable research demos -->
+        <section id="fun" class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label">Fun</p>
+                    <h2>Research, playable</h2>
+                </div>
+
+                <div class="fun-tabs" role="tablist" aria-label="Playable demos">
+                    <button class="fun-tab active" id="tab-puzzle" role="tab" aria-selected="true"
+                        aria-controls="panel-puzzle" type="button">PuzzleFusion · jigsaw</button>
+                    <button class="fun-tab" id="tab-forecast" role="tab" aria-selected="false"
+                        aria-controls="panel-forecast" type="button">Scaleformer · forecast</button>
+                </div>
+
+                <div id="panel-puzzle" role="tabpanel" aria-labelledby="tab-puzzle">
+                    <div class="puzzle-grid">
+                        <div class="puzzle-text">
+                            <p class="puzzle-blurb">
+                                In <a href="https://arxiv.org/pdf/2211.13785" target="_blank"
+                                    rel="noopener noreferrer">PuzzleFusion (NeurIPS 2023)</a> we showed that a
+                                diffusion model can solve spatial jigsaw puzzles: treat the scattered pieces as
+                                noise, then denoise them into place. Here is the human benchmark — tap two tiles
+                                to swap them and reassemble the photo. Or press the button and let reverse
+                                diffusion do it for you.
+                            </p>
+                            <div class="puzzle-actions">
+                                <button class="btn" id="puzzle-shuffle" type="button">Shuffle</button>
+                                <button class="btn btn-solid" id="puzzle-solve" type="button">Solve with
+                                    diffusion</button>
+                            </div>
+                            <p class="puzzle-status" id="puzzle-status" aria-live="polite"></p>
+                        </div>
+                        <div class="puzzle-frame">
+                            <div class="puzzle-board" id="puzzle-board"
+                                aria-label="Jigsaw puzzle of a fjord landscape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-forecast" role="tabpanel" aria-labelledby="tab-forecast" hidden>
+                    <div class="puzzle-grid forecast-grid">
+                        <div class="puzzle-text">
+                            <p class="puzzle-blurb">
+                                In <a href="https://arxiv.org/pdf/2206.04038v3.pdf" target="_blank"
+                                    rel="noopener noreferrer">Scaleformer (ICLR 2023)</a> we improved time-series
+                                forecasting by refining predictions from coarse to fine scales. Your turn:
+                                study the history, then draw your forecast across the shaded region with your
+                                mouse or finger. Reveal the future to see whether you beat the model.
+                            </p>
+                            <div class="puzzle-actions">
+                                <button class="btn" id="fc-new" type="button">New series</button>
+                                <button class="btn btn-solid" id="fc-reveal" type="button">Reveal the
+                                    future</button>
+                            </div>
+                            <p class="puzzle-status" id="fc-status" aria-live="polite"></p>
+                        </div>
+                        <div class="forecast-frame">
+                            <canvas id="fc-canvas" aria-label="Forecasting game: draw your prediction for the shaded
+                                region of the time series"></canvas>
+                            <p class="fc-legend">
+                                <span class="fc-key"><span class="fc-swatch fc-swatch-hist"></span>history</span>
+                                <span class="fc-key"><span class="fc-swatch fc-swatch-you"></span>you</span>
+                                <span class="fc-key"><span class="fc-swatch fc-swatch-model"></span>model</span>
+                                <span class="fc-key"><span class="fc-swatch fc-swatch-truth"></span>truth</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Action Buttons -->
-        <div class="container mx-auto max-w-5xl px-4 mt-10">
-            <div class="flex flex-wrap gap-3">
-                <a href="mailto:aminshabaany@gmail.com"
-                    class="btn-primary bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2.5 rounded-lg flex items-center justify-center transition-all shadow-sm text-sm font-medium">
-                    <i class="fas fa-envelope mr-2"></i> Contact Me
-                </a>
-                <a href="CV-AminShabani.pdf" download="CV-AminShabani.pdf"
-                    class="btn-outline border border-slate-300 text-slate-700 hover:bg-slate-50 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all text-sm font-medium">
-                    <i class="fas fa-download mr-2"></i> Download CV
-                </a>
-                <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
-                    class="btn-outline border border-slate-300 text-slate-700 hover:bg-slate-50 px-5 py-2.5 rounded-lg flex items-center justify-center transition-all text-sm font-medium">
-                    <i class="fas fa-graduation-cap mr-2"></i> Google Scholar
-                </a>
-            </div>
-        </div>
-
-        <!-- Research Interests -->
-        <div class="container mx-auto max-w-5xl px-4 mt-8">
-            <p class="text-slate-400 uppercase tracking-widest text-xs font-semibold mb-3">Research Interests</p>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Generative Models</span>
-                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Large Language Models</span>
-                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Computer Vision</span>
-                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700">Time Series Forecasting</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- News and Photos Section -->
-    <section id="news-photos" class="py-16 bg-slate-50">
-        <div class="container mx-auto max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- News Section -->
-            <div>
-                <h2 class="text-3xl font-bold mb-8 section-title text-slate-900">News</h2>
-                <div class="news-scroll-container space-y-3 pr-2">
-                    <!-- Upper Bound 2026 Talk -->
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">May 2026</span>
-                            Gave a talk at <a href="https://www.upperbound.ai/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline"><strong>Upper Bound 2026</strong></a>, Amii's annual AI conference in Edmonton.
-                            <span class="text-red-500 font-semibold text-xs">(new)</span>
-                        </p>
-                    </div>
-                    <!-- ACL Findings 2026: FACTS -->
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Apr 2026</span>
-                            Paper "<a href="https://openreview.net/forum?id=tl9RvW3JLN" target="_blank"
-                                rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline">FACTS: Table Summarization via Offline Template Generation with Agentic Workflows</a>" accepted at <strong>ACL Findings 2026</strong>. <span
-                                class="text-red-500 font-semibold text-xs">(new)</span>
-                        </p>
-                    </div>
-                    <!-- ICLR 2026: EBCAR -->
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2026</span>
-                            Paper "<a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank"
-                                rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 transition-colors hover:underline">Embedding-based
-                                Context-aware Reranker</a>" accepted at <strong>ICLR 2026</strong>. <span
-                                class="text-red-500 font-semibold text-xs">(new)</span>
-                        </p>
-                    </div>
-                    <!-- NEW ITEM 1 -->
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Oct 2025</span>
-                            <strong>1st Place Winner</strong>, Financial Agentic Retrieval Grand Challenge (<a
-                                href="https://ai4f.org/2025-challenge" target="_blank" rel="noopener noreferrer"
-                                class="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors">FinAgentBench</a>), <strong>AI for Finance Symposium '25</strong>.
-                            <span class="text-red-500 font-semibold text-xs">(new)</span>
-                        </p>
-                    </div>
-                    <!-- NeurIPS Workshop 2025 -->
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2025</span>
-                            Paper "<a href="https://openreview.net/forum?id=wfhumSU3lw" target="_blank" rel="noopener noreferrer"
-                                class="text-cyan-600 hover:text-cyan-700 hover:underline transition-colors">Fast, Accurate, and Privacy-Compliant Table
-                                Summarization via Offline Template Generation</a>" accepted at <strong>NeurIPS 2025 Workshop</strong> on Generative
-                            AI in Finance.
-                        </p>
-                    </div>
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Apr 2024</span>
-                            Joined <strong>RBC Borealis</strong> as a Machine Learning Researcher.
-                        </p>
-                    </div>
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Mar 2024</span>
-                            Paper "Visual Layout Composer" accepted at <strong>CVPR 2024</strong>.
-                        </p>
-                    </div>
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2024</span>
-                            Gave a talk on diffusion models for layout generation at <strong>Samsung AI Center</strong>, Toronto.
-                        </p>
-                    </div>
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Sep 2023</span>
-                            Paper "PuzzleFusion" accepted as <strong>Spotlight</strong> at <strong>NeurIPS 2023</strong>.
-                        </p>
-                    </div>
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Mar 2023</span>
-                            Paper "HouseDiffusion" accepted at <strong>CVPR 2023</strong>.
-                        </p>
-                    </div>
-                    <div class="news-card bg-white p-4 rounded-lg border border-slate-200">
-                        <p class="text-slate-700 news-item-line text-sm">
-                            <span class="text-cyan-600 font-semibold mr-2 text-xs uppercase tracking-wide">Jan 2023</span>
-                            Paper "Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting"
-                            accepted at <strong>ICLR 2023</strong>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Photos Section (Carousel) -->
-            <div>
-                <h2 class="text-3xl font-bold mb-8 section-title text-slate-900">Photos</h2>
-                <div class="carousel-container">
-                    <img id="carousel-image" class="carousel-image" src="" alt="Personal Photo"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/0f172a/94a3b8?text=Photo+Not+Available';">
-                    <div id="photo-title" class="photo-title"></div>
-                    <button id="prev-button" class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-                    <button id="next-button" class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-                    <div id="carousel-dots" class="carousel-dots"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Experience -->
-    <section id="experience" class="py-16 bg-white">
-        <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Work Experience</h2>
-            <div class="relative pl-8 timeline">
-                <!-- RBC Borealis -->
-                <div class="mb-8 relative timeline-item">
-                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-slate-900">Machine Learning Researcher</h3>
-                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Apr 2024 – Present</span>
-                        </div>
-                        <div class="flex items-center text-slate-500 mb-3 text-sm">
-                            <a href="https://rbcborealis.com/" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                                <img src="images/rbc-borealis-logo.svg" alt="RBC Borealis" class="h-4 max-w-28 object-contain">
-                            </a>
-                        </div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Contributing to research and development of machine learning models for
-                            real-world applications in finance.</p>
-                    </div>
-                </div>
-
-                <!-- Adobe -->
-                <div class="mb-8 relative timeline-item">
-                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-slate-900">Research Scientist/Engineer Intern</h3>
-                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Jun 2023 – Nov 2023</span>
-                        </div>
-                        <div class="flex items-center text-slate-500 mb-3 text-sm">
-                            <a href="https://www.adobe.com/ca/" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                                <img src="images/adobe-logo.svg" alt="Adobe" class="h-5 object-contain">
-                                <span>Adobe</span>
-                            </a>
-                        </div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Worked on a new method for automatically generating layout designs.
-                            Published at CVPR 2024.</p>
-                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html"
-                            target="_blank" class="inline-block mt-3 text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Borealis AI -->
-                <div class="mb-8 relative timeline-item">
-                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-slate-900">Machine Learning Research Intern</h3>
-                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Jan 2022 – May 2022</span>
-                        </div>
-                        <div class="flex items-center text-slate-500 mb-3 text-sm">
-                            <a href="https://www.borealisai.com/en/" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                                <img src="images/rbc-borealis-logo.svg" alt="Borealis AI" class="h-4 max-w-28 object-contain">
-                            </a>
-                        </div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Worked on Iterative Multi-scale Refining Transformers for Time Series
-                            Forecasting. Published at ICLR 2023.</p>
-                        <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank"
-                            class="inline-block mt-3 text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                            <i class="fas fa-external-link-alt mr-1"></i> View Publication
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Faraadid -->
-                <div class="relative timeline-item">
-                    <div class="experience-card bg-white p-6 rounded-lg border border-slate-200">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-lg font-semibold text-slate-900">Research and Development Engineer</h3>
-                            <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">Feb 2017 – Aug 2017</span>
-                        </div>
-                        <div class="flex items-center text-slate-500 mb-3 text-sm">
-                            <i class="fas fa-building mr-2 text-xs"></i>
-                            <a href="http://faraadid.com/VisitorPages/default.aspx?itemid=3" target="_blank"
-                                class="hover:text-cyan-400 transition-colors">Faraadid Company</a>
-                        </div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Worked on finding online methods for object detection, considering the
-                            trade-off between speed and accuracy.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="py-16 bg-slate-50">
-        <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Education</h2>
-            <div class="space-y-4">
-                <!-- SFU -->
-                <div class="edu-card bg-white p-6 rounded-lg border border-slate-200">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <img src="images/sfu-logo.png" alt="SFU" class="h-8 w-8 object-contain flex-shrink-0">
-                            <h3 class="text-lg font-semibold text-slate-900">Simon Fraser University</h3>
-                        </div>
-                        <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">2019 – 2025</span>
-                    </div>
-                    <p class="text-slate-700 font-medium text-sm">Ph.D. in Computer Science</p>
-                    <a href="https://summit.sfu.ca/item/39603"
-                        target="_blank" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-xs mt-2 transition-colors">
-                        <i class="fas fa-file-alt mr-1"></i> Ph.D. Thesis
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <div class="wrap contact-inner">
+                <p class="section-label">Contact</p>
+                <h2>Get in touch</h2>
+                <p class="contact-blurb">Feel free to reach out about research, collaborations, or anything
+                    interesting.</p>
+                <a class="contact-email" href="mailto:aminshabaany@gmail.com">aminshabaany@gmail.com</a>
+                <p class="contact-location">Vancouver, Canada</p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/aminshabani" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/aminshabani" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.67.8.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/amin_shabani" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitter / X">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M18.24 2.25h3.31l-7.23 8.26L22.83 21.75h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.17 2.25h6.83l4.72 6.24 5.52-6.24zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z" />
+                        </svg>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
+                        rel="noopener noreferrer" aria-label="Google Scholar">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+                        </svg>
                     </a>
                 </div>
-
-                <!-- Seoul National University -->
-                <div class="edu-card bg-white p-6 rounded-lg border border-slate-200">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <img src="images/snu-logo.svg" alt="SNU" class="h-8 object-contain flex-shrink-0">
-                            <h3 class="text-lg font-semibold text-slate-900">Seoul National University</h3>
-                        </div>
-                        <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">2017 – 2019</span>
-                    </div>
-                    <p class="text-slate-700 font-medium text-sm">M.Sc. in Computer Engineering</p>
-                    <a href="https://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf"
-                        target="_blank" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-xs mt-2 transition-colors">
-                        <i class="fas fa-file-alt mr-1"></i> M.Sc. Thesis
-                    </a>
-                </div>
-
-                <!-- Sharif University -->
-                <div class="edu-card bg-white p-6 rounded-lg border border-slate-200">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <img src="images/sharif-logo.png" alt="Sharif University" class="h-8 w-8 object-contain flex-shrink-0">
-                            <h3 class="text-lg font-semibold text-slate-900">Sharif University of Technology</h3>
-                        </div>
-                        <span class="text-cyan-600 font-medium text-sm mt-1 md:mt-0">2012 – 2017</span>
-                    </div>
-                    <p class="text-slate-700 font-medium text-sm">B.Sc. in Computer Science</p>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Publications -->
-    <section id="publications" class="py-16 bg-white">
-        <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Publications</h2>
-            <div class="publications-scroll-container space-y-4">
-                <!-- ACL Findings 2026: FACTS -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/facts_acl.png" alt="FACTS table summarization pipeline overview"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=FACTS';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">FACTS: Table Summarization via Offline Template Generation with Agentic Workflows</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ACL Findings 2026</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openreview.net/pdf?id=tl9RvW3JLN" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>Query-focused table summarization requires generating natural language summaries of tabular data conditioned on a user query, enabling users to access insights beyond fact retrieval. Existing approaches face key limitations: table-to-text models require costly fine-tuning and struggle with complex reasoning, prompt-based LLM methods suffer from token-limit and efficiency issues while exposing sensitive data, and prior agentic pipelines often rely on decomposition, planning, or manual templates that lack robustness and scalability. To mitigate these issues, we introduce an agentic workflow, FACTS, a Fast, Accurate, and Privacy-Compliant Table Summarization approach via Offline Template Generation. FACTS produces offline templates, consisting of SQL queries and Jinja2 templates, which can be rendered into natural language summaries and are reusable across multiple tables sharing the same schema. It enables fast summarization through reusable offline templates, accurate outputs with executable SQL queries, and privacy compliance by sending only table schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS consistently outperforms baseline methods, establishing it as a practical solution for real-world query-focused table summarization.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- ICLR 2026: EBCAR -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/ebcar.png" alt="Embedding-based Context-aware Reranker diagram"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=EBCAR';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Embedding-based Context-aware Reranker</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ICLR 2026</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openreview.net/pdf?id=OBMcxeSK5U" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proposes an embedding-based context-aware reranking method for retrieval-augmented generation (RAG) that improves document ranking by incorporating query context, leading to more relevant and accurate retrieval results.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>Retrieval-Augmented Generation (RAG) systems rely on retrieving relevant evidence from a corpus to support downstream generation. The common practice of splitting a long document into multiple shorter passages enables finer-grained and targeted information retrieval. However, it also introduces challenges when a correct retrieval would require inference across passages, such as resolving coreference, disambiguating entities, and aggregating evidence scattered across multiple sources. Many state-of-the-art (SOTA) reranking methods, despite utilizing powerful large pretrained language models with potentially high inference costs, still neglect the aforementioned challenges. Therefore, we propose Embedding-Based Context-Aware Reranker (EBCAR), a lightweight reranking framework operating directly on embeddings of retrieved passages with enhanced cross-passage understandings through the structural information of the passages and a hybrid attention mechanism, which captures both high-level interactions across documents and low-level relationships within each document. We evaluate EBCAR against SOTA rerankers on the ConTEB benchmark, demonstrating its effectiveness for information retrieval requiring cross-passage inference and its advantages in both accuracy and efficiency.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- NeurIPS Workshop 2025 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/facts.png" alt="Fast, Accurate, and Privacy-Compliant Table Summarization"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=FACTS';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Fast, Accurate, and Privacy-Compliant Table Summarization via Offline Template Generation</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">NeurIPS Workshop, 2025</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">Ye Yuan, <strong class="text-slate-800">Amin Shabani</strong>, Siqi Liu</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openreview.net/pdf?id=wfhumSU3lw" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a framework for financial table summarization that combines offline template generation with agentic workflows, enabling structured and accurate natural language summaries of complex tabular financial data while preserving data privacy.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>Query-focused table summarization requires generating natural language summaries of tabular data conditioned on a user query, enabling users to access insights beyond fact retrieval. Existing approaches face key limitations: table-to-text models require costly fine-tuning and struggle with complex reasoning, prompt-based LLM methods suffer from token-limit and efficiency issues while exposing sensitive data, and prior agentic pipelines often rely on decomposition, planning, or manual templates that lack robustness and scalability. To mitigate these issues, we introduce an agentic workflow, FACTS, a Fast, Accurate, and Privacy-Compliant Table Summarization approach via Offline Template Generation. FACTS produces offline templates, consisting of SQL queries and Jinja2 templates, which can be rendered into natural language summaries and are reusable across multiple tables sharing the same schema. It enables fast summarization through reusable offline templates, accurate outputs with executable SQL queries, and privacy compliance by sending only table schemas to LLMs. Evaluations on widely-used benchmarks show that FACTS consistently outperforms baseline methods, establishing it as a practical solution for real-world query-focused table summarization.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- CVPR 2024 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/vlc.jpg" alt="Visual Layout Composer dual diffusion model overview"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=VLC';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Visual Layout Composer: Image-Vector Dual
-                                Diffusion Model for Design Layout Generation</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">CVPR 2024</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Zhaowen Wang, Difan Liu, Nanxuan
-                            Zhao, Jimei Yang, Yasutaka Furukawa</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf"
-                                target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="visual_layout_composer/index.html" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-globe mr-1"></i> Project Website
-                            </a>
-                            <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-certificate mr-1"></i> Related Patent
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Presents a dual diffusion model that jointly generates raster image content and corresponding vector layout for graphic design templates, enabling coherent, high-quality, and editable design generation from user-provided conditions.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>This paper proposes an image-vector dual diffusion model for generative layout design. Distinct from prior efforts that mostly ignore element-level visual information, our approach integrates the power of a pre-trained large image diffusion model to guide layout composition in a vector diffusion model by providing enhanced salient region understanding and high-level inter-element relationship reasoning. Our proposed model simultaneously operates in two domains: it generates the overall design appearance in the image domain while optimizing the size and position of each design element in the vector domain. The proposed method achieves the state-of-the-art results on several datasets and enables new layout design applications.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- NeurIPS 2023 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/jigsawplan.png" alt="PuzzleFusion jigsaw puzzle solving with diffusion models"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=Puzzle';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">PuzzleFusion: Unleashing the Power of Diffusion
-                                Models for Spatial Puzzle Solving</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">NeurIPS 2023 (Spotlight)</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">Sepidehsadat Hosseini, <strong class="text-slate-800">Amin Shabani</strong>, Saghar
-                            Irandoust, and Yasutaka Furukawa</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2211.13785" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="https://sepidsh.github.io/puzzlefusion/" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-globe mr-1"></i> Project Website
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Reformulates spatial jigsaw puzzle solving as a denoising diffusion process, jointly predicting piece positions and orientations without hand-crafted features or piece ordering assumptions, achieving state-of-the-art results on challenging benchmarks.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>This paper presents an end-to-end neural architecture based on Diffusion Models for spatial puzzle solving, particularly jigsaw puzzle and room arrangement tasks. In the latter task, for instance, the proposed system "PuzzleFusion" takes a set of room layouts as polygonal curves in the top-down view and aligns the room layout pieces by estimating their 2D translations and rotations, akin to solving the jigsaw puzzle of room layouts. A surprising discovery of the paper is that the simple use of a Diffusion Model effectively solves these challenging spatial puzzle tasks as a conditional generation process. To enable learning of an end-to-end neural system, the paper introduces new datasets with ground-truth arrangements: 1) 2D Voronoi jigsaw dataset, a synthetic one where pieces are generated by Voronoi diagram of 2D pointset; and 2) MagicPlan dataset, a real one offered by MagicPlan from its production pipeline, where pieces are room layouts constructed by augmented reality App by real-estate consumers. The qualitative and quantitative evaluations demonstrate that our approach outperforms the competing methods by significant margins in all the tasks.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- CVPR 2023 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/housediffusion.jpg" alt="HouseDiffusion vector floorplan generation examples"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=House';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">HouseDiffusion: Vector Floorplan Generation via
-                                a Diffusion Model with Discrete and Continuous Denoising</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">CVPR 2023</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Sepidehsadat Hosseini, and Yasutaka
-                            Furukawa</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2211.13287.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="housediffusion/index.html" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-globe mr-1"></i> Project Website
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Generates structured vector floorplans using a diffusion model that simultaneously denoises discrete room types and continuous polygon coordinates, producing diverse and realistic architectural layouts from user-specified room programs.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>The paper presents a novel approach for vector-floorplan generation via a diffusion model, which denoises 2D coordinates of room/door corners with two inference objectives: 1) a single-step noise as the continuous quantity to precisely invert the continuous forward process; and 2) the final 2D coordinate as the discrete quantity to establish geometric incident relationships such as parallelism, orthogonality, and corner-sharing. Our task is graph-conditioned floorplan generation, a common workflow in floorplan design. We represent a floorplan as 1D polygonal loops, each of which corresponds to a room or a door. Our diffusion model employs a Transformer architecture at the core, which controls the attention masks based on the input graph-constraint and directly generates vector-graphics floorplans via a discrete and continuous denoising process. We have evaluated our approach on RPLAN dataset. The proposed approach makes significant improvements in all the metrics against the state-of-the-art with significant margins, while being capable of generating non-Manhattan structures and controlling the exact number of corners per room.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- ICLR 2023 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/scaleformer.png" alt="Scaleformer iterative multi-scale architecture"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=Scale';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Scaleformer: Iterative Multi-scale Refining
-                                Transformers for Time Series Forecasting</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ICLR 2023</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Amir Abdi, Lili Meng, and Tristan
-                            Sylvain</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2206.04038v3.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="https://github.com/BorealisAI/scaleformer" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-code mr-1"></i> Code
-                            </a>
-                            <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-certificate mr-1"></i> Related Patent
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proposes an iterative multi-scale refining framework that applies Transformer-based forecasters at multiple temporal resolutions, progressively sharpening predictions from coarse to fine scales for improved time series forecasting accuracy.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>The performance of time series forecasting has recently been greatly improved by the introduction of transformers. In this paper, we propose a general multi-scale framework that can be applied to the state-of-the-art transformer-based time series forecasting models (FEDformer, Autoformer, etc.). By iteratively refining a forecasted time series at multiple scales with shared weights, introducing architecture adaptations, and a specially-designed normalization scheme, we are able to achieve significant performance improvements, from 5.5% to 38.5% across datasets and transformer architectures, with minimal additional computational overhead. Via detailed ablation studies, we demonstrate the effectiveness of each of our contributions across the architecture and methodology. Furthermore, our experiments on various public datasets demonstrate that the proposed improvements outperform their corresponding baseline counterparts.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- ACCV 2022 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/vectorizing_building.png" alt="Vectorizing Building Blueprints method results"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=Vector';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Vectorizing Building Blueprints</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ACCV 2022</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">Weilian Song, Mahsa Maleki Abyaneh, <strong class="text-slate-800">Amin Shabani</strong>,
-                            and Yasutaka Furukawa</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf"
-                                target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="https://weiliansong.github.io/blueprint-vectorizer/" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-globe mr-1"></i> Project Website
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Converts raster building blueprint images into structured vector representations by detecting and reconstructing walls, doors, windows, and symbols as scalable primitives, enabling downstream architectural analysis.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>This paper proposes a novel vectorization algorithm for high-definition floorplans with construction-level intricate architectural details, namely a blueprint. A state-of-the-art floorplan vectorization algorithm starts by detecting corners, whose process does not scale to high-definition floorplans with thin interior walls, small door frames, and long exterior walls. Our approach 1) obtains rough semantic segmentation by running off-the-shelf segmentation algorithms; 2) learning to infer missing smaller architectural components; 3) adding the missing components by a refinement generative adversarial network; and 4) simplifying the segmentation boundaries by heuristics. We have created a vectorized blueprint database consisting of 200 production scanned blueprint images. Qualitative and quantitative evaluations demonstrate the effectiveness of the approach, making significant boost in standard vectorization metrics over the current state-of-the-art and baseline methods.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- ICCV 2021 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/extreme_sfm.jpg" alt="Extreme SfM indoor panorama 3D reconstruction"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=SfM';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Extreme Structure from Motion for Indoor
-                                Panoramas without Visual Overlaps</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">ICCV 2021</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">Amin Shabani</strong>, Weilian Song, Makoto Odamaki,
-                            Hirochika Fujiki, and Yasutaka Furukawa</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="publications/extreme_sfm/pdfs/iccv2021_2088.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="publications/extreme_sfm/index.html" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-globe mr-1"></i> Project Website
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Estimates 3D camera configurations for indoor panoramic images that have no visual feature overlap, leveraging structural layout constraints and Manhattan-world assumptions to recover global scene geometry.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>This paper proposes an extreme Structure from Motion (SfM) algorithm for residential indoor panoramas that have little to no visual overlaps. Only a single panorama is present in a room for many cases, making the task infeasible for existing SfM algorithms. Our idea is to learn to evaluate the realism of room/door/window arrangements in the top-down semantic space. After using heuristics to enumerate possible arrangements based on door detections, we evaluate their realism scores, pick the most realistic arrangement, and return the corresponding camera poses. We evaluate the proposed approach on a dataset of 1029 panorama images with 286 houses. Our qualitative and quantitative evaluations show that an existing SfM approach completely fails for most of the houses. The proposed approach achieves the mean positional error of less than 1.0 meter for 47% of the houses and even 78% when considering the top five reconstructions.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- BMVC 2017 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/lvm.jpg" alt="Local Visual Microphones sound extraction from video"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=LVM';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Local Visual Microphones: Improved Sound
-                                Extraction from Silent Video</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">BMVC 2017</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">MA Shabani</strong>, L Samadfam, MA Sadeghi</p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1801.09436.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=ZX0NSlHDWV4" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-video mr-1"></i> Video
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Recovers audio signals from silent video by analyzing subtle, high-frequency vibrations in local image regions, improving over global visual microphone methods by capturing spatially-varying sound sources more accurately.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>Sound waves cause small vibrations in nearby objects. A few techniques exist in the literature that can extract sound from video. In this paper we study local vibration patterns at different image locations. We show that different locations in the image vibrate differently. We carefully aggregate local vibrations and produce a sound quality that improves state-of-the-art. We show that local vibrations could have a time delay because sound waves take time to travel through the air. We use this phenomenon to estimate sound direction. We also present a novel algorithm that speeds up sound extraction by two to three orders of magnitude and reaches real-time performance in a 20KHz video.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- 2019 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/lpkd.png" alt="Layer-wise Progressive Knowledge Distillation diagram"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=LPKD';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">Layer-wise Progressive Knowledge Distillation
-                            </h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">2019</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm"><strong class="text-slate-800">MA Shabani</strong></p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="http://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Introduces a layer-wise progressive knowledge distillation strategy that transfers knowledge from a teacher to a student network one layer at a time, improving the efficiency and effectiveness of model compression.</p>
-                    </div>
-                </div>
-
-                <!-- arXiv preprint -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/5cycle.png" alt="Complete tripartite graph 5-cycle decomposition illustration"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=5-cycle';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">On decomposing complete tripartite graphs into
-                                5-cycles</h3>
-                            <span class="text-cyan-600 font-medium md:ml-4 text-sm mt-1 md:mt-0">arXiv preprint</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">M Abdolmaleki, SG Ilchi, ES Mahmoodian, <strong class="text-slate-800">MA
-                                Shabani</strong></p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1907.06187.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Proves necessary and sufficient conditions for decomposing complete tripartite graphs into 5-cycles, extending known results on cycle decompositions in combinatorial graph theory.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>The problem of finding necessary and sufficient conditions to decompose a complete tripartite graph K<sub>r,s,t</sub> into 5-cycles was first considered by E.S. Mahmoodian and Maryam Mirzakhani (1995). They stated some necessary conditions and conjectured that those conditions are also sufficient. Since then, many cases of the problem have been solved by various authors; however, the case when the partite sets r≤s≤t have odd and distinct sizes remained open. We show the conjecture is true when r, s and t are all multiples of 5, t+90 ≤ 4rs/(r+s), and t ≠ s+10.</p>
-                        </details>
-                    </div>
-                </div>
-
-                <!-- Graphs and Combinatorics, 2018 -->
-                <div
-                    class="publication-item bg-slate-50 p-5 rounded-lg transition-all flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                    <img src="images/uklc.png" alt="Uniquely k-list colorable graph examples"
-                        class="rounded-lg flex-shrink-0 w-20 h-20 object-cover cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105"
-                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/0f172a/94a3b8?text=UKLC';">
-                    <div class="flex-grow">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-1.5">
-                            <h3 class="text-base font-semibold text-slate-900">On Uniquely k-List Colorable Planar Graphs,
-                                Graphs on Surfaces, and Regular Graphs</h3>
-                            <span class="text-cyan-400 font-medium md:ml-4 text-sm mt-1 md:mt-0">Graphs and Combinatorics, 2018</span>
-                        </div>
-                        <p class="text-slate-600 mb-2 text-sm">M Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N
-                            Matsumoto, <strong class="text-slate-800">M. A. Shabani</strong></p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1705.07434.pdf" target="_blank"
-                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                                <i class="fas fa-file-pdf mr-1"></i> PDF
-                            </a>
-                        </div>
-                        <p class="text-xs text-slate-500 italic mt-2 leading-relaxed"><span class="font-semibold not-italic text-slate-600">TL;DR:</span> Characterizes uniquely k-list colorable planar graphs and graphs on surfaces, establishing new structural properties and bounds for list coloring in graph theory.</p>
-                        <details class="pub-abstract mt-2">
-                            <summary>Show Abstract</summary>
-                            <p>A graph G is called uniquely k-list colorable (UkLC) if there exists a list of colors on its vertices, say L={S<sub>v</sub> | v ∈ V(G)}, each of size k, such that there is a unique proper list coloring of G from this list of colors. A graph G is said to have property M(k) if it is not uniquely k-list colorable. Mahmoodian and Mahdian characterized all graphs with property M(2). For k≥3 property M(k) has been studied only for multipartite graphs. Here we find bounds on M(k) for graphs embedded on surfaces, and obtain new results on planar graphs. We begin a general study of bounds on M(k) for regular graphs, as well as for graphs with varying list sizes.</p>
-                        </details>
-                    </div>
-                </div>
-
-            </div>
-            <!-- More publications button -->
-            <div class="text-center mt-10">
-                <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
-                    class="inline-flex items-center bg-cyan-600 hover:bg-cyan-700 text-white font-medium px-6 py-3 rounded-lg transition-all shadow-sm">
-                    View All Publications <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Patents -->
-    <section id="patents" class="py-16 bg-slate-50">
-        <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Patents</h2>
-            <div class="space-y-4">
-
-                <!-- Patent 1: Adobe / Visual Layout Composer -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
-                        <h3 class="text-base font-semibold text-slate-900">Generating Visually Aware Design Layouts Using a Multi-Domain Diffusion Neural Network</h3>
-                        <span class="text-cyan-600 font-medium text-sm whitespace-nowrap">Oct 2025</span>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-1">Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu, <strong class="text-slate-800">Mohammad Amin Shabani</strong></p>
-                    <p class="text-slate-500 text-xs mb-3">
-                        <span class="font-medium">US20250329081A1</span> &middot; Adobe Inc &middot; Filed Apr 2024
-                    </p>
-                    <p class="text-xs text-slate-500 italic leading-relaxed mb-3">Describes a diffusion framework that jointly generates design layouts in image and vector domains, using visual element characteristics as conditions to improve diversity and saliency reasoning.</p>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="https://patents.google.com/patent/US20250329081A1/en" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                            <i class="fas fa-external-link-alt mr-1"></i> View on Google Patents
-                        </a>
-                        <a href="#publications" onclick="document.querySelector('#publications').scrollIntoView({behavior:'smooth'}); return false;"
-                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                            <i class="fas fa-file-alt mr-1"></i> Related Publication (CVPR 2024)
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Patent 2: RBC / Scaleformer -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
-                        <h3 class="text-base font-semibold text-slate-900">Multi-Scale Artificial Neural Network and a Method for Operating Same for Time Series Forecasting</h3>
-                        <span class="text-cyan-600 font-medium text-sm whitespace-nowrap">Nov 2023</span>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-1"><strong class="text-slate-800">Amin Shabani</strong>, Tristan Sylvain, Lili Meng, Amir Abdi</p>
-                    <p class="text-slate-500 text-xs mb-3">
-                        <span class="font-medium">US20230368002A1</span> &middot; Royal Bank of Canada &middot; Filed May 2023
-                    </p>
-                    <p class="text-xs text-slate-500 italic leading-relaxed mb-3">Describes an iterative multi-scale neural network approach for time series forecasting that progressively refines predictions from coarse to fine temporal resolutions, achieving 5.5–38.5% error reduction across benchmarks.</p>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="https://patents.google.com/patent/US20230368002A1/en" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                            <i class="fas fa-external-link-alt mr-1"></i> View on Google Patents
-                        </a>
-                        <a href="https://openreview.net/forum?id=sCrnllCtjoE" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-cyan-600 hover:text-cyan-700 text-sm transition-colors">
-                            <i class="fas fa-file-alt mr-1"></i> Related Publication (ICLR 2023)
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-white text-slate-700">
-        <div class="container mx-auto max-w-5xl px-4">
-            <h2 class="text-3xl font-bold mb-10 section-title text-slate-900">Get In Touch</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-base font-semibold mb-4 text-slate-900">Contact</h3>
-                    <div class="space-y-3 text-sm text-slate-600">
-                        <div>
-                            <span class="text-slate-500">Email — </span>
-                            <a href="mailto:aminshabaany@gmail.com"
-                                class="text-cyan-600 hover:text-cyan-700 transition-colors">aminshabaany@gmail.com</a>
-                        </div>
-                        <div>
-                            <span class="text-slate-500">Location — </span>
-                            <span>Vancouver, Canada</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-base font-semibold mb-4 text-slate-900">Connect</h3>
-                    <div class="flex space-x-3">
-                        <a href="https://www.linkedin.com/in/aminshabani" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
-                            <i class="fab fa-linkedin-in text-slate-600"></i>
-                        </a>
-                        <a href="https://github.com/aminshabani" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
-                            <i class="fab fa-github text-slate-600"></i>
-                        </a>
-                        <a href="https://twitter.com/amin_shabani" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
-                            <i class="fab fa-twitter text-slate-600"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=NC5J2SkAAAAJ&hl=en" target="_blank"
-                            class="social-btn w-11 h-11 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 flex items-center justify-center transition-all">
-                            <i class="fas fa-graduation-cap text-slate-600" title="Google Scholar"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white text-slate-400 py-6 border-t border-slate-200">
-        <div class="container mx-auto max-w-5xl px-4 text-center text-sm">
-            <p>
-                &copy; 2026 Mohammad Amin Shabani. Designed with <span
-                    class="text-cyan-600 font-semibold">Claude</span>, built with <span
-                    class="text-cyan-600 font-semibold">Deepsite</span> &amp; <span
-                    class="text-cyan-600 font-semibold">Gemini</span>.
-            </p>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Mohammad Amin Shabani. Designed with <a href="https://claude.com/claude-code"
+                    target="_blank" rel="noopener noreferrer">Claude</a>.</p>
+            <a href="#" class="to-top">Back to top ↑</a>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Image Pop-up Modal -->
-    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden p-4">
-        <div class="relative bg-white p-4 rounded-xl shadow-2xl max-w-3xl max-h-[90vh] overflow-hidden border border-slate-200">
-            <button id="close-image-modal"
-                class="absolute top-2 right-2 text-slate-400 hover:text-slate-800 text-3xl font-bold leading-none transition-colors">&times;</button>
-            <img id="modal-image" src="" alt="Enlarged Publication Image"
-                class="max-w-full max-h-full object-contain rounded-lg">
-        </div>
+    <!-- Image lightbox -->
+    <div id="image-modal" class="lightbox" hidden>
+        <button id="close-image-modal" aria-label="Close">&times;</button>
+        <img id="modal-image" src="" alt="Enlarged publication image">
     </div>
 
-    <!-- External JS -->
     <script src="js/main.js"></script>
 </body>
 
