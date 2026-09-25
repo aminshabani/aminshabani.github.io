@@ -45,10 +45,8 @@
     --font-body: 'Public Sans', 'Helvetica Neue', sans-serif;
     --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
 
-    --radius: 6px;
+    --radius: 3px;
     --wrap: 1120px;
-    --shadow-card: 0 1px 2px rgba(29, 33, 38, 0.04), 0 3px 12px rgba(29, 33, 38, 0.04);
-    --shadow-lift: 0 2px 4px rgba(29, 33, 38, 0.05), 0 8px 22px rgba(29, 33, 38, 0.08);
 }
 
 /* Dark scheme: follows the OS unless the header toggle pins data-theme. */
@@ -134,8 +132,12 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-img {
+img,
+svg,
+canvas,
+video {
     max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -331,6 +333,13 @@ p a:hover {
     background-size: 32px 32px;
 }
 
+.hero-text,
+.pub-body,
+.tl-card,
+.edu-card > div {
+    min-width: 0;
+}
+
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
@@ -396,14 +405,12 @@ p a:hover {
     border: 1px solid var(--line);
     padding: 11px 20px;
     border-radius: 4px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease,
-        background 0.2s ease, color 0.2s ease;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
     color: var(--accent-deep);
     border-color: var(--accent-line);
-    box-shadow: var(--shadow-card);
 }
 
 .btn-solid {
@@ -445,7 +452,6 @@ p a:hover {
     border-radius: 4px;
     background: var(--card-bg);
     border: 1px solid var(--line);
-    box-shadow: var(--shadow-lift);
 }
 
 .portrait-ring img {
@@ -585,7 +591,6 @@ p a:hover {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: var(--shadow-card);
 }
 
 .carousel-stage {
@@ -654,7 +659,7 @@ p a:hover {
 .pubs {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .pub {
@@ -664,14 +669,12 @@ p a:hover {
     background: var(--bg);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: clamp(18px, 2.5vw, 26px);
-    box-shadow: var(--shadow-card);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    padding: clamp(16px, 2vw, 22px);
+    transition: border-color 0.2s ease;
 }
 
 .pub:hover {
     border-color: var(--accent-line);
-    box-shadow: var(--shadow-lift);
 }
 
 .section-alt .pub {
@@ -849,7 +852,7 @@ p a:hover {
 
 .tl-item {
     position: relative;
-    padding-bottom: 22px;
+    padding-bottom: 18px;
 }
 
 .tl-item:last-child {
@@ -872,14 +875,12 @@ p a:hover {
     background: var(--card-bg);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: clamp(18px, 2.5vw, 24px);
-    box-shadow: var(--shadow-card);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    padding: clamp(16px, 2vw, 22px);
+    transition: border-color 0.2s ease;
 }
 
 .tl-card:hover {
     border-color: var(--accent-line);
-    box-shadow: var(--shadow-lift);
 }
 
 .tl-top {
@@ -965,14 +966,12 @@ p a:hover {
     background: var(--bg);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 22px;
-    box-shadow: var(--shadow-card);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    padding: 18px;
+    transition: border-color 0.2s ease;
 }
 
 .edu-card:hover {
     border-color: var(--accent-line);
-    box-shadow: var(--shadow-lift);
 }
 
 .edu-logo {
@@ -1024,14 +1023,12 @@ p a:hover {
     background: var(--card-bg);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: clamp(18px, 2.5vw, 24px);
-    box-shadow: var(--shadow-card);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    padding: clamp(16px, 2vw, 22px);
+    transition: border-color 0.2s ease;
 }
 
 .patent-card:hover {
     border-color: var(--accent-line);
-    box-shadow: var(--shadow-lift);
 }
 
 .patent-meta {
@@ -1059,6 +1056,7 @@ p a:hover {
 
 .fun-tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
     border-bottom: 1px solid var(--line);
     margin-bottom: clamp(28px, 4vw, 44px);
@@ -1073,6 +1071,7 @@ p a:hover {
     border-bottom: 2px solid transparent;
     margin-bottom: -1px;
     color: var(--ink-soft);
+    white-space: nowrap;
     cursor: pointer;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
@@ -1095,13 +1094,11 @@ p a:hover {
     background: var(--bg-soft);
     padding: 14px;
     border-radius: var(--radius);
-    box-shadow: var(--shadow-card);
 }
 
 #fc-canvas {
     display: block;
     width: 100%;
-    height: auto;
     touch-action: none;
     cursor: crosshair;
     border-radius: 4px;
@@ -1180,7 +1177,6 @@ p a:hover {
     background: var(--bg-soft);
     padding: 10px;
     border-radius: var(--radius);
-    box-shadow: var(--shadow-card);
 }
 
 .puzzle-board {
