@@ -1,3 +1,44 @@
+// Theme: follow the OS unless the visitor picks one explicitly
+const themeToggle = document.getElementById('theme-toggle');
+const darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+const themeMetas = Array.from(document.querySelectorAll('meta[name="theme-color"]'));
+themeMetas.forEach(m => { m.dataset.default = m.content; });
+
+function currentTheme() {
+    return document.documentElement.dataset.theme || (darkMedia.matches ? 'dark' : 'light');
+}
+
+function reflectTheme() {
+    const theme = currentTheme();
+    if (themeToggle) {
+        themeToggle.setAttribute('aria-label',
+            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+    const pinned = document.documentElement.dataset.theme;
+    const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+    themeMetas.forEach(m => { m.content = pinned ? bg : m.dataset.default; });
+    document.dispatchEvent(new CustomEvent('themechange', { detail: theme }));
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const next = currentTheme() === 'dark' ? 'light' : 'dark';
+        const system = darkMedia.matches ? 'dark' : 'light';
+        if (next === system) {
+            delete document.documentElement.dataset.theme;
+        } else {
+            document.documentElement.dataset.theme = next;
+        }
+        try {
+            if (next === system) localStorage.removeItem('theme');
+            else localStorage.setItem('theme', next);
+        } catch (e) { }
+        reflectTheme();
+    });
+}
+darkMedia.addEventListener('change', reflectTheme);
+reflectTheme();
+
 // Mobile navigation
 const navToggle = document.getElementById('nav-toggle');
 const siteNav = document.getElementById('site-nav');
@@ -254,10 +295,21 @@ if (fcCanvas) {
 
     const HIST = 84, HORIZON = 36, PERIOD = 24;
     const TOTAL = HIST + HORIZON;
-    const COLOR = {
-        hist: '#1d2126', you: '#235a83', model: '#969ea6',
-        truth: '#b2593a', grid: '#e3e3de', wash: 'rgba(35, 90, 131, 0.07)',
-    };
+    // Read the palette from the CSS tokens so the canvas follows the theme.
+    let COLOR = {};
+    function readColors() {
+        const css = getComputedStyle(document.documentElement);
+        const v = name => css.getPropertyValue(name).trim();
+        COLOR = {
+            hist: v('--ink'), you: v('--accent'), model: v('--ink-faint'),
+            truth: v('--warn'), grid: v('--line'), wash: v('--accent-wash'),
+        };
+    }
+    readColors();
+    document.addEventListener('themechange', () => {
+        readColors();
+        if (fcCanvas.clientWidth) draw();
+    });
 
     let series = [], modelFc = [], pred = [];
     let revealed = false, revealProgress = 0;
