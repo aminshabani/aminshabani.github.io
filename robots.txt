@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /tools/
+# The CV source and build copy live here; /CV-AminShabani.pdf is the indexed copy.
+Disallow: /cv/
 Sitemap: https://shabani.me/sitemap.xml
