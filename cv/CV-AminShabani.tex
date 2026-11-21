@@ -90,15 +90,14 @@
 \vspace{6pt}
 {\color{line}\hrule height 0.5pt}
 
-% ================= summary =================
-\section{Research Summary}
-I build generative and structured-prediction models whose outputs are \emph{discrete and constrained} — vector floorplans, editable layouts, spatial arrangements, ranked evidence sets — rather than free-form pixels or text. Recurring threads: diffusion over vector and geometric representations under exact relational constraints; transformers whose attention is shaped by problem structure; and LLM systems built to the accuracy, latency, and privacy budgets of real deployments. 11 peer-reviewed papers (CVPR $\times$2, ICLR $\times$2, NeurIPS, ICCV, ACL, BMVC, ACCV) and 2 US patent applications.
-
 % ================= experience =================
 \section{Experience}
 
 \entry{Senior Machine Learning Researcher}{\href{https://rbcborealis.com/}{RBC Borealis}, Vancouver}{Jul 2026 -- Present}
-\small Research for quantitative finance: models that stay accurate, auditable, and privacy-compliant under the data-governance constraints of a regulated bank.\normalsize
+\small Research for quantitative finance: models that stay accurate, auditable, and privacy-compliant under the data-governance constraints of a regulated bank.
+\begin{itemize}
+  \item \textbf{What on-policy distillation learns} (\href{https://arxiv.org/abs/2610.39020}{ESC}, arXiv 2026; \href{https://github.com/maybenotime/opd-esc}{code}). Entropy-shape agreement predicts the best LLM teacher.
+\end{itemize}\normalsize
 
 \entry{Machine Learning Researcher}{\href{https://rbcborealis.com/}{RBC Borealis}, Vancouver}{Apr 2024 -- Jun 2026}
 \small LLM systems for finance, from prototype to production. Two lines of work, both published and open-sourced:
@@ -114,9 +113,6 @@ I build generative and structured-prediction models whose outputs are \emph{disc
 \entry{Machine Learning Research Intern}{\href{https://rbcborealis.com/}{Borealis AI} (now RBC Borealis), Vancouver}{Jan 2022 -- May 2022}
 \small Developed \href{https://openreview.net/forum?id=sCrnllCtjoE}{Scaleformer} (ICLR 2023), a model-agnostic multi-scale framework for time-series forecasting: coarse-to-fine refinement with shared weights, cross-scale normalization against distribution shift, and an adaptive loss against error accumulation. 5.5--38.5\% lower error on five transformer backbones at minimal overhead; filed as a US patent application.\normalsize
 
-\entry{Research and Development Engineer}{Faraadid, Tehran}{Feb 2017 -- Aug 2017}
-\small Benchmarked online object-detection architectures along the accuracy--latency trade-off for real-time deployment.\normalsize
-
 % ================= education =================
 \section{Education}
 
@@ -130,6 +126,7 @@ I build generative and structured-prediction models whose outputs are \emph{disc
 % ================= publications =================
 \section{Publications}
 \begin{pubs}
+\pub{Shiping Yang, Chuanqi Tang, Hossein Hajimirsadeghi, Layla El Asri, \me, Angel X. Chang}{Distilling the Shape of Uncertainty: What On-Policy Distillation Learns and How to Predict It}{https://arxiv.org/abs/2610.39020}{arXiv preprint}{2026}{}
 \pub{Ye Yuan, \me, Siqi Liu}{FACTS: Table Summarization via Offline Template Generation with Agentic Workflows}{https://aclanthology.org/2026.findings-acl.453.pdf}{ACL Findings}{2026}{Reusable SQL + Jinja2 templates; schema-only LLM exposure; runtime flat in table size.}
 \pub{Ye Yuan, \me, Siqi Liu}{Embedding-based Context-aware Reranker}{https://arxiv.org/abs/2510.13329}{ICLR}{2026}{Embedding-space reranker with hybrid full/masked attention; SOTA nDCG@10 on ConTEB at 29 queries/s.}
 \pub{Ye Yuan, \me, Siqi Liu}{Fast, Accurate, and Privacy-Compliant Table Summarization via Offline Template Generation}{https://openreview.net/pdf?id=wfhumSU3lw}{NeurIPS Workshop on Generative AI in Finance}{2025}{}
@@ -146,6 +143,7 @@ I build generative and structured-prediction models whose outputs are \emph{disc
 % ================= patents =================
 \section{Patents}
 \begin{itemize}
+  \item Parishad BehnamGhader, \me, Jiawei He, Leonid Sigal, Siqi Liu. \href{https://patents.google.com/patent/US20260195323A1}{\emph{Systems, apparatuses, methods, and non-transitory computer-readable storage devices for information retrieval}}. \venue{US 19/429,732}, Royal Bank of Canada, 2025.
   \item Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu, \me. \href{https://patents.google.com/patent/US20250329081A1}{\emph{Generating visually aware design layouts using a multi-domain diffusion neural network}}. \venue{US 18/641,137}, Adobe, 2024.
   \item \me, Tristan Sylvain, Lili Meng, Amir Abdi. \href{https://patents.google.com/patent/US20230368002A1}{\emph{Multi-scale artificial neural network and a method for operating same for time series forecasting}}. \venue{US 18/197,197}, Royal Bank of Canada, 2023.
 \end{itemize}
@@ -153,7 +151,7 @@ I build generative and structured-prediction models whose outputs are \emph{disc
 % ================= talks & service =================
 \section{Talks \& Service}
 \begin{itemize}
-  \item \textbf{Invited talks:} Upper Bound 2026 (Amii), Edmonton, May 2026 \,·\, Samsung AI Center, Toronto — diffusion models for layout generation, Jan 2024 \,·\, IPM (Institute for Research in Fundamental Sciences), Tehran — \href{https://arxiv.org/abs/1907.06187}{decomposing complete tripartite graphs into 5-cycles}, 2017.
+  \item \textbf{Talks \& panels:} Panelist, \href{https://groundlm.github.io/grouplm_emnlp2026/}{GroundLM} (EMNLP 2026 workshop), Budapest, Oct 2026 \,·\, Upper Bound 2026 (Amii), Edmonton, May 2026 \,·\, Samsung AI Center, Toronto — diffusion models for layout generation, Jan 2024 \,·\, IPM (Institute for Research in Fundamental Sciences), Tehran — \href{https://arxiv.org/abs/1907.06187}{decomposing complete tripartite graphs into 5-cycles}, 2017.
   \item \textbf{Reviewer:} CVPR 2026, ECCV 2024, NeurIPS 2023, SIGGRAPH 2023, ICCV 2023, CVPR 2023, ACCV 2022, ICCV 2021.
 \end{itemize}
 
@@ -161,6 +159,7 @@ I build generative and structured-prediction models whose outputs are \emph{disc
 \section{Honors \& Awards}
 \begin{itemize}
   \item 1st place, Financial Agentic Retrieval Grand Challenge (FinAgentBench), AI for Finance Symposium\dates{2025}
+  \item One RBC Team Award, RBC\dates{2025}
   \item Spotlight presentations, NeurIPS 2023 and BMVC 2017
   \item Helmut \& Hugo Eppich Family Graduate Scholarship, SFU\dates{2021, 2023}
   \item SFU Computing Science Graduate Fellowship\dates{2020 -- 2022}

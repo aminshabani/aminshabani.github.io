@@ -85,6 +85,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Photo carousel
 const images = [
     { src: "assets/photos/upperbound-2026.jpeg", title: "Talk at Upper Bound 2026, Edmonton" },
+    { src: "assets/photos/rbc-team-award-2025.jpg", title: "One RBC Team Award, RBC Gala 2025" },
     { src: "assets/photos/group-2023-cvpr.jpg", title: "CVPR 2023 Group Photo" },
     { src: "assets/photos/group-2022-sfu.jpg", title: "SFU Lab Group Photo 2022" },
 ];
