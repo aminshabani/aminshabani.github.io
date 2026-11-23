@@ -82,6 +82,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Email: assembled at runtime so the address isn't sitting in the HTML for scrapers
+(function () {
+    const addr = ['aminshabaany', 'gmail.com'].join('@');
+    document.querySelectorAll('.js-mail').forEach(a => {
+        a.href = 'mailto:' + addr;
+        if (a.hasAttribute('data-show-address')) a.textContent = addr;
+    });
+})();
+
+// News: on narrow screens show the latest items inline (no nested scroll box) with a toggle
+(function () {
+    const list = document.getElementById('news-list');
+    const more = document.getElementById('news-more');
+    if (!list || !more) return;
+    const narrow = window.matchMedia('(max-width: 900px)');
+    const SHOWN = 4;
+    const total = list.querySelectorAll('.news-row').length;
+    let expanded = false;
+    function sync() {
+        const collapsible = narrow.matches && total > SHOWN;
+        list.classList.toggle('is-collapsed', collapsible && !expanded);
+        // On mobile the list is no longer its own scroll region, so drop it from the tab order
+        if (narrow.matches) list.removeAttribute('tabindex'); else list.setAttribute('tabindex', '0');
+        more.hidden = !collapsible;
+        more.setAttribute('aria-expanded', String(expanded));
+        more.textContent = expanded ? 'Show less' : `Show all news (${total - SHOWN} more)`;
+    }
+    more.addEventListener('click', () => {
+        expanded = !expanded;
+        sync();
+        if (!expanded) list.scrollIntoView({ block: 'start', behavior: scrollBehavior() });
+    });
+    narrow.addEventListener('change', sync);
+    sync();
+})();
+
 // Photo carousel
 const images = [
     { src: "assets/photos/upperbound-2026.jpeg", title: "Talk at Upper Bound 2026, Edmonton" },

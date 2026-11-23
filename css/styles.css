@@ -571,6 +571,14 @@ a.chip:hover {
     padding-right: 6px;
 }
 
+.news-more {
+    margin-top: 16px;
+}
+
+.news-more[hidden] {
+    display: none;
+}
+
 .news-row {
     display: grid;
     grid-template-columns: 96px 1fr;
@@ -1003,6 +1011,13 @@ a.chip:hover {
 
 .tl-org a:hover {
     color: var(--accent);
+}
+
+.tl-loc {
+    margin-left: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
 }
 
 .org-logo {
@@ -1548,6 +1563,18 @@ a.chip:hover {
 
     .split {
         grid-template-columns: 1fr;
+    }
+
+    .news-scroll {
+        max-height: none;
+        overflow: visible;
+        -webkit-mask-image: none;
+        mask-image: none;
+        padding: 0;
+    }
+
+    .news-scroll.is-collapsed .news-row:nth-child(n+5) {
+        display: none;
     }
 
     .service-row {

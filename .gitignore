@@ -9,3 +9,6 @@ cv/*.out
 cv/*.fls
 cv/*.fdb_latexmk
 cv/*.synctex.gz
+
+# Built CV; the published copy is /CV-AminShabani.pdf at the repo root (make copies it there)
+cv/*.pdf

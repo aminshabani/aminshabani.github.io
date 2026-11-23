@@ -5,7 +5,6 @@
 \documentclass[10pt,letterpaper]{article}
 
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{libertinus}                       % Libertinus Serif (body + headings)
 \usepackage[scale=0.86]{plex-mono}            % IBM Plex Mono for metadata
 \usepackage{microtype}
@@ -67,7 +66,7 @@
 
 % \pub{authors}{title}{url}{venue}{year}{one-line takeaway (may be empty)}
 \newcommand{\pub}[6]{%
-  \item #1, \href{#3}{\emph{#2}}. \venue{#4 #5}.%
+  \item #1, \href{#3}{\emph{#2}}. \venue{\textbf{#4} #5}.%
   \ifx\relax#6\relax\else\\ \soft{\small #6}\fi}
 
 \newlist{pubs}{enumerate}{1}
@@ -94,20 +93,21 @@
 \section{Experience}
 
 \entry{Senior Machine Learning Researcher}{\href{https://rbcborealis.com/}{RBC Borealis}, Vancouver}{Jul 2026 -- Present}
-\small Research for quantitative finance: models that stay accurate, auditable, and privacy-compliant under the data-governance constraints of a regulated bank.
+\small Foundation models for personalized banking, tailoring products and experiences to each client, and machine learning for portfolio construction; models built to stay accurate, auditable, and privacy-compliant under the data-governance constraints of a regulated bank.
 \begin{itemize}
   \item \textbf{What on-policy distillation learns} (\href{https://arxiv.org/abs/2610.39020}{ESC}, arXiv 2026; \href{https://github.com/maybenotime/opd-esc}{code}). Entropy-shape agreement predicts the best LLM teacher.
 \end{itemize}\normalsize
 
 \entry{Machine Learning Researcher}{\href{https://rbcborealis.com/}{RBC Borealis}, Vancouver}{Apr 2024 -- Jun 2026}
-\small LLM systems for finance, from prototype to production. Two lines of work, both published and open-sourced:
+\small LLM systems for personalized banking, from prototype to production.
 \begin{itemize}
-  \item \textbf{Agentic table summarization} (\href{https://aclanthology.org/2026.findings-acl.453.pdf}{FACTS}, ACL Findings 2026; \href{https://github.com/BorealisAI/FACTS}{code}). Recast query-focused summarization as offline template generation: an agentic workflow synthesizes guiding questions, SQL, and Jinja2 templates, each validated by an LLM-council ensemble. Only schemas reach the LLM and reusable templates keep runtime flat in table size. 97\% intent match, 94\% SQL accuracy; best or second-best on every metric across FeTaQA, QTSumm, QFMTS.
+  \item \textbf{Agentic table summarization} (\href{https://aclanthology.org/2026.findings-acl.453.pdf}{FACTS}, Findings of ACL 2026; \href{https://github.com/BorealisAI/FACTS}{code}). Recast query-focused summarization as offline template generation: an agentic workflow synthesizes guiding questions, SQL, and Jinja2 templates, each validated by an LLM-council ensemble. Only schemas reach the LLM and reusable templates keep runtime flat in table size. 97\% intent match, 94\% SQL accuracy; best or second-best on every metric across FeTaQA, QTSumm, QFMTS.
   \item \textbf{Efficient context-aware reranking} (\href{https://arxiv.org/abs/2510.13329}{EBCAR}, ICLR 2026; \href{https://github.com/BorealisAI/EBCAR}{code}). A 126M-parameter reranker over pre-computed passage embeddings; document-ID and position encodings with hybrid full/document-masked attention capture cross-document evidence and coreference. Best average nDCG@10 (64.92) on ConTEB at 29.3 queries/s on one A100, an order of magnitude faster than LLM listwise rerankers.
+  \item \textbf{Hierarchical retrieval over long documents} (\href{https://patents.google.com/patent/US20260195323A1}{US patent application}, 2025). Passage embeddings aggregated into document embeddings, so a query locates the relevant documents first, then the passages within them.
   \item \textbf{1st place}, Financial Agentic Retrieval Grand Challenge (\href{https://ai4f.org/2025-challenge}{FinAgentBench}), AI for Finance Symposium 2025.
 \end{itemize}\normalsize
 
-\entry{Research Scientist/Engineer Intern}{\href{https://research.adobe.com/}{Adobe Research}, San Jose}{Jun 2023 -- Nov 2023}
+\entry{Research Scientist/Engineer Intern}{\href{https://research.adobe.com/}{Adobe Research}, San Jose (Remote)}{Jun 2023 -- Nov 2023}
 \small Developed \href{https://openaccess.thecvf.com/content/CVPR2024/html/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.html}{Visual Layout Composer} (CVPR 2024): an image diffusion model and a vector diffusion model over element boxes denoise in lockstep through cross-domain attention, so element appearance informs geometry while the output stays a layered, editable design. State of the art on multiple layout benchmarks; filed as a US patent application.\normalsize
 
 \entry{Machine Learning Research Intern}{\href{https://rbcborealis.com/}{Borealis AI} (now RBC Borealis), Vancouver}{Jan 2022 -- May 2022}
@@ -117,35 +117,37 @@
 \section{Education}
 
 \entry{Ph.D. in Computing Science}{Simon Fraser University, Canada \,·\, advisor \href{https://yasu-furukawa.github.io/}{Yasutaka Furukawa}}{Sep 2019 -- Aug 2025}
-\small Thesis: diffusion models for structured geometry — vector floorplans, spatial puzzles, design layouts. \href{https://summit.sfu.ca/item/39603}{summit.sfu.ca/item/39603}\normalsize
+\small Thesis: \href{https://summit.sfu.ca/item/39603}{\emph{From Floorplans to User Interfaces: Generative AI for Layout Design}}\normalsize
 
-\entry{M.S. in Electrical and Computer Engineering}{Seoul National University, Korea \,·\, advisor \href{https://cv.snu.ac.kr/}{Kyoung Mu Lee}}{Sep 2017 -- Aug 2019}
+\entry{M.Sc. in Electrical and Computer Engineering}{Seoul National University, Korea \,·\, advisor \href{https://cv.snu.ac.kr/}{Kyoung Mu Lee}}{Sep 2017 -- Aug 2019}
+\small Thesis: \href{https://s-space.snu.ac.kr/bitstream/10371/161065/1/000000157560.pdf}{\emph{Layer-wise Progressive Knowledge Distillation}}\normalsize
 
-\entry{B.S. in Computer Science}{Sharif University of Technology, Iran}{Oct 2012 -- Aug 2017}
+\entry{B.Sc. in Computer Science}{Sharif University of Technology, Iran}{Oct 2012 -- Aug 2017}
 
 % ================= publications =================
 \section{Publications}
 \begin{pubs}
 \pub{Shiping Yang, Chuanqi Tang, Hossein Hajimirsadeghi, Layla El Asri, \me, Angel X. Chang}{Distilling the Shape of Uncertainty: What On-Policy Distillation Learns and How to Predict It}{https://arxiv.org/abs/2610.39020}{arXiv preprint}{2026}{}
-\pub{Ye Yuan, \me, Siqi Liu}{FACTS: Table Summarization via Offline Template Generation with Agentic Workflows}{https://aclanthology.org/2026.findings-acl.453.pdf}{ACL Findings}{2026}{Reusable SQL + Jinja2 templates; schema-only LLM exposure; runtime flat in table size.}
-\pub{Ye Yuan, \me, Siqi Liu}{Embedding-based Context-aware Reranker}{https://arxiv.org/abs/2510.13329}{ICLR}{2026}{Embedding-space reranker with hybrid full/masked attention; SOTA nDCG@10 on ConTEB at 29 queries/s.}
+\pub{Ye Yuan, \me, Siqi Liu}{FACTS: Table Summarization via Offline Template Generation with Agentic Workflows}{https://aclanthology.org/2026.findings-acl.453.pdf}{Findings of ACL}{2026}{}
+\pub{Ye Yuan, \me, Siqi Liu}{Embedding-based Context-aware Reranker}{https://arxiv.org/abs/2510.13329}{ICLR}{2026}{}
 \pub{Ye Yuan, \me, Siqi Liu}{Fast, Accurate, and Privacy-Compliant Table Summarization via Offline Template Generation}{https://openreview.net/pdf?id=wfhumSU3lw}{NeurIPS Workshop on Generative AI in Finance}{2025}{}
-\pub{\me, Zhaowen Wang, Difan Liu, Nanxuan Zhao, Jimei Yang, Yasutaka Furukawa}{Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation}{https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf}{CVPR}{2024}{Coupled image--vector diffusion; appearance-aware yet fully editable layouts.}
+\pub{\me, Zhaowen Wang, Difan Liu, Nanxuan Zhao, Jimei Yang, Yasutaka Furukawa}{Visual Layout Composer: Image-Vector Dual Diffusion Model for Design Layout Generation}{https://openaccess.thecvf.com/content/CVPR2024/papers/Shabani_Visual_Layout_Composer_Image-Vector_Dual_Diffusion_Model_for_Design_Layout_CVPR_2024_paper.pdf}{CVPR}{2024}{}
 \pub{Sepidehsadat Hosseini, \me, Saghar Irandoust, Yasutaka Furukawa}{PuzzleFusion: Unleashing the Power of Diffusion Models for Spatial Puzzle Solving}{https://arxiv.org/abs/2211.13785}{NeurIPS}{2023 (Spotlight)}{Jigsaw and room-arrangement solving as diffusion over SE(2) piece transforms; new Voronoi-jigsaw and MagicPlan benchmarks.}
 \pub{\me, Sepidehsadat Hosseini, Yasutaka Furukawa}{HouseDiffusion: Vector Floorplan Generation via a Diffusion Model with Discrete and Continuous Denoising}{https://shabani.me/housediffusion/}{CVPR}{2023}{Discrete/continuous denoising over polygonal loops with graph-conditioned attention; exact parallelism, orthogonality, corner-sharing.}
-\pub{\me, Amir Abdi, Lili Meng, Tristan Sylvain}{Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting}{https://arxiv.org/abs/2206.04038}{ICLR}{2023}{Architecture-agnostic coarse-to-fine refinement; 5.5--38.5\% error reduction over five transformer backbones.}
+\pub{\me, Amir Abdi, Lili Meng, Tristan Sylvain}{Scaleformer: Iterative Multi-scale Refining Transformers for Time Series Forecasting}{https://arxiv.org/abs/2206.04038}{ICLR}{2023}{}
 \pub{Weilian Song, Mahsa Maleki Abyaneh, \me, Yasutaka Furukawa}{Vectorizing Building Blueprints}{https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf}{ACCV}{2022}{}
 \pub{\me, Weilian Song, Makoto Odamaki, Hirochika Fujiki, Yasutaka Furukawa}{Extreme Structure from Motion for Indoor Panoramas without Visual Overlaps}{https://shabani.me/publications/extreme_sfm/}{ICCV}{2021}{Poses for non-overlapping indoor panoramas via a learned realism score over top-down layouts; sub-meter error on 47\% of 286 houses.}
 \pub{\me, Laleh Samadfam, Mohammad Amin Sadeghi}{Local Visual Microphones: Improved Sound Extraction from Silent Video}{https://arxiv.org/abs/1801.09436}{BMVC}{2017 (Spotlight)}{Aggregates local vibration phases for higher audio quality and sound direction; real-time, 2--3 orders of magnitude faster.}
+\pub{M. Abdolmaleki, S. Gh. Ilchi, E. S. Mahmoodian, \me\ (alphabetical)}{On Decomposing Complete Tripartite Graphs into 5-Cycles}{https://arxiv.org/abs/1907.06187}{arXiv preprint}{2019}{}
 \pub{M. Abdolmaleki, J. P. Hutchinson, S. Gh. Ilchi, E. S. Mahmoodian, N. Matsumoto, \me\ (alphabetical)}{On Uniquely k-List Colorable Planar Graphs, Graphs on Surfaces, and Regular Graphs}{https://link.springer.com/article/10.1007/s00373-018-1879-7}{Graphs and Combinatorics}{2018}{}
 \end{pubs}
 
 % ================= patents =================
-\section{Patents}
+\section{Patent Applications}
 \begin{itemize}
-  \item Parishad BehnamGhader, \me, Jiawei He, Leonid Sigal, Siqi Liu. \href{https://patents.google.com/patent/US20260195323A1}{\emph{Systems, apparatuses, methods, and non-transitory computer-readable storage devices for information retrieval}}. \venue{US 19/429,732}, Royal Bank of Canada, 2025.
-  \item Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu, \me. \href{https://patents.google.com/patent/US20250329081A1}{\emph{Generating visually aware design layouts using a multi-domain diffusion neural network}}. \venue{US 18/641,137}, Adobe, 2024.
-  \item \me, Tristan Sylvain, Lili Meng, Amir Abdi. \href{https://patents.google.com/patent/US20230368002A1}{\emph{Multi-scale artificial neural network and a method for operating same for time series forecasting}}. \venue{US 18/197,197}, Royal Bank of Canada, 2023.
+  \item Parishad BehnamGhader, \me, Jiawei He, Leonid Sigal, Siqi Liu. \href{https://patents.google.com/patent/US20260195323A1}{\emph{Systems, apparatuses, methods, and non-transitory computer-readable storage devices for information retrieval}}. \venue{US App.\ 19/429,732}, Royal Bank of Canada, filed 2025.
+  \item Zhaowen Wang, Nanxuan Zhao, Jimei Yang, Difan Liu, \me. \href{https://patents.google.com/patent/US20250329081A1}{\emph{Generating visually aware design layouts using a multi-domain diffusion neural network}}. \venue{US App.\ 18/641,137}, Adobe, filed 2024.
+  \item \me, Tristan Sylvain, Lili Meng, Amir Abdi. \href{https://patents.google.com/patent/US20230368002A1}{\emph{Multi-scale artificial neural network and a method for operating same for time series forecasting}}. \venue{US App.\ 18/197,197}, Royal Bank of Canada, filed 2023.
 \end{itemize}
 
 % ================= talks & service =================
@@ -160,7 +162,7 @@
 \begin{itemize}
   \item 1st place, Financial Agentic Retrieval Grand Challenge (FinAgentBench), AI for Finance Symposium\dates{2025}
   \item One RBC Team Award, RBC\dates{2025}
-  \item Spotlight presentations, NeurIPS 2023 and BMVC 2017
+  \item Spotlight presentations, NeurIPS and BMVC\dates{2023, 2017}
   \item Helmut \& Hugo Eppich Family Graduate Scholarship, SFU\dates{2021, 2023}
   \item SFU Computing Science Graduate Fellowship\dates{2020 -- 2022}
   \item Graduate Scholarship for Excellent Foreign Students, Seoul National University\dates{2017 -- 2019}
@@ -175,10 +177,7 @@
 \end{itemize}
 
 % ================= skills =================
-\section{Technical Skills}
-\begin{itemize}
-  \item \textbf{Methods:} diffusion and generative models, transformers, structured/vector output prediction, retrieval-augmented generation and reranking, agentic LLM workflows, contrastive learning, time-series forecasting, 3D vision.
-  \item \textbf{Languages \& frameworks:} Python, PyTorch, C++, SQL, TensorFlow, MATLAB.
-\end{itemize}
+\section{Tools}
+Python, PyTorch, Hugging Face (Transformers, Datasets), vLLM, DeepSpeed, SQL; earlier: C++.
 
 \end{document}
