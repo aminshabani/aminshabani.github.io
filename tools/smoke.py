@@ -71,6 +71,17 @@ try:
     key("Home")
     check("Home returns to puzzle tab", js("document.getElementById('tab-puzzle').getAttribute('aria-selected') === 'true' && document.getElementById('tab-forecast').tabIndex === -1"))
 
+    # publication topic tabs
+    js("document.querySelector('.pub-tab[data-filter=theory]').click()")
+    check("topic tab filters publications", js("Array.from(document.querySelectorAll('#pubs-list .pub')).filter(p => !p.hidden).every(p => p.dataset.topic === 'theory')")
+          and js("document.querySelectorAll('#pubs-list .pub:not([hidden])').length") == 2)
+    js("document.querySelector('.pub-tab[data-filter=theory]').focus()")
+    key("Home")
+    check("Home on topic tabs returns to All", js("document.querySelector('.pub-tab[data-filter=all]').getAttribute('aria-selected') === 'true' && document.querySelectorAll('#pubs-list .pub[hidden]').length === 0"))
+    js("document.querySelector('.pub-tab[data-filter=llm]').click()")
+    js("document.querySelector('a[href=\"#pub-vlc\"]').click()")
+    check("link to a filtered-out paper switches back to All", not js("document.getElementById('pub-vlc').hidden"))
+
     # theme toggle
     check("light scheme by default", js("getComputedStyle(document.body).backgroundColor") == "rgb(253, 253, 252)")
     js("document.getElementById('theme-toggle').click()")

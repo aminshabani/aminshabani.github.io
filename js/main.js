@@ -60,6 +60,52 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Publications: topic tabs filter the single list (ARIA tabs: click, Arrow/Home/End)
+(function () {
+    const tabs = Array.from(document.querySelectorAll('.pub-tab'));
+    const list = document.getElementById('pubs-list');
+    if (!tabs.length || !list) return;
+    const pubs = Array.from(list.querySelectorAll('.pub'));
+
+    function select(tab) {
+        const filter = tab.dataset.filter;
+        tabs.forEach(t => {
+            const active = t === tab;
+            t.classList.toggle('active', active);
+            t.setAttribute('aria-selected', String(active));
+            t.tabIndex = active ? 0 : -1;
+        });
+        pubs.forEach(p => { p.hidden = filter !== 'all' && p.dataset.topic !== filter; });
+        list.setAttribute('aria-label', 'Publications: ' + tab.textContent);
+        list.classList.remove('is-filtering');
+        void list.offsetWidth; // restart the entry animation
+        list.classList.add('is-filtering');
+    }
+
+    tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => select(tab));
+        tab.addEventListener('keydown', (e) => {
+            const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+            if (!(e.key in keys)) return;
+            e.preventDefault();
+            const next = tabs[(keys[e.key] + tabs.length) % tabs.length];
+            select(next);
+            next.focus();
+        });
+    });
+
+    // A link to a paper that is filtered out (news, patents) switches back to "All" first.
+    function reveal(id) {
+        const el = id && document.getElementById(id);
+        if (el && el.classList.contains('pub') && el.hidden) select(tabs[0]);
+    }
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest && e.target.closest('a[href^="#pub-"]');
+        if (a) reveal(a.getAttribute('href').slice(1));
+    }, true);
+    window.addEventListener('hashchange', () => reveal(location.hash.slice(1)));
+})();
+
 // Smooth scrolling for anchor links (and close mobile nav)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

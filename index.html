@@ -581,7 +581,7 @@
                 <a href="#news-photos">News</a>
                 <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
-                <a href="#publications">Research</a>
+                <a href="#publications">Publications</a>
                 <a href="#patents">Patents</a>
                 <a href="#talks">Talks</a>
                 <a href="#fun">Fun</a>
@@ -620,7 +620,7 @@
                     <p class="hero-lede">
                         I'm a Senior Machine Learning Researcher at <a href="https://rbcborealis.com/" target="_blank"
                             rel="noopener noreferrer">RBC Borealis</a> in Vancouver, where I work on
-                        foundation models that personalize banking for clients. I received my Ph.D. in Computing Science
+                        models that personalize banking for clients. I received my Ph.D. in Computing Science
                         from Simon Fraser University (SFU) under the
                         supervision of <a href="https://yasu-furukawa.github.io/" target="_blank"
                             rel="noopener noreferrer">Prof.&nbsp;Yasutaka Furukawa</a>, and my M.Sc. from Seoul
@@ -805,7 +805,7 @@
                             <p class="tl-org"><a href="https://rbcborealis.com/" target="_blank"
                                     rel="noopener noreferrer"><img src="images/rbc-borealis-logo.svg"
                                         alt="RBC Borealis" class="org-logo org-logo-wide"></a></p>
-                            <p class="tl-desc">Research and development of foundation models that personalize
+                            <p class="tl-desc">Research and development of models that personalize
                                 banking products and experiences for clients.</p>
                             <p class="tl-links"><a href="https://arxiv.org/abs/2610.39020" target="_blank"
                                     rel="noopener noreferrer">On-Policy Distillation (ESC) · arXiv 2026 ↗</a></p>
@@ -932,10 +932,18 @@
                     <p class="section-label">Research</p>
                     <h2>Publications</h2>
                 </div>
-                <div class="pubs">
+                <div class="pub-tabs" role="tablist" aria-label="Publication topics">
+                    <button class="pub-tab active" role="tab" type="button" aria-selected="true" aria-controls="pubs-list" tabindex="0" data-filter="all">All</button>
+                    <button class="pub-tab" role="tab" type="button" aria-selected="false" aria-controls="pubs-list" tabindex="-1" data-filter="llm">LLMs &amp; Retrieval</button>
+                    <button class="pub-tab" role="tab" type="button" aria-selected="false" aria-controls="pubs-list" tabindex="-1" data-filter="gen">Generative Layout</button>
+                    <button class="pub-tab" role="tab" type="button" aria-selected="false" aria-controls="pubs-list" tabindex="-1" data-filter="vision">Computer Vision</button>
+                    <button class="pub-tab" role="tab" type="button" aria-selected="false" aria-controls="pubs-list" tabindex="-1" data-filter="learning">Time Series &amp; Distillation</button>
+                    <button class="pub-tab" role="tab" type="button" aria-selected="false" aria-controls="pubs-list" tabindex="-1" data-filter="theory">Graph Theory</button>
+                </div>
+                <div class="pubs" id="pubs-list" role="tabpanel" aria-label="Publications">
 
                     <!-- arXiv 2026: OPD / ESC -->
-                    <article class="pub" id="pub-opd-esc">
+                    <article class="pub" id="pub-opd-esc" data-topic="llm">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/opd_esc.webp" alt="Entropy shape of teacher and student along a rollout (where to branch) and top token candidates at a mismatch (how to branch)" class="pub-thumb">
                         </button>
@@ -979,7 +987,7 @@
                     </article>
 
                     <!-- ACL Findings 2026: FACTS -->
-                    <article class="pub" id="pub-facts">
+                    <article class="pub" id="pub-facts" data-topic="llm">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/facts_acl.webp" alt="FACTS table summarization pipeline overview" class="pub-thumb">
                         </button>
@@ -1024,7 +1032,7 @@
                     </article>
 
                     <!-- ICLR 2026: EBCAR -->
-                    <article class="pub" id="pub-ebcar">
+                    <article class="pub" id="pub-ebcar" data-topic="llm">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/ebcar.webp" alt="Embedding-based Context-aware Reranker diagram" class="pub-thumb">
                         </button>
@@ -1070,7 +1078,7 @@
                     </article>
 
                     <!-- NeurIPS Workshop 2025 -->
-                    <article class="pub" id="pub-facts-w">
+                    <article class="pub" id="pub-facts-w" data-topic="llm">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/facts.webp" alt="Fast, Accurate, and Privacy-Compliant Table Summarization" class="pub-thumb">
                         </button>
@@ -1094,7 +1102,7 @@
                     </article>
 
                     <!-- CVPR 2024 -->
-                    <article class="pub" id="pub-vlc">
+                    <article class="pub" id="pub-vlc" data-topic="gen">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/vlc.webp" alt="Visual Layout Composer dual diffusion model overview" class="pub-thumb">
                         </button>
@@ -1134,7 +1142,7 @@
                     </article>
 
                     <!-- NeurIPS 2023 -->
-                    <article class="pub" id="pub-puzzlefusion">
+                    <article class="pub" id="pub-puzzlefusion" data-topic="gen">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/jigsawplan.webp" alt="PuzzleFusion jigsaw puzzle solving with diffusion models" class="pub-thumb">
                         </button>
@@ -1179,7 +1187,7 @@
                     </article>
 
                     <!-- CVPR 2023 -->
-                    <article class="pub" id="pub-housediffusion">
+                    <article class="pub" id="pub-housediffusion" data-topic="gen">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/housediffusion.webp" alt="HouseDiffusion vector floorplan generation examples" class="pub-thumb">
                         </button>
@@ -1224,7 +1232,7 @@
                     </article>
 
                     <!-- ICLR 2023 -->
-                    <article class="pub" id="pub-scaleformer">
+                    <article class="pub" id="pub-scaleformer" data-topic="learning">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/scaleformer.webp" alt="Scaleformer iterative multi-scale architecture" class="pub-thumb">
                         </button>
@@ -1268,7 +1276,7 @@
                     </article>
 
                     <!-- ACCV 2022 -->
-                    <article class="pub" id="pub-blueprints">
+                    <article class="pub" id="pub-blueprints" data-topic="vision">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/vectorizing_building.webp" alt="Vectorizing Building Blueprints method results" class="pub-thumb">
                         </button>
@@ -1309,7 +1317,7 @@
                     </article>
 
                     <!-- ICCV 2021 -->
-                    <article class="pub" id="pub-extreme-sfm">
+                    <article class="pub" id="pub-extreme-sfm" data-topic="vision">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/extreme_sfm.webp" alt="Extreme SfM indoor panorama 3D reconstruction" class="pub-thumb">
                         </button>
@@ -1347,7 +1355,7 @@
                     </article>
 
                     <!-- BMVC 2017 -->
-                    <article class="pub" id="pub-lvm">
+                    <article class="pub" id="pub-lvm" data-topic="vision">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/lvm.webp" alt="Local Visual Microphones sound extraction from video" class="pub-thumb">
                         </button>
@@ -1383,7 +1391,7 @@
                     </article>
 
                     <!-- M.Sc. Thesis 2019 -->
-                    <article class="pub" id="pub-lpkd">
+                    <article class="pub" id="pub-lpkd" data-topic="learning">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/lpkd.webp" alt="Layer-wise Progressive Knowledge Distillation diagram" class="pub-thumb">
                         </button>
@@ -1404,7 +1412,7 @@
                     </article>
 
                     <!-- arXiv preprint -->
-                    <article class="pub" id="pub-5cycles">
+                    <article class="pub" id="pub-5cycles" data-topic="theory">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/5cycle.webp" alt="Complete tripartite graph 5-cycle decomposition illustration" class="pub-thumb">
                         </button>
@@ -1437,7 +1445,7 @@
                     </article>
 
                     <!-- Graphs and Combinatorics, 2018 -->
-                    <article class="pub" id="pub-uklc">
+                    <article class="pub" id="pub-uklc" data-topic="theory">
                         <button type="button" class="pub-thumb-btn" aria-label="Enlarge figure">
                             <img loading="lazy" decoding="async" src="images/uklc.webp" alt="Uniquely k-list colorable graph examples" class="pub-thumb">
                         </button>
